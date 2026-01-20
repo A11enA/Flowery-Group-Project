@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cnjkqcshr8653"]
+
+[ext_resource type="Texture2D" uid="uid://qc06k7rgq7vb" path="res://Assets/white_and_blue_textbox_by_afiniwind_d96bnih-fullview.png" id="1_fr5wc"]
+
+[resource]
+texture = ExtResource("1_fr5wc")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
