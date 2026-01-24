@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Flowery Group Project"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -21,12 +21,19 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Ial Tutor": "res://Characters/Ial Tutor.dch",
 "character": "res://Characters/character.dch"
 }
 directories/dtl_directory={
+"Tutorial": "res://Timeline/Tutorial.dtl",
 "timeline": "res://Timeline/timeline.dtl"
 }
 layout/style_directory={}
+layout/style_list=[]
+layout/default_style="Default"
+variables={
+"ialLikability": 0
+}
 
 [editor_plugins]
 
