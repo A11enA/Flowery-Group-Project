@@ -1,5 +1,5 @@
 join "Ial Tutor" (Default) center [animation="Fade In"]
-set 
+set {ialLikability} = 0
 "Ial Tutor": Hello, You must be that Traveller!
 "Ial Tutor" (Smile): I'm here to help out! I'll give you my Tommy's Hand-Me-Downs.
 - Thank You!
