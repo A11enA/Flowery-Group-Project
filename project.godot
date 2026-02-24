@@ -15,6 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Flowery Group Project"
+run/main_scene="uid://cebp2mxrdhgjs"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -69,6 +70,11 @@ glossary/default_case_sensitive=true
 variables={
 "ialLikability": 0.0
 }
+
+[display]
+
+window/size/viewport_width=1155
+window/size/viewport_height=650
 
 [editor_plugins]
 
