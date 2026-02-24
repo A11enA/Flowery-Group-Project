@@ -74,6 +74,10 @@ variables={
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[global_group]
+
+UI=""
+
 [input]
 
 dialogic_default_action={
