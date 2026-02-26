@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bsmcqvl413ohg"]
+
+[ext_resource type="StyleBox" uid="uid://cknnoa12ioxtb" path="res://GUI/panel_style_box_flat.tres" id="1_6cm4i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tvn5x"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.338339, 0.192441, 0.100606, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[resource]
+Button/styles/normal = SubResource("StyleBoxFlat_tvn5x")
+Label/font_sizes/font_size = 24
+Panel/styles/panel = ExtResource("1_6cm4i")
+PanelContainer/styles/normal = ExtResource("1_6cm4i")
+PanelContainer/styles/panel = ExtResource("1_6cm4i")
+VBoxContainer/constants/separation = 10

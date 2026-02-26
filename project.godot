@@ -22,6 +22,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
+Save="*res://Saves/save.JSON"
+GameController="*uid://bigtr6bn5sirt"
+Global="*uid://x512p2yhgmgk"
 
 [dialogic]
 
@@ -70,6 +73,8 @@ glossary/default_case_sensitive=true
 variables={
 "ialLikability": 0.0
 }
+layout/style_list=[]
+layout/default_style="Default"
 
 [display]
 

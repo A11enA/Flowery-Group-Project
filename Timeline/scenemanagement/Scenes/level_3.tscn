@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b50t1rxltbxg5"]
+
+[ext_resource type="PackedScene" uid="uid://dyqp42caniwxf" path="res://Scenes/world_2d_template.tscn" id="1_b8vnw"]
+
+[node name="level_3" instance=ExtResource("1_b8vnw")]
+
+[node name="SceneIdentifier" parent="MarginContainer/VBoxContainer" index="0"]
+text = "SCENE 3"

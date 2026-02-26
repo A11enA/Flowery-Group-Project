@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://booa41ymhmkko"]
+
+[ext_resource type="PackedScene" uid="uid://dyqp42caniwxf" path="res://Scenes/world_2d_template.tscn" id="1_wntix"]
+[ext_resource type="Script" path="res://Scripts/level_1.gd" id="2_7jw7d"]
+
+[node name="level1" instance=ExtResource("1_wntix")]
+script = ExtResource("2_7jw7d")
+
+[connection signal="pressed" from="MarginContainer/BoxContainer/Button" to="." method="_on_button_pressed"]

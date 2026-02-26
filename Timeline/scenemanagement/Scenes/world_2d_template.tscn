@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyqp42caniwxf"]
+
+[ext_resource type="PackedScene" uid="uid://wqqls2ol6og2" path="res://Scenes/player.tscn" id="1_ncymt"]
+[ext_resource type="Texture2D" uid="uid://bkxevadyba00h" path="res://icon.svg" id="2_nbef6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4nrn"]
+size = Vector2(123.311, 120.497)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dc7o6"]
+
+[node name="World2DTemplate" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="ground" type="StaticBody2D" parent="."]
+position = Vector2(600, 600)
+scale = Vector2(9.545, 0.805)
+
+[node name="Sprite2D" type="Sprite2D" parent="ground"]
+texture = ExtResource("2_nbef6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
+position = Vector2(-2.04295, -4.34784)
+shape = SubResource("RectangleShape2D_f4nrn")
+
+[node name="SceneUI" type="AspectRatioContainer" parent="."]
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(400, 400)
+offset_right = 1152.0
+offset_bottom = 653.0
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="BoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="Button" type="Button" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+text = "Next Scene
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="SceneIdentifier" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "SCENE 1"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Button Clicks: "
+label_settings = SubResource("LabelSettings_dc7o6")
+
+[node name="PlayerClicksLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="Player" parent="." instance=ExtResource("1_ncymt")]
+position = Vector2(520, 354)

@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://do71ng8lvdetc"]
+
+[ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="1_pwymc"]
+[ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scripts/rotation.gd" id="2_34yr4"]
+[ext_resource type="Script" uid="uid://475iai65lpmy" path="res://Scripts/loading.gd" id="2_xxhsw"]
+[ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="3_xxhsw"]
+
+[node name="loading Screen" type="MarginContainer" unique_id=679297742]
+offset_right = 1155.0
+offset_bottom = 650.0
+theme = ExtResource("1_pwymc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=685132319]
+layout_mode = 2
+color = Color(0.827451, 1, 1, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=389796187]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1004152912]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=936138877]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1709255185]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 150
+text = "Loading"
+script = ExtResource("2_xxhsw")
+
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1836741828 node_paths=PackedStringArray("sunFlower")]
+layout_mode = 2
+script = ExtResource("2_34yr4")
+sunFlower = NodePath("TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Control" unique_id=1543469761]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.0
+offset_right = 88.0
+offset_bottom = 176.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("1_pwymc")
+texture = ExtResource("3_xxhsw")
+expand_mode = 2
+
+[node name="Timer" type="Timer" parent="." unique_id=1791179962]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="PanelContainer/MarginContainer/VBoxContainer/Label" method="_on_timer_timeout"]
