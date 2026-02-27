@@ -30,8 +30,24 @@ layout_mode = 2
 layout_mode = 2
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1543469761]
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1836741828 node_paths=PackedStringArray("sunFlower")]
 layout_mode = 2
+script = ExtResource("3_y7u4j")
+sunFlower = NodePath("TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/Control" unique_id=1543469761]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -47.5
+offset_bottom = 47.5
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme = ExtResource("1_vkb7l")
 texture = ExtResource("2_5j608")
 expand_mode = 2
@@ -52,32 +68,27 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Control" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1836741828 node_paths=PackedStringArray("sunFlower")]
-layout_mode = 2
-script = ExtResource("3_y7u4j")
-sunFlower = NodePath("../../HBoxContainer2/TextureRect")
-
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1177867723]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 theme = ExtResource("1_vkb7l")
 alignment = 1
 
-[node name="startButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=519158386 groups=["UI"]]
+[node name="save1" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=519158386 groups=["UI"]]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Save 1"
 
-[node name="loadButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1169786343]
+[node name="save2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1169786343]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Save 2
 "
 
-[node name="optionButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=435778260]
+[node name="save3" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=435778260]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
@@ -89,4 +100,4 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Save 4"
 
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/loadButton" to="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Control" method="_on_load_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/save2" to="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/Control" method="_on_load_button_pressed"]

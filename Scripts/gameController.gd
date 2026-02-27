@@ -11,6 +11,7 @@ func _ready():
 	Global.game_controller = self
 	
 	current_scene = $"World/Title Screen"
+	print("scene holder: ", scene_holder)
 	
 	
 
@@ -19,14 +20,15 @@ func change_scene(
 	delete: bool = true,
 	keep_running:bool = false,
 	transition: bool = false,
-	transition_in: String = "Fade In",
-	transition_out: String = "Fade Out",
-	seconds: float = 1.0):
+	#transition_in: String = "Fade In",
+	#transition_out: String = "Fade Out",
+	#seconds: float = 1.0
+	):
 	
 	#fade to black
-	if transition:
-		translation_controller.transition(transition_in, seconds)
-		await translation_controller.animation_player.animation_finished
+	#if transition:
+		#translation_controller.transition(transition_in, seconds)
+		#await translation_controller.animation_player.animation_finished
 		
 	if current_scene != null:
 		if delete:
@@ -36,11 +38,14 @@ func change_scene(
 		else:
 			scene_holder.remove_child(current_scene) #keeps scene in memory not running
 	var new = load(new_scene).instantiate()
+	print("new scene: ", new_scene)
+	print("scene holder: ", scene_holder)
 	scene_holder.add_child(new)
 	current_scene = new
 	
-	#fade back in
-	if transition:
-		translation_controller.transition(transition_out, seconds)
-		await translation_controller.animation_player.animation_finished
+	
+	##fade back in
+	#if transition:
+		#translation_controller.transition(transition_out, seconds)
+		#await translation_controller.animation_player.animation_finished
 	
