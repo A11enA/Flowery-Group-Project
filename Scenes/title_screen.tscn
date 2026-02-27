@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="1_p3fck"]
 [ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="2_4gxqj"]
+[ext_resource type="Script" uid="uid://efpdy613dgoj" path="res://Scripts/title_screen.gd" id="2_55kwv"]
 [ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scripts/rotation.gd" id="2_twnyg"]
 [ext_resource type="Script" uid="uid://dm4xo27clceto" path="res://Scripts/start_button.gd" id="4_twnyg"]
 
@@ -9,6 +10,7 @@
 offset_right = 1155.0
 offset_bottom = 650.0
 theme = ExtResource("1_p3fck")
+script = ExtResource("2_55kwv")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=685132319]
 layout_mode = 2
@@ -77,27 +79,27 @@ layout_mode = 2
 theme = ExtResource("1_p3fck")
 alignment = 1
 
-[node name="startButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=519158386 groups=["UI"]]
+[node name="startButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=519158386 groups=["Buttons", "UI"]]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Start"
 script = ExtResource("4_twnyg")
 
-[node name="loadButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1169786343]
+[node name="loadButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1169786343 groups=["Buttons"]]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Load
 "
 
-[node name="optionButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=435778260]
+[node name="optionButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=435778260 groups=["Buttons"]]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Options"
 
-[node name="creditButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1207272339]
+[node name="creditButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1207272339 groups=["Buttons"]]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
