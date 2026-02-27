@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://cebp2mxrdhgjs"]
+[gd_scene format=3 uid="uid://i7piuk0kaqn5"]
 
-[ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="1_p3fck"]
-[ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="2_4gxqj"]
-[ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scripts/rotation.gd" id="2_twnyg"]
+[ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="1_vkb7l"]
+[ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="2_5j608"]
+[ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scripts/rotation.gd" id="3_y7u4j"]
 
-[node name="Title Screen" type="MarginContainer" unique_id=679297742]
+[node name="SaveUI" type="MarginContainer" unique_id=679297742]
 offset_right = 1155.0
 offset_bottom = 650.0
-theme = ExtResource("1_p3fck")
+theme = ExtResource("1_vkb7l")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=685132319]
 layout_mode = 2
@@ -25,17 +25,26 @@ size_flags_vertical = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2012620212]
 layout_mode = 2
-size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1350393480]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=386115054]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1543469761]
+layout_mode = 2
+theme = ExtResource("1_vkb7l")
+texture = ExtResource("2_5j608")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1350393480]
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("1_p3fck")
+theme = ExtResource("1_vkb7l")
 theme_override_font_sizes/font_size = 75
-text = "Ultimate Florist "
+text = "Save Slots"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=797864560]
-custom_minimum_size = Vector2(500, 100)
+custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=355918181]
@@ -45,60 +54,39 @@ size_flags_vertical = 4
 
 [node name="Control" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1836741828 node_paths=PackedStringArray("sunFlower")]
 layout_mode = 2
-script = ExtResource("2_twnyg")
-sunFlower = NodePath("TextureRect")
-
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Control" unique_id=1543469761]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = -88.0
-offset_right = 88.0
-offset_bottom = 88.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-theme = ExtResource("1_p3fck")
-texture = ExtResource("2_4gxqj")
-expand_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=193533117]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
+script = ExtResource("3_y7u4j")
+sunFlower = NodePath("../../HBoxContainer2/TextureRect")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1177867723]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
-theme = ExtResource("1_p3fck")
+theme = ExtResource("1_vkb7l")
 alignment = 1
 
 [node name="startButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=519158386 groups=["UI"]]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Start"
+theme_override_font_sizes/font_size = 50
+text = "Save 1"
 
 [node name="loadButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1169786343]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Load
+theme_override_font_sizes/font_size = 50
+text = "Save 2
 "
 
 [node name="optionButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=435778260]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Options"
+theme_override_font_sizes/font_size = 50
+text = "Save 3"
 
 [node name="creditButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1207272339]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Credits"
+theme_override_font_sizes/font_size = 50
+text = "Save 4"
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/loadButton" to="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Control" method="_on_load_button_pressed"]
