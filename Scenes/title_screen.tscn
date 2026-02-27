@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="1_p3fck"]
 [ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="2_4gxqj"]
 [ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scripts/rotation.gd" id="2_twnyg"]
+[ext_resource type="Script" uid="uid://dm4xo27clceto" path="res://Scripts/start_button.gd" id="4_twnyg"]
 
 [node name="Title Screen" type="MarginContainer" unique_id=679297742]
 offset_right = 1155.0
@@ -81,6 +82,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Start"
+script = ExtResource("4_twnyg")
 
 [node name="loadButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1169786343]
 unique_name_in_owner = true

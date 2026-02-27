@@ -1,13 +1,15 @@
-[gd_scene format=3 uid="uid://i7piuk0kaqn5"]
+[gd_scene format=3 uid="uid://cwtwoj6jfwek7"]
 
-[ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="1_vkb7l"]
-[ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="2_5j608"]
-[ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scripts/rotation.gd" id="3_y7u4j"]
+[ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="1_s3gu2"]
+[ext_resource type="Script" uid="uid://c7bbmxvpmvhlr" path="res://Scenes/save_ui.gd" id="2_4x5me"]
+[ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="3_s0tx0"]
+[ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scripts/rotation.gd" id="4_jrxu8"]
 
 [node name="SaveUI" type="MarginContainer" unique_id=679297742]
 offset_right = 1155.0
 offset_bottom = 650.0
-theme = ExtResource("1_vkb7l")
+theme = ExtResource("1_s3gu2")
+script = ExtResource("2_4x5me")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=685132319]
 layout_mode = 2
@@ -32,14 +34,14 @@ alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1543469761]
 layout_mode = 2
-theme = ExtResource("1_vkb7l")
-texture = ExtResource("2_5j608")
+theme = ExtResource("1_s3gu2")
+texture = ExtResource("3_s0tx0")
 expand_mode = 2
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1350393480]
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("1_vkb7l")
+theme = ExtResource("1_s3gu2")
 theme_override_font_sizes/font_size = 75
 text = "Save Slots"
 
@@ -54,13 +56,13 @@ size_flags_vertical = 4
 
 [node name="Control" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1836741828 node_paths=PackedStringArray("sunFlower")]
 layout_mode = 2
-script = ExtResource("3_y7u4j")
+script = ExtResource("4_jrxu8")
 sunFlower = NodePath("../../HBoxContainer2/TextureRect")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1177867723]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
-theme = ExtResource("1_vkb7l")
+theme = ExtResource("1_s3gu2")
 alignment = 1
 
 [node name="startButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=519158386 groups=["UI"]]
