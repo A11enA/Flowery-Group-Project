@@ -10,8 +10,6 @@ config_version=5
 
 [application]
 
-config/name="Group Project"
-run/main_scene="uid://cebp2mxrdhgjs"
 config/name="group project"
 run/main_scene="uid://77ph3c5tpfb3"
 config/features=PackedStringArray("4.6", "Forward Plus")
@@ -23,12 +21,5 @@ config/icon="res://icon.svg"
 
 [rendering]
 
-Global="*uid://x512p2yhgmgk"
-
-[physics]
-
-3d/physics_engine="Jolt Physics"
-
-[rendering]
-
 rendering_device/driver.windows="d3d12"
+Global="*uid://x512p2yhgmgk"
