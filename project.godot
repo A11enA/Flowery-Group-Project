@@ -10,18 +10,15 @@ config_version=5
 
 [application]
 
-config/name="Group Project"
-run/main_scene="uid://cebp2mxrdhgjs"
-config/name="group project"
+config/name="Flowery-Group-Project"
+config/description="Group project :)
+"
+config/version="ALPHA"
 run/main_scene="uid://77ph3c5tpfb3"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://basrd6iuma74l"
 
-[physics]
-
-3d/physics_engine="Jolt Physics"
-
-[rendering]
+[autoload]
 
 Global="*uid://x512p2yhgmgk"
 
@@ -32,3 +29,4 @@ Global="*uid://x512p2yhgmgk"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+Global="*uid://x512p2yhgmgk"
