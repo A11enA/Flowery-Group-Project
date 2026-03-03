@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ccom2t2e5qmsn"]
+
+[ext_resource type="PackedScene" uid="uid://cebp2mxrdhgjs" path="res://Scenes/title_screen.tscn" id="1_etjlb"]
+
+[node name="Character Creator" unique_id=679297742 instance=ExtResource("1_etjlb")]
+script = null
+
+[node name="Control" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" parent_id_path=PackedInt32Array(355918181) index="0" unique_id=1836741828]
+script = null
+
+[node name="VBoxContainer2" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" parent_id_path=PackedInt32Array(355918181) index="2" unique_id=1177867723]
+custom_minimum_size = Vector2(100, 100)

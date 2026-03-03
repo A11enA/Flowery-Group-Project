@@ -10,13 +10,13 @@ config_version=5
 
 [application]
 
-config/name="Flowery-Group-Project"
+config/name="Ultimate Florist"
 config/description="Group project :)
 "
 config/version="ALPHA"
 run/main_scene="uid://c412wig40ybc4"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="uid://basrd6iuma74l"
+config/icon="res://icon.svg"
 
 [autoload]
 
