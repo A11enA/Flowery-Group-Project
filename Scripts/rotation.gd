@@ -18,4 +18,4 @@ func spin(rotation_length_s: float):
 
 
 func _on_load_button_pressed() -> void:
-	Global.change_scene("res://Scenes/save_ui.tscn")
+	pass
