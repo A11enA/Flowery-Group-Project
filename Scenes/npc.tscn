@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://kyenwys6faus"]
+
+[ext_resource type="Script" uid="uid://bmghjmbtrwpls" path="res://Scripts/npc.gd" id="1_xxsvc"]
+[ext_resource type="Texture2D" uid="uid://bmw3g7vk5mix5" path="res://icon.svg" id="2_g6unj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxcha"]
+size = Vector2(96, 91)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xxsvc"]
+radius = 227.07928
+
+[node name="Npc" type="CharacterBody2D" unique_id=261900754]
+script = ExtResource("1_xxsvc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=371525295]
+modulate = Color(1, 0.5176471, 1, 1)
+texture = ExtResource("2_g6unj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1612846950]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_xxcha")
+
+[node name="Interact" type="Area2D" parent="." unique_id=1216461594]
+position = Vector2(-0.5, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact" unique_id=1907655729]
+position = Vector2(0.5, 2)
+shape = SubResource("CircleShape2D_xxsvc")
+
+[node name="Button" type="Button" parent="." unique_id=240100104]
+offset_left = -43.0
+offset_top = 81.0
+offset_right = 39.0
+offset_bottom = 113.0
+text = "talk
+"
+
+[connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]
+[connection signal="body_exited" from="Interact" to="." method="_on_interact_body_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
