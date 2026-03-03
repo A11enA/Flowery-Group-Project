@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://c412wig40ybc4"]
 
+[ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="1_5a7ea"]
+[ext_resource type="PackedScene" uid="uid://1y4y8yuvil3t" path="res://Scenes/player.tscn" id="2_8j60k"]
+[ext_resource type="PackedScene" uid="uid://kyenwys6faus" path="res://Scenes/npc.tscn" id="3_fo5ed"]
 [ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://1y4y8yuvil3t" path="res://Scenes/player.tscn" id="2_fj7yv"]
 
@@ -8,6 +11,15 @@
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1834151789]
 position = Vector2(577, 326.50003)
 scale = Vector2(2.0342855, 1.8428571)
+texture = ExtResource("1_5a7ea")
+
+[node name="Player" parent="." unique_id=417626187 instance=ExtResource("2_8j60k")]
+position = Vector2(576, 558)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1284320271]
+
+[node name="Npc" parent="." unique_id=261900754 instance=ExtResource("3_fo5ed")]
+position = Vector2(570, 89)
 texture = ExtResource("1_f3sb7")
 
 [node name="Player" parent="." unique_id=417626187 instance=ExtResource("2_fj7yv")]
