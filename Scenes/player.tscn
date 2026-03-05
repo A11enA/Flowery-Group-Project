@@ -1,20 +1,10 @@
 [gd_scene format=3 uid="uid://1y4y8yuvil3t"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://dy4uu41x8bb2a" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bmw3g7vk5mix5" path="res://icon.svg" id="2_6t5aa"]
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
-size = Vector2(112, 114)
-=======
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
 radius = 26.0
->>>>>>> Stashed changes
-=======
-[sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
-radius = 26.0
->>>>>>> Stashed changes
 
 [node name="Player" type="CharacterBody2D" unique_id=417626187]
 script = ExtResource("1_cvnsp")
@@ -24,13 +14,6 @@ move_speed = 600.0
 texture = ExtResource("2_6t5aa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1038736412]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-position = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_hqtel")
-=======
 shape = SubResource("CircleShape2D_cvnsp")
->>>>>>> Stashed changes
-=======
-shape = SubResource("CircleShape2D_cvnsp")
->>>>>>> Stashed changes
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1756012814]
