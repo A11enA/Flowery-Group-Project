@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cygoom5wgcpoq"]
+
+[ext_resource type="Script" uid="uid://y1j7t3pe13w1" path="res://Scripts/baseflower.gd" id="1_jsq7h"]
+[ext_resource type="Texture2D" uid="uid://bmw3g7vk5mix5" path="res://icon.svg" id="2_f56yq"]
+
+[node name="baseflower" type="Area2D" unique_id=450694347]
+script = ExtResource("1_jsq7h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1315787143]
+modulate = Color(0.32156864, 0.8156863, 0.74509805, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_f56yq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=538056892]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1610130573]
+root_node = NodePath("../Sprite2D")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=614244517]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

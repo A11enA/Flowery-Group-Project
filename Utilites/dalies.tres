@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="flower_attributes" format=3 uid="uid://btl0q8kn55i8k"]
+
+[ext_resource type="Script" uid="uid://mgg7h2xnasln" path="res://Utilites/flower_attributes.gd" id="1_bcp5s"]
+[ext_resource type="Texture2D" uid="uid://ctht8grhi3lpv" path="res://Assets/Sprites/Ial Tutor/Smile.png" id="2_i1pl5"]
+
+[resource]
+script = ExtResource("1_bcp5s")
+texture = ExtResource("2_i1pl5")
+desc = "daldal"
+metadata/_custom_type_script = "uid://mgg7h2xnasln"
