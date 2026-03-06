@@ -78,6 +78,10 @@ audio/channel_defaults={
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[global_group]
+
+Persistent="Persistent objects"
+
 [input]
 
 move_up={

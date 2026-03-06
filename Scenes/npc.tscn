@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://kyenwys6faus"]
 
-[ext_resource type="Script" path="res://Scripts/npc.gd" id="1_xxsvc"]
+[ext_resource type="Script" uid="uid://bmghjmbtrwpls" path="res://Scripts/npc.gd" id="1_xxsvc"]
 [ext_resource type="Texture2D" uid="uid://ssu1ic72e4jf" path="res://Assets/Sprites/Ial Tutor/Default.png" id="2_xxsvc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxcha"]
