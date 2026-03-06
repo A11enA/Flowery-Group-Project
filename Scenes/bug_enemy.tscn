@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dmkv466uencfj"]
+
+[ext_resource type="Texture2D" uid="uid://bff0ius00iswv" path="res://Assets/Sprites/Red-Mason-Bee.webp" id="1_hvlcn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5bnd"]
+size = Vector2(33, 35)
+
+[node name="BugEnemy" type="CharacterBody2D" unique_id=1864485187]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1170699744]
+position = Vector2(0.5, -1.5)
+shape = SubResource("RectangleShape2D_m5bnd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1731104508]
+position = Vector2(0, -1)
+scale = Vector2(0.044270836, 0.045310523)
+texture = ExtResource("1_hvlcn")
