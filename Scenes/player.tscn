@@ -16,3 +16,5 @@ texture = ExtResource("2_6t5aa")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1038736412]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_hqtel")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1474949224]

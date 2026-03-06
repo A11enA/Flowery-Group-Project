@@ -28,6 +28,7 @@ position = Vector2(0.5, 2)
 shape = SubResource("CircleShape2D_xxsvc")
 
 [node name="Button" type="Button" parent="." unique_id=240100104]
+visible = false
 offset_left = -43.0
 offset_top = 81.0
 offset_right = 39.0

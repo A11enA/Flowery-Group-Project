@@ -14,7 +14,7 @@ config/name="Ultimate Florist"
 config/description="Group project :)
 "
 config/version="ALPHA"
-run/main_scene="uid://c412wig40ybc4"
+run/main_scene="uid://77ph3c5tpfb3"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

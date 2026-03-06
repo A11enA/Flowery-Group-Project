@@ -14,9 +14,5 @@ texture = ExtResource("1_f3sb7")
 [node name="Player" parent="." unique_id=417626187 instance=ExtResource("2_fj7yv")]
 position = Vector2(576, 558)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1284320271]
-
-[node name="Camera2D2" type="Camera2D" parent="Player" unique_id=1787393149]
-
 [node name="Npc" parent="." unique_id=261900754 instance=ExtResource("3_fo5ed")]
 position = Vector2(570, 89)
