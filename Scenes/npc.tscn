@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://kyenwys6faus"]
 
 [ext_resource type="Script" uid="uid://bmghjmbtrwpls" path="res://Scripts/npc.gd" id="1_xxsvc"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://bmw3g7vk5mix5" path="res://icon.svg" id="2_g6unj"]
+=======
+[ext_resource type="Texture2D" uid="uid://ssu1ic72e4jf" path="res://Assets/Sprites/Ial Tutor/Default.png" id="2_xxsvc"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxcha"]
 size = Vector2(96, 91)

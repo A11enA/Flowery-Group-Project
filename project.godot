@@ -22,6 +22,11 @@ config/icon="res://icon.svg"
 
 Global="*uid://x512p2yhgmgk"
 Dialogic="*uid://ds2q0uclmolvu"
+<<<<<<< Updated upstream
+=======
+PlayerStats="*uid://c0x62gugl8bhf"
+Inventorymanager="*uid://c4eph5mikp81a"
+>>>>>>> Stashed changes
 
 [dialogic]
 

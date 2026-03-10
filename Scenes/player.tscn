@@ -3,8 +3,13 @@
 [ext_resource type="Script" uid="uid://dy4uu41x8bb2a" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bmw3g7vk5mix5" path="res://icon.svg" id="2_6t5aa"]
 
+<<<<<<< Updated upstream
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
 size = Vector2(126, 119)
+=======
+[sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
+radius = 50.0
+>>>>>>> Stashed changes
 
 [node name="Player" type="CharacterBody2D" unique_id=417626187]
 script = ExtResource("1_cvnsp")
