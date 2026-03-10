@@ -105,4 +105,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Credits"
 
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/startButton" to="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Control" method="_on_start_button_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/loadButton" to="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Control" method="_on_load_button_pressed"]
