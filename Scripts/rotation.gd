@@ -15,7 +15,3 @@ func _process(delta: float) -> void:
 func spin(rotation_length_s: float):
 	var tween = create_tween().set_loops()
 	tween.tween_property(sunFlower, "rotation", TAU, rotation_length_s).from(0)
-
-
-func _on_load_button_pressed() -> void:
-	pass

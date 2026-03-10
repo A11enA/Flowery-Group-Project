@@ -1,5 +1,4 @@
-[gd_scene format=3 uid="uid://b3a15n3yy88f1"]
-[gd_scene format=3 uid="uid://c412wig40ybc4"]
+[gd_scene format=3 uid="uid://ba2em6a278yhg"]
 
 [ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://1y4y8yuvil3t" path="res://Scenes/player.tscn" id="2_fj7yv"]
