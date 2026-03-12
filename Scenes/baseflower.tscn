@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cygoom5wgcpoq"]
+
+[ext_resource type="Script" uid="uid://y1j7t3pe13w1" path="res://Scripts/baseflower.gd" id="1_jsq7h"]
+[ext_resource type="Script" uid="uid://mgg7h2xnasln" path="res://Utilites/flower_attributes.gd" id="2_f56yq"]
+[ext_resource type="Texture2D" uid="uid://d217k17bvoq1b" path="res://Assets/Images/testflower.jpg" id="2_jsq7h"]
+
+[sub_resource type="Resource" id="Resource_y2d71"]
+script = ExtResource("2_f56yq")
+texture = ExtResource("2_jsq7h")
+metadata/_custom_type_script = "uid://mgg7h2xnasln"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f56yq"]
+radius = 51.0
+height = 118.0
+
+[sub_resource type="Animation" id="Animation_f56yq"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.18325958, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_y2d71"]
+resource_name = "moving"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-0.18151425, -0.25, 0, 0.25, 0, 0.18325958, -0.16666667, -0.060795635, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fc7ro"]
+_data = {
+&"RESET": SubResource("Animation_f56yq"),
+&"moving": SubResource("Animation_y2d71")
+}
+
+[node name="baseflower" type="Area2D" unique_id=450694347]
+script = ExtResource("1_jsq7h")
+attributes = SubResource("Resource_y2d71")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1315787143]
+rotation = 0.18325958
+scale = Vector2(0.25, 0.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=538056892]
+shape = SubResource("CapsuleShape2D_f56yq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1610130573]
+root_node = NodePath("../Sprite2D")
+libraries/ = SubResource("AnimationLibrary_fc7ro")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=614244517]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
