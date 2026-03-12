@@ -15,3 +15,11 @@ func _process(delta: float) -> void:
 func spin(rotation_length_s: float):
 	var tween = create_tween().set_loops()
 	tween.tween_property(sunFlower, "rotation", TAU, rotation_length_s).from(0)
+
+
+func _on_load_button_pressed() -> void:
+	Global.game_controller.change_scene("res://Scenes/save_screen.tscn")
+
+
+func _on_start_button_pressed() -> void:
+	Global.game_controller.change_scene("res://Scenes/world.tscn")

@@ -105,9 +105,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Credits"
 
-[connection signal="button_up" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/startButton" to="." method="_on_start_button_button_up"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/startButton" to="." method="_on_start_button_pressed"]
-[connection signal="button_up" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/optionButton" to="." method="_on_option_button_button_up"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/optionButton" to="." method="_on_optionbutton_pressed"]
-[connection signal="button_up" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/creditButton" to="." method="_on_credit_button_button_up"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/creditButton" to="." method="_on_credit_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/startButton" to="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Control" method="_on_start_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/loadButton" to="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Control" method="_on_load_button_pressed"]

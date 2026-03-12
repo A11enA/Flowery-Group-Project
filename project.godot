@@ -73,6 +73,10 @@ audio/channel_defaults={
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[global_group]
+
+Persistent="Persistent objects"
+
 [input]
 
 dialogic_default_action={
