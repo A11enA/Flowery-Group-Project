@@ -11,6 +11,12 @@ func _ready() -> void:
 	value = attributes.value
 	sprite.texture = attributes.texture
 
+func collected():
+	Inventorymanager.add_item(attributes)
+	print("im in inventory")
+
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		animation.play()
+		collected()
+		queue_free()
+		print("im gone")
