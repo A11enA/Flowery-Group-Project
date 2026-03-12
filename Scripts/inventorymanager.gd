@@ -1,5 +1,6 @@
+class_name InventoryControl extends Node
 # InventoryManager.gd
-extends Node
+
  
 # A signal to notify the UI when the inventory changes.
 signal inventory_changed

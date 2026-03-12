@@ -11,13 +11,16 @@ config_version=5
 [application]
 
 config/name="Flowery-Group-Project"
+run/main_scene="uid://77ph3c5tpfb3"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
+Global="*uid://x512p2yhgmgk"
 PlayerStats="*uid://c0x62gugl8bhf"
+Inventorymanager="*uid://c4eph5mikp81a"
 
 [dialogic]
 
