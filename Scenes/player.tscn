@@ -17,4 +17,4 @@ texture = ExtResource("2_6t5aa")
 position = Vector2(0, -0.5)
 shape = SubResource("CircleShape2D_cvnsp")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1474949224]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1756012814]

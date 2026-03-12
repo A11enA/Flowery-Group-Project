@@ -1,13 +1,12 @@
 join "Ial Tutor" (Default) center [animation="Fade In"]
-set {ialLikability} = 0
-"Ial Tutor": Hello, You must be that Traveller!
-"Ial Tutor" (Smile): I'm here to help out! I'll give you my Tommy's Hand-Me-Downs.
+"Ial Tutor": Hello, You must be that newbie i've heard so much about!
+"Ial Tutor" (Smile): I come bearing gifts! I hope you can get as much use out of them as my husband did!
 - Thank You!
-	set {ialLikability} += 2.0
+	set {Likability.Ial} += 2.0
 	"Ial Tutor" (Smile): Well arent you polite! Ask me for help anytime.
 - No, Thank you anyway.
-	set {ialLikability} += 1.0
+	set {Likability.Ial} += 1.0
 	"Ial Tutor" (Default): Ok, Tell me if you change your mind!
 - I don't want your charity.
-	set {ialLikability} -= 2.0
+	set {Likability.Ial} -= 2.0
 	"Ial Tutor" (Frown): Oh, how rude.
