@@ -10,6 +10,7 @@ size = Vector2(96, 91)
 radius = 227.07928
 
 [node name="Npc" type="CharacterBody2D" unique_id=261900754]
+scale = Vector2(0.3, 0.3)
 script = ExtResource("1_xxsvc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=371525295]
