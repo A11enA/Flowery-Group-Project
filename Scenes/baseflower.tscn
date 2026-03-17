@@ -48,6 +48,7 @@ _data = {
 }
 
 [node name="baseflower" type="Area2D" unique_id=450694347]
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_jsq7h")
 attributes = SubResource("Resource_y2d71")
 
