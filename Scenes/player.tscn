@@ -7,8 +7,8 @@
 radius = 58.0
 
 [node name="Player" type="CharacterBody2D" unique_id=417626187]
-scale = Vector2(0.2, 0.2)
 script = ExtResource("1_cvnsp")
+move_speed = 600.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=62737062]
 texture = ExtResource("2_6t5aa")
@@ -18,4 +18,3 @@ position = Vector2(0, -0.5)
 shape = SubResource("CircleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1756012814]
-zoom = Vector2(5, 5)

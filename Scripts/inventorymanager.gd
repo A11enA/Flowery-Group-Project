@@ -10,7 +10,6 @@ var items: Array[flower_attributes] = []
 func add_item(item: flower_attributes):
 	items.append(item)
 	inventory_changed.emit()
-	print("im in inventory")
  
 func remove_item(item: flower_attributes):
 	if items.has(item):

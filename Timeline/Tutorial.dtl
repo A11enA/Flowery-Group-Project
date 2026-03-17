@@ -1,5 +1,5 @@
 join "Ial Tutor" (Default) center [animation="Fade In"]
-"Ial Tutor": Welcome to (town name). We don’t get tourists this far out. What is your business here?
+"Ial Tutor": Hello, You must be that newbie i've heard so much about!
 "Ial Tutor" (Smile): I come bearing gifts! I hope you can get as much use out of them as my husband did!
 - Thank You!
 	set {Likability.Ial} += 2.0

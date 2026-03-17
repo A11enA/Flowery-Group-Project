@@ -13,6 +13,7 @@ func _ready() -> void:
 
 func collected():
 	Inventorymanager.add_item(attributes)
+	print("im in inventory")
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
