@@ -1,16 +1,47 @@
 [gd_scene format=3 uid="uid://b2vj3fxx3k4pw"]
 
 [ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="1_7uq00"]
-[ext_resource type="Script" uid="uid://efpdy613dgoj" path="res://Scripts/title_screen.gd" id="2_cpnhs"]
+[ext_resource type="Script" uid="uid://bjgav5ljetcb1" path="res://Scripts/save_screen.gd" id="2_84ofj"]
 [ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scripts/rotation.gd" id="3_gggy6"]
 [ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="4_lfbfu"]
-[ext_resource type="Script" uid="uid://dm4xo27clceto" path="res://Scripts/start_button.gd" id="5_1cjjo"]
 
-[node name="Title Screen" type="MarginContainer" unique_id=679297742]
+[sub_resource type="GDScript" id="GDScript_twnyg"]
+script/source = "extends Button
+var tween:Tween
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pivot_offset = size * Vector2(0.5, 1.0)
+	
+	button_down.connect(_on_button_down)
+	button_up.connect(_on_button_up)
+	
+	
+
+func _on_button_down():
+	if tween: tween.kill()
+	
+	scale = Vector2(0.9, 0.7)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _on_button_up():
+	tween = create_tween()
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_QUAD)
+	
+	tween.tween_property(self, \"scale\", Vector2(1,1), 0.25)
+"
+
+[node name="Save Screen" type="MarginContainer" unique_id=679297742 node_paths=PackedStringArray("save1_button", "save2_button", "save3_button", "save4_button")]
 offset_right = 1155.0
 offset_bottom = 650.0
 theme = ExtResource("1_7uq00")
-script = ExtResource("2_cpnhs")
+script = ExtResource("2_84ofj")
+save1_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/save1Button")
+save2_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/save2Button")
+save3_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/save3Button")
+save4_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/save4Button")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=685132319]
 layout_mode = 2
@@ -73,7 +104,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Save 1"
-script = ExtResource("5_1cjjo")
+script = SubResource("GDScript_twnyg")
 
 [node name="save2Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1169786343 groups=["Buttons"]]
 unique_name_in_owner = true
