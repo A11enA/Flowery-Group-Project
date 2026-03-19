@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ba2em6a278yhg"]
+[gd_scene format=3 uid="uid://dnpaq28igpwuu"]
 
 [ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://1y4y8yuvil3t" path="res://Scenes/player.tscn" id="2_fj7yv"]
@@ -13,4 +13,4 @@ texture = ExtResource("1_f3sb7")
 [node name="Player" parent="." unique_id=417626187 instance=ExtResource("2_fj7yv")]
 position = Vector2(574, 322)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1284320271]
+[node name="Camera2D2" type="Camera2D" parent="Player" unique_id=1284320271]
