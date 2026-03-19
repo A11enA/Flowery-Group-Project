@@ -8,7 +8,6 @@ radius = 32.003906
 
 [node name="Player" type="CharacterBody2D" unique_id=417626187]
 script = ExtResource("1_cvnsp")
-move_speed = 600.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=62737062]
 scale = Vector2(0.5, 0.5)
