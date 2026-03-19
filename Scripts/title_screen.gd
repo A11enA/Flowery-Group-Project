@@ -19,23 +19,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	update_button_transform()
 
-# attach code to button group for tweening
 
 func update_button_transform():
-	## for a group of buttons you can iterate through the array
 	for button in title_screen_buttons:
-		button_hover(button, 1.5, 0.2)
+		button_pressed(button, 0.8, 0.2)
 
 
-func button_hover(button : Button, tween_amt, duration):
-## change the pivot if desired, ratio is from 0 to 1
+func button_pressed(button : Button, tween_amt, duration):
 	button.pivot_offset_ratio = Vector2(0.5, 0.5)
-	if button.is_hovered():
-## if button state is hover than scale up
+	if button.is_pressed():
 		tween(button, "scale", Vector2.ONE * tween_amt, duration)
 	else:
-#print("not hovered")
-## if button state is not hover than scale down (multiply amount * nothing)
 		tween(button, "scale", Vector2.ONE, duration)
 
 func tween(button, property, amount, duration):

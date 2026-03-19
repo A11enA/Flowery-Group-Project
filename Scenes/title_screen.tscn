@@ -4,13 +4,44 @@
 [ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="2_4gxqj"]
 [ext_resource type="Script" uid="uid://efpdy613dgoj" path="res://Scripts/title_screen.gd" id="2_55kwv"]
 [ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scripts/rotation.gd" id="2_twnyg"]
-[ext_resource type="Script" uid="uid://dm4xo27clceto" path="res://Scripts/start_button.gd" id="4_twnyg"]
 
-[node name="Title Screen" type="MarginContainer" unique_id=679297742]
+[sub_resource type="GDScript" id="GDScript_twnyg"]
+script/source = "extends Button
+var tween:Tween
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pivot_offset = size * Vector2(0.5, 1.0)
+	
+	button_down.connect(_on_button_down)
+	button_up.connect(_on_button_up)
+	
+	
+
+func _on_button_down():
+	if tween: tween.kill()
+	
+	scale = Vector2(0.9, 0.7)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _on_button_up():
+	tween = create_tween()
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_QUAD)
+	
+	tween.tween_property(self, \"scale\", Vector2(1,1), 0.25)
+"
+
+[node name="Title Screen" type="MarginContainer" unique_id=679297742 node_paths=PackedStringArray("start_button", "load_button", "option_button", "credit_button")]
 offset_right = 1155.0
 offset_bottom = 650.0
 theme = ExtResource("1_p3fck")
 script = ExtResource("2_55kwv")
+start_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/startButton")
+load_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/loadButton")
+option_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/optionButton")
+credit_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/creditButton")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=685132319]
 layout_mode = 2
@@ -84,7 +115,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Start"
-script = ExtResource("4_twnyg")
+script = SubResource("GDScript_twnyg")
 
 [node name="loadButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1169786343 groups=["Buttons"]]
 unique_name_in_owner = true
