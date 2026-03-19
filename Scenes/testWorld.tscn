@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ba2em6a278yhg"]
+
+[ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="1_rdb4h"]
+[ext_resource type="PackedScene" uid="uid://1y4y8yuvil3t" path="res://Scenes/player.tscn" id="2_b8w0i"]
+[ext_resource type="PackedScene" uid="uid://kyenwys6faus" path="res://Scenes/npc.tscn" id="3_xr43f"]
+[ext_resource type="PackedScene" uid="uid://cygoom5wgcpoq" path="res://Scenes/baseflower.tscn" id="4_emcaa"]
+[ext_resource type="Script" uid="uid://mgg7h2xnasln" path="res://Utilites/flower_attributes.gd" id="5_xvvnt"]
+[ext_resource type="Texture2D" uid="uid://d217k17bvoq1b" path="res://Assets/Images/testflower.jpg" id="6_l8m0x"]
+[ext_resource type="PackedScene" uid="uid://dmkv466uencfj" path="res://Scenes/bug_enemy.tscn" id="7_t0p86"]
+
+[sub_resource type="Resource" id="Resource_5ukr8"]
+script = ExtResource("5_xvvnt")
+texture = ExtResource("6_l8m0x")
+metadata/_custom_type_script = "uid://mgg7h2xnasln"
+
+[node name="World" type="Node2D" unique_id=935309299]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1834151789]
+position = Vector2(577, 326.50003)
+scale = Vector2(2.0342855, 1.8428571)
+texture = ExtResource("1_rdb4h")
+
+[node name="Player" parent="." unique_id=417626187 instance=ExtResource("2_b8w0i")]
+position = Vector2(576, 558)
+
+[node name="Npc" parent="." unique_id=261900754 instance=ExtResource("3_xr43f")]
+position = Vector2(570, 89)
+
+[node name="baseflower" parent="." unique_id=450694347 instance=ExtResource("4_emcaa")]
+position = Vector2(1004, 432)
+attributes = SubResource("Resource_5ukr8")
+
+[node name="BugEnemy" parent="." unique_id=1864485187 instance=ExtResource("7_t0p86")]
+position = Vector2(25, 416)

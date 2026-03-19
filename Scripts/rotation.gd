@@ -23,4 +23,4 @@ func _on_load_button_pressed() -> void:
 
 
 func _on_start_button_pressed() -> void:
-	Global.game_controller.change_scene("res://Scenes/world.tscn")
+	Global.game_controller.change_scene("res://Scenes/Village.tscn")
