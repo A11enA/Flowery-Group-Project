@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 Dialogic="*uid://ds2q0uclmolvu"
 Global="*uid://x512p2yhgmgk"
 PlayerStats="*uid://c0x62gugl8bhf"
-Inventorymanager="*uid://c4eph5mikp81a"
+Inventorymanager="*uid://wremrernhdhf"
 
 [dialogic]
 
