@@ -2,6 +2,13 @@
 
 [ext_resource type="Script" uid="uid://dy4uu41x8bb2a" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bmw3g7vk5mix5" path="res://icon.svg" id="2_6t5aa"]
+[ext_resource type="Script" uid="uid://mgg7h2xnasln" path="res://Utilites/flower_attributes.gd" id="2_vgqql"]
+[ext_resource type="Script" uid="uid://wremrernhdhf" path="res://Scripts/inventorymanager.gd" id="3_fkybt"]
+[ext_resource type="PackedScene" uid="uid://j64scf4gk148" path="res://inv_ui.tscn" id="5_fkybt"]
+
+[sub_resource type="Resource" id="Resource_x3wgy"]
+script = ExtResource("3_fkybt")
+metadata/_custom_type_script = "uid://wremrernhdhf"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
 radius = 32.003906
@@ -10,6 +17,7 @@ radius = 32.003906
 collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_cvnsp")
+inv = SubResource("Resource_x3wgy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=62737062]
 scale = Vector2(0.5, 0.5)
@@ -20,3 +28,5 @@ shape = SubResource("CircleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1756012814]
 zoom = Vector2(2, 2)
+
+[node name="Inv_UI" parent="." unique_id=358855631 instance=ExtResource("5_fkybt")]

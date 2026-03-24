@@ -4,6 +4,7 @@ class_name Player
 @export var move_speed: float = 100.0
 @export var acceleration: float = 10.0
 @export var sprint = 1.5
+@export var inv : InventoryControl
 var direction 
 
 func _ready() -> void:
