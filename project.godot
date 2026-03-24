@@ -11,6 +11,9 @@ config_version=5
 [application]
 
 config/name="Flowery-Group-Project"
+config/description="Group project :)
+"
+config/version="ALPHA"
 run/main_scene="uid://77ph3c5tpfb3"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
@@ -71,6 +74,8 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+layout/style_list=[]
+layout/default_style="Default"
 
 [editor_plugins]
 
@@ -144,3 +149,4 @@ inv={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+Global="*uid://x512p2yhgmgk"

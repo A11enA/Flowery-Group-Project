@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://due7vslmn5brd"
-path="res://.godot/imported/player-pixilart (3).png-28b5e68bc5d81c3ca80ccaa3682f9de3.ctex"
+uid="uid://bjkw6al6gwsic"
+path="res://.godot/imported/player-pixilart (4).png-a4888128b2ab7b1ac17d7f13d8a64910.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/player-pixilart (3).png"
-dest_files=["res://.godot/imported/player-pixilart (3).png-28b5e68bc5d81c3ca80ccaa3682f9de3.ctex"]
+source_file="res://Assets/Sprites/player-pixilart (4).png"
+dest_files=["res://.godot/imported/player-pixilart (4).png-a4888128b2ab7b1ac17d7f13d8a64910.ctex"]
 
 [params]
 

@@ -2,33 +2,117 @@
 
 [ext_resource type="Script" uid="uid://dy4uu41x8bb2a" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Script" uid="uid://mgg7h2xnasln" path="res://Utilites/flower_attributes.gd" id="2_vgqql"]
-[ext_resource type="Script" uid="uid://wremrernhdhf" path="res://Scripts/inventorymanager.gd" id="3_fkybt"]
-[ext_resource type="PackedScene" uid="uid://j64scf4gk148" path="res://inv_ui.tscn" id="5_fkybt"]
+[ext_resource type="Script" path="res://Scripts/inventorymanager.gd" id="3_fkybt"]
+[ext_resource type="Texture2D" uid="uid://bjkw6al6gwsic" path="res://Assets/Sprites/player-pixilart (4).png" id="4_fkybt"]
+[ext_resource type="PackedScene" path="res://inv_ui.tscn" id="5_fkybt"]
 
 [sub_resource type="Resource" id="Resource_x3wgy"]
 script = ExtResource("3_fkybt")
-metadata/_custom_type_script = "uid://wremrernhdhf"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
+atlas = ExtResource("4_fkybt")
+region = Rect2(19, 0, 19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
+atlas = ExtResource("4_fkybt")
+region = Rect2(0, 0, 19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
+atlas = ExtResource("4_fkybt")
+region = Rect2(38, 0, 19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
+atlas = ExtResource("4_fkybt")
+region = Rect2(19, 20, 19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukyrk"]
+atlas = ExtResource("4_fkybt")
+region = Rect2(0, 20, 19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4iuc"]
+atlas = ExtResource("4_fkybt")
+region = Rect2(38, 20, 19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqcod"]
+atlas = ExtResource("4_fkybt")
+region = Rect2(19, 40, 19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fd4e3"]
+atlas = ExtResource("4_fkybt")
+region = Rect2(0, 40, 19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igrcy"]
+atlas = ExtResource("4_fkybt")
+region = Rect2(38, 40, 19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6n3p"]
+atlas = ExtResource("4_fkybt")
+region = Rect2(19, 60, 19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs7ks"]
+atlas = ExtResource("4_fkybt")
+region = Rect2(0, 60, 19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olqyp"]
+atlas = ExtResource("4_fkybt")
+region = Rect2(38, 60, 19, 20)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vgqql"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gymyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx1dd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu2lt")
+}],
 "loop": true,
-"name": &"move_down",
+"name": &"walk_down",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dp3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukyrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4iuc")
+}],
 "loop": true,
-"name": &"move_left",
+"name": &"walk_left",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqcod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fd4e3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igrcy")
+}],
 "loop": true,
-"name": &"move_right",
+"name": &"walk_right",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6n3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs7ks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olqyp")
+}],
 "loop": true,
-"name": &"move_up",
+"name": &"walk_up",
 "speed": 5.0
 }]
 
@@ -39,11 +123,14 @@ radius = 32.003906
 collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_cvnsp")
+move_speed = 500.0
 inv = SubResource("Resource_x3wgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1255805462]
+position = Vector2(-2.9999998, -2.9999998)
+scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_vgqql")
-animation = &"move_right"
+animation = &"walk_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1038736412]
 shape = SubResource("CircleShape2D_cvnsp")
