@@ -30,3 +30,8 @@ shape = SubResource("CircleShape2D_cvnsp")
 zoom = Vector2(2, 2)
 
 [node name="Inv_UI" parent="." unique_id=358855631 instance=ExtResource("5_fkybt")]
+offset_left = -132.0
+offset_top = -245.99998
+offset_right = 589.0
+offset_bottom = 251.00002
+scale = Vector2(0.386386, 0.39276767)
