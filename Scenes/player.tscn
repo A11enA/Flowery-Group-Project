@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dy4uu41x8bb2a" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Script" uid="uid://mgg7h2xnasln" path="res://Utilites/flower_attributes.gd" id="2_vgqql"]
-[ext_resource type="Script" path="res://Scripts/inventorymanager.gd" id="3_fkybt"]
+[ext_resource type="Script" uid="uid://wremrernhdhf" path="res://Scripts/inventorymanager.gd" id="3_fkybt"]
 [ext_resource type="Texture2D" uid="uid://bjkw6al6gwsic" path="res://Assets/Sprites/player-pixilart (4).png" id="4_fkybt"]
 [ext_resource type="PackedScene" path="res://inv_ui.tscn" id="5_fkybt"]
 
@@ -123,7 +123,6 @@ radius = 32.003906
 collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_cvnsp")
-move_speed = 500.0
 inv = SubResource("Resource_x3wgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1255805462]

@@ -1,6 +1,6 @@
 extends Control
 
-@onready var inv: InventoryControl = preload("res://Scripts/inventorymanager.gd")
+##@onready var inv: InventoryControl = preload("res://Scripts/inventorymanager.gd")
 
 var is_open = false
 
