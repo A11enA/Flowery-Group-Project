@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://1y4y8yuvil3t"]
 
 [ext_resource type="Script" uid="uid://dy4uu41x8bb2a" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://bmw3g7vk5mix5" path="res://icon.svg" id="2_6t5aa"]
 [ext_resource type="Script" uid="uid://mgg7h2xnasln" path="res://Utilites/flower_attributes.gd" id="2_vgqql"]
 [ext_resource type="Script" uid="uid://wremrernhdhf" path="res://Scripts/inventorymanager.gd" id="3_fkybt"]
 [ext_resource type="PackedScene" uid="uid://j64scf4gk148" path="res://inv_ui.tscn" id="5_fkybt"]
@@ -9,6 +8,29 @@
 [sub_resource type="Resource" id="Resource_x3wgy"]
 script = ExtResource("3_fkybt")
 metadata/_custom_type_script = "uid://wremrernhdhf"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vgqql"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"move_down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"move_left",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"move_right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"move_up",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
 radius = 32.003906
@@ -19,9 +41,9 @@ collision_mask = 13
 script = ExtResource("1_cvnsp")
 inv = SubResource("Resource_x3wgy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=62737062]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_6t5aa")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1255805462]
+sprite_frames = SubResource("SpriteFrames_vgqql")
+animation = &"move_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1038736412]
 shape = SubResource("CircleShape2D_cvnsp")

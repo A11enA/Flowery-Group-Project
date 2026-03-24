@@ -32,3 +32,4 @@ attributes = SubResource("Resource_5ukr8")
 
 [node name="BugEnemy" parent="." unique_id=1864485187 instance=ExtResource("7_t0p86")]
 position = Vector2(25, 416)
+script = null
