@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dd8td1dlcsdr7"]
+
+[ext_resource type="Script" uid="uid://d0at8td332e6i" path="res://inv_ui_slot.gd" id="1_l1ld1"]
+[ext_resource type="Texture2D" uid="uid://bmw3g7vk5mix5" path="res://icon.svg" id="1_t52p0"]
+
+[node name="inv_UI_slot" type="Panel" unique_id=111100005]
+modulate = Color(6.9061527, 4.836114, 6.9061527, 1)
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(206, 206)
+offset_right = 206.0
+offset_bottom = 206.0
+script = ExtResource("1_l1ld1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=861591390]
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("1_t52p0")
+centered = false
+
+[node name="Item_display" type="Sprite2D" parent="." unique_id=1413859779]
