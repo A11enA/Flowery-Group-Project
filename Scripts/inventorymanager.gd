@@ -8,9 +8,9 @@ signal inventory_changed
  
 @export var items: Array[flower_attributes]
 
-#func add_item(item: flower_attributes):
-	#items.append(item)
-	#inventory_changed.emit()
+func add_item(item: flower_attributes):
+	items.append(item)
+	inventory_changed.emit()
  
 func update_item(item,amount):
 	if items.has(item):

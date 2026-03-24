@@ -1,11 +1,13 @@
 extends Control
 
+@onready var inv: InventoryControl = preload("res://Scripts/inventorymanager.gd")
+
 var is_open = false
 
-func _ready() -> void:
+func _ready():
 	close()
 
-func _process(delta: float) -> void:
+func _process(delta):
 	if Input.is_action_just_pressed("inv"):
 		print("i")
 		if is_open:
@@ -19,4 +21,4 @@ func open():
 
 func close(): 
 	visible = false
-	is_open = true
+	is_open = false
