@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cebp2mxrdhgjs" path="res://Scenes/title_screen.tscn" id="2_ppfu0"]
 [ext_resource type="PackedScene" uid="uid://do71ng8lvdetc" path="res://Scenes/loadingScreen.tscn" id="3_7la68"]
 
-[node name="GameControl" type="Node" unique_id=728303283]
+[node name="GameControl" type="Node" unique_id=728303283 groups=["Global"]]
 script = ExtResource("1_goscw")
 
 [node name="World" type="Node" parent="." unique_id=857930202]

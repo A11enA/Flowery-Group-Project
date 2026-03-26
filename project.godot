@@ -84,6 +84,8 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/inve
 [global_group]
 
 Persistent="Persistent objects"
+SceneManager=""
+Global=""
 
 [input]
 
