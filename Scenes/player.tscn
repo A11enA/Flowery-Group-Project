@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://mgg7h2xnasln" path="res://Utilites/flower_attributes.gd" id="2_vgqql"]
 [ext_resource type="Script" uid="uid://wremrernhdhf" path="res://Scripts/inventorymanager.gd" id="3_fkybt"]
 [ext_resource type="Texture2D" uid="uid://bjkw6al6gwsic" path="res://Assets/Sprites/player-pixilart (4).png" id="4_fkybt"]
-[ext_resource type="PackedScene" path="res://inv_ui.tscn" id="5_fkybt"]
+[ext_resource type="PackedScene" uid="uid://j64scf4gk148" path="res://inv_ui.tscn" id="5_fkybt"]
 
 [sub_resource type="Resource" id="Resource_x3wgy"]
 script = ExtResource("3_fkybt")
