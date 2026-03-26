@@ -85,5 +85,5 @@ id = 7
 
 [resource]
 script = ExtResource("2_database")
-items = Array[ExtResource("1_definition")]([SubResource("item_health_potion"), SubResource("item_iron_sword"), SubResource("item_magic_scroll"), SubResource("item_quest_key"), SubResource("item_leather_armor"), SubResource("item_rare_gem"), SubResource("Resource_dqxuk")])
+items = Array[ExtResource("1_definition")]([SubResource("item_health_potion"), SubResource("item_iron_sword"), SubResource("item_magic_scroll"), SubResource("item_quest_key"), SubResource("item_leather_armor"), SubResource("item_rare_gem")])
 _migration_v2_materials_done = true
