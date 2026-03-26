@@ -16,7 +16,7 @@ config/description="Group project :)
 config/version="ALPHA"
 run/main_scene="uid://77ph3c5tpfb3"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [autoload]
 
@@ -24,16 +24,12 @@ Dialogic="*uid://ds2q0uclmolvu"
 Global="*uid://x512p2yhgmgk"
 PlayerStats="*uid://c0x62gugl8bhf"
 Inventorymanager="*uid://wremrernhdhf"
+SAVE_MANAGER="*uid://ctt30dnwyf7w6"
 
 [dialogic]
 
-directories/dch_directory={
-"Ial Tutor": "res://Characters/Ial Tutor.dch",
-"character": "res://Characters/character.dch"
-}
-directories/dtl_directory={
-"Tutorial": "res://Timeline/Tutorial.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 layout/style_directory={}
 variables={
 "Likability": {
@@ -79,7 +75,7 @@ layout/default_style="Default"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/inventory_forge/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/inventory_forge/plugin.cfg", "res://addons/simple_save_tool/plugin.cfg")
 
 [global_group]
 
