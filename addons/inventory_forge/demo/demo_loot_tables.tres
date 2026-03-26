@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="LootTableDatabase" format=3 uid="uid://btspgemgfpbge"]
+
+[ext_resource type="Script" uid="uid://dlxvgna2pfwix" path="res://addons/inventory_forge/resources/loot_table_database.gd" id="1_n2lop"]
+[ext_resource type="Script" uid="uid://cijsyulqf2r64" path="res://addons/inventory_forge/resources/loot_table.gd" id="2_cnrkw"]
+
+[resource]
+script = ExtResource("1_n2lop")
