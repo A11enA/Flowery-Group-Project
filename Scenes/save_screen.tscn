@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b2vj3fxx3k4pw"]
 
 [ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="1_7uq00"]
-[ext_resource type="Script" uid="uid://djehpx8avjcmo" path="res://Scenes/save_screen.gd" id="2_84ofj"]
-[ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scripts/rotation.gd" id="3_gggy6"]
+[ext_resource type="Script" uid="uid://djehpx8avjcmo" path="res://Scenes/Scripts/save_screen.gd" id="2_84ofj"]
+[ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scenes/Scripts/rotation.gd" id="3_gggy6"]
 [ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="4_lfbfu"]
 
 [sub_resource type="GDScript" id="GDScript_twnyg"]

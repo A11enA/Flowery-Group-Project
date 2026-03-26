@@ -2,8 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="1_p3fck"]
 [ext_resource type="Texture2D" uid="uid://basrd6iuma74l" path="res://Assets/Images/daisy-flower-isolated-on-background-with-generative-ai-png.png" id="2_4gxqj"]
-[ext_resource type="Script" uid="uid://efpdy613dgoj" path="res://Scripts/title_screen.gd" id="2_55kwv"]
-[ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scripts/rotation.gd" id="2_twnyg"]
+[ext_resource type="Script" uid="uid://efpdy613dgoj" path="res://Scenes/Scripts/title_screen.gd" id="2_55kwv"]
+[ext_resource type="Script" uid="uid://syfuhoux2ai7" path="res://Scenes/Scripts/rotation.gd" id="2_twnyg"]
 
 [sub_resource type="GDScript" id="GDScript_twnyg"]
 script/source = "extends Button

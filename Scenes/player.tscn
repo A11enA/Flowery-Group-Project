@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://1y4y8yuvil3t"]
 
-[ext_resource type="Script" uid="uid://dy4uu41x8bb2a" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://dy4uu41x8bb2a" path="res://Scenes/Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Script" uid="uid://mgg7h2xnasln" path="res://Utilites/flower_attributes.gd" id="2_vgqql"]
-[ext_resource type="Script" uid="uid://wremrernhdhf" path="res://Scripts/inventorymanager.gd" id="3_fkybt"]
+[ext_resource type="Script" uid="uid://wremrernhdhf" path="res://Scenes/Scripts/inventorymanager.gd" id="3_fkybt"]
 [ext_resource type="Texture2D" uid="uid://bjkw6al6gwsic" path="res://Assets/Sprites/player-pixilart (4).png" id="4_fkybt"]
 [ext_resource type="PackedScene" uid="uid://j64scf4gk148" path="res://inv_ui.tscn" id="5_fkybt"]
 
