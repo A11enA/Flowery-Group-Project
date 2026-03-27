@@ -3,8 +3,8 @@ extends Node2D
 
 
 #func _ready() -> void:
-	#store type of tiles in array to only spawn flowers on flower tiles
-	#different array for tiles that have flowers on them 
+	#store type of tiles  array to only spawn flowers on flower tiles
+	#different array finor tiles that have flowers on them 
 	#timer for flower spawn -> three minutes 
 
 
