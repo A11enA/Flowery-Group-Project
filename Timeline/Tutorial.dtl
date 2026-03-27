@@ -1,12 +1,22 @@
 join "Ial Tutor" (Default) center [animation="Fade In"]
-"Ial Tutor": Hello, You must be that newbie i've heard so much about!
-"Ial Tutor" (Smile): I come bearing gifts! I hope you can get as much use out of them as my husband did!
-- Thank You!
-	set {Likability.Ial} += 2.0
-	"Ial Tutor" (Smile): Well arent you polite! Ask me for help anytime.
-- No, Thank you anyway.
-	set {Likability.Ial} += 1.0
-	"Ial Tutor" (Default): Ok, Tell me if you change your mind!
-- I don't want your charity.
-	set {Likability.Ial} -= 2.0
-	"Ial Tutor" (Frown): Oh, how rude.
+"Ial Tutor": Welcome to Flora Falls!
+"Ial Tutor" (Default): We don’t get many tourists this far out. What is your business here?
+- Sorry, I forgot to introduce myself. My name is MC.
+set {Likability.Ial} += 2.0
+"Ial Tutor" (Flustered): As in the legendary line of florists? Fascinating…
+- I want to make a name for myself. I am going to create a florist business of my own to rival my family's.
+set {Likability.Ial} += 1.0
+set {Likability.Ial} -= 2.0
+"Ial Tutor" (Smile): Of course! Flora Falls is known for our abundance of common and rare flowers alike.
+"Ial Tutor" (Default): I am Tutor Ial, a humble teacher to the few children that live here.
+- Can I count on you to teach me a little bit about how I should start my business?
+- You seem like you would appreciate a flower or two...
+- Can I interest you in some flowers I don’t have yet?
+"Ial Tutor" (Smile):  I would be honored to be your first customer! I prefer tulips to spruce up my house a little.
+"Ial Tutor" (Default): With all of my kids dirtying the house I haven’t had enough time to decorate.
+- Where could I find them?
+"Ial Tutor": Ah yes. Common flowers like tulips can be found in the flower field east of here.
+"Ial Tutor" (Frown): But I must warn you, there are bees that like to roam around there.
+- And where can I find you to deliver them?
+"Ial Tutor" (Smile): This town is small enough for you to find your way around. If you knock on the wrong door perhaps you might meet a new potential customer.
+"Ial Tutor": Ciao!

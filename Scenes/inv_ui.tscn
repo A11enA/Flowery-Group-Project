@@ -1,9 +1,5 @@
 [gd_scene format=3 uid="uid://j64scf4gk148"]
 
-[ext_resource type="Script" uid="uid://hm0fd05ujbje" path="res://Scenes/Scripts/inv_ui.gd" id="1_64hv7"]
-[ext_resource type="Texture2D" uid="uid://bmw3g7vk5mix5" path="res://icon.svg" id="2_s7you"]
-[ext_resource type="PackedScene" uid="uid://dd8td1dlcsdr7" path="res://inv_ui_slot.tscn" id="3_cgw14"]
-
 [node name="Inv_UI" type="Control" unique_id=358855631]
 layout_mode = 3
 anchors_preset = 0
@@ -15,7 +11,6 @@ layout_mode = 0
 offset_top = 2.0
 offset_right = 720.0
 offset_bottom = 498.0
-
 patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
