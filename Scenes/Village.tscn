@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://nkexf3iisl8f" path="res://TileSets/Grass.tres" id="1_ptt31"]
 [ext_resource type="PackedScene" uid="uid://1y4y8yuvil3t" path="res://Scenes/player.tscn" id="2_fdddk"]
-[ext_resource type="PackedScene" path="res://Scenes/npc.tscn" id="3_nd6jl"]
+[ext_resource type="PackedScene" uid="uid://kyenwys6faus" path="res://Scenes/npc.tscn" id="3_nd6jl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ptt31"]
 
@@ -17,6 +17,7 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=417626187 instance=ExtResource("2_fdddk")]
 scale = Vector2(0.5, 0.5)
+sprint = 0.0
 
 [node name="Npc" parent="." unique_id=261900754 instance=ExtResource("3_nd6jl")]
 position = Vector2(0, -320)

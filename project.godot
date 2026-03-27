@@ -28,8 +28,13 @@ SAVE_MANAGER="*uid://ctt30dnwyf7w6"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"Ial Tutor": "res://Characters/Ial Tutor.dch",
+"character": "res://Characters/character.dch"
+}
+directories/dtl_directory={
+"Tutorial": "res://Timeline/Tutorial.dtl"
+}
 layout/style_directory={}
 variables={
 "Likability": {
