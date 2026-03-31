@@ -79,10 +79,6 @@ sell_price = 500
 rarity = 4
 craftable = true
 
-[sub_resource type="Resource" id="Resource_dqxuk"]
-script = ExtResource("1_definition")
-id = 7
-
 [resource]
 script = ExtResource("2_database")
 items = Array[ExtResource("1_definition")]([SubResource("item_health_potion"), SubResource("item_iron_sword"), SubResource("item_magic_scroll"), SubResource("item_quest_key"), SubResource("item_leather_armor"), SubResource("item_rare_gem")])

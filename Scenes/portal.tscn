@@ -9,6 +9,7 @@ size = Vector2(11, 10)
 script = ExtResource("1_j20fm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1963937601]
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_vff14")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

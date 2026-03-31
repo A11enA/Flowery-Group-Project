@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://nkexf3iisl8f" path="res://TileSets/Grass.tres" id="1_ptt31"]
 [ext_resource type="PackedScene" uid="uid://1y4y8yuvil3t" path="res://Scenes/player.tscn" id="2_fdddk"]
-[ext_resource type="PackedScene" path="res://Scenes/npc.tscn" id="3_nd6jl"]
+[ext_resource type="PackedScene" uid="uid://kyenwys6faus" path="res://Scenes/npc.tscn" id="3_nd6jl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ptt31"]
 

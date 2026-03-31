@@ -1,6 +1,9 @@
 extends Node
 
 var game_controller : GameControl
+var player_start_position: Vector2
+var player_spawn_position: Vector2 = Vector2(144,200)
+var player_hp = 3
 
 
 # Called when the node enters the scene tree for the first time.
