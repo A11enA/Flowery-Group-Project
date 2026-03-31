@@ -158,13 +158,19 @@ texture = ExtResource("1_u1nt8")
 9:3/0 = 0
 10:3/0 = 0
 0:4/0 = 0
-0:4/0/probability = 500.0
+0:4/0/probability = 50.0
+0:4/0/custom_data_0 = true
 1:4/0 = 0
+1:4/0/custom_data_0 = true
 2:4/0 = 0
+2:4/0/custom_data_0 = true
 3:4/0 = 0
+3:4/0/custom_data_0 = true
 
 [resource]
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+custom_data_layer_0/name = "Spawn Flowers"
+custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_i1dcv")

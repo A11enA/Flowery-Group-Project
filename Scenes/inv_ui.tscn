@@ -9,14 +9,12 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 724.0
 offset_bottom = 499.0
-script = ExtResource("1_owgac")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1083523490]
 layout_mode = 0
 offset_top = 2.0
 offset_right = 720.0
 offset_bottom = 498.0
-texture = ExtResource("2_khj2i")
 patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
@@ -36,21 +34,3 @@ offset_bottom = 219.5
 grow_horizontal = 2
 grow_vertical = 2
 columns = 3
-
-[node name="inv_UI_slot" parent="NinePatchRect/GridContainer" unique_id=111100005 instance=ExtResource("3_kscwq")]
-layout_mode = 2
-
-[node name="inv_UI_slot2" parent="NinePatchRect/GridContainer" unique_id=980291645 instance=ExtResource("3_kscwq")]
-layout_mode = 2
-
-[node name="inv_UI_slot3" parent="NinePatchRect/GridContainer" unique_id=1568622500 instance=ExtResource("3_kscwq")]
-layout_mode = 2
-
-[node name="inv_UI_slot4" parent="NinePatchRect/GridContainer" unique_id=679726395 instance=ExtResource("3_kscwq")]
-layout_mode = 2
-
-[node name="inv_UI_slot5" parent="NinePatchRect/GridContainer" unique_id=2009861510 instance=ExtResource("3_kscwq")]
-layout_mode = 2
-
-[node name="inv_UI_slot6" parent="NinePatchRect/GridContainer" unique_id=1648653950 instance=ExtResource("3_kscwq")]
-layout_mode = 2

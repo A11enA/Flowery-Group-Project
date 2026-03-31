@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://nkexf3iisl8f" path="res://TileSets/Grass.tres" id="1_ptt31"]
 [ext_resource type="PackedScene" uid="uid://1y4y8yuvil3t" path="res://Scenes/player.tscn" id="2_fdddk"]
 [ext_resource type="PackedScene" uid="uid://kyenwys6faus" path="res://Scenes/npc.tscn" id="3_nd6jl"]
+[ext_resource type="PackedScene" uid="uid://c7gmms1n2drqs" path="res://Scenes/portal.tscn" id="4_fdddk"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ptt31"]
 
@@ -15,8 +16,11 @@ tile_map_data = PackedByteArray("AAAAANz/AQAFAAEAAAD//9z/AQAFAAEAAAD//9v/AQABAAA
 tile_set = ExtResource("1_ptt31")
 metadata/_edit_lock_ = true
 
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=244311342]
+
 [node name="Player" parent="." unique_id=417626187 instance=ExtResource("2_fdddk")]
 scale = Vector2(0.5, 0.5)
+sprint = 0.0
 
 [node name="Npc" parent="." unique_id=261900754 instance=ExtResource("3_nd6jl")]
 position = Vector2(0, -320)
@@ -42,3 +46,7 @@ shape = SubResource("WorldBoundaryShape2D_c183e")
 position = Vector2(-1000, -1000)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_c183e")
+
+[node name="Portal" parent="." unique_id=1773961177 instance=ExtResource("4_fdddk")]
+position = Vector2(965, 2)
+next_scene = "res://Scenes/east_field.tscn"

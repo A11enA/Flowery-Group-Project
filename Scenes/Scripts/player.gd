@@ -22,6 +22,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("sprint"):
 			velocity *= sprint
 	move_and_slide()
+	
 func move_player():
 	var move_vector: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	#velocity = move_vector * move_speed
