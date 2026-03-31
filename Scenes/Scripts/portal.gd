@@ -18,7 +18,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		print("entered the portal")
 		Global.game_controller.player_spawn_position = player_location
-		get_tree().change_scene_to_file.call_deferred(next_scene)
+		Global.game_controller.change_scene(next_scene)
 
 
 func _on_body_exited(body: Node2D) -> void:

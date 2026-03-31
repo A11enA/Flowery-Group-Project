@@ -14,14 +14,14 @@ config/name="Flowery-Group-Project"
 config/description="Group project :)
 "
 config/version="ALPHA"
-run/main_scene="uid://77ph3c5tpfb3"
+run/main_scene="uid://dcqtvabkrvrvv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
 [autoload]
 
-Dialogic="*uid://ds2q0uclmolvu"
 Global="*uid://x512p2yhgmgk"
+Dialogic="*uid://ds2q0uclmolvu"
 PlayerStats="*uid://c0x62gugl8bhf"
 Inventorymanager="*uid://wremrernhdhf"
 SAVE_MANAGER="*uid://ctt30dnwyf7w6"

@@ -1,11 +1,13 @@
-[gd_scene format=3 uid="uid://77ph3c5tpfb3"]
+[gd_scene format=3 uid="uid://dcqtvabkrvrvv"]
 
-[ext_resource type="Script" uid="uid://bsey4bx64ul0" path="res://Scenes/Scripts/game_controller.gd" id="1_goscw"]
+[ext_resource type="Script" uid="uid://bigtr6bn5sirt" path="res://Scenes/Scripts/gameController.gd" id="1_goscw"]
 [ext_resource type="PackedScene" uid="uid://cebp2mxrdhgjs" path="res://Scenes/title_screen.tscn" id="2_ppfu0"]
 [ext_resource type="PackedScene" uid="uid://do71ng8lvdetc" path="res://Scenes/loadingScreen.tscn" id="3_7la68"]
 
-[node name="GameControl" type="Node" unique_id=728303283 groups=["Global"]]
+[node name="GameControl" type="Node" unique_id=728303283 node_paths=PackedStringArray("scene_holder", "translation_controller") groups=["Global"]]
 script = ExtResource("1_goscw")
+scene_holder = NodePath("World")
+translation_controller = NodePath("loading Screen")
 
 [node name="World" type="Node" parent="." unique_id=857930202]
 
