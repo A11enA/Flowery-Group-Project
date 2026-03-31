@@ -15,7 +15,7 @@ extends Node2D
 # this is if you are just using scenes
 #@export var scenes_to_spawn: Array[PackedScene] = []
 # for a scene that uses custom resources, do this
-const PICKUPS_SCENE: PackedScene = preload("res://Scenes/baseflower.tscn")
+const PICKUPS_SCENE: PackedScene = preload("res://Scenes/Collectibles/pickup.tscn")
 @export var resources_to_spawn: Array[Resource] = []
 #const SPAWN_CUSTOM_DATA_NAME = "Spawnable"
 #const SPAWN_CUSTOM_DATA_VALUE = 1
@@ -27,6 +27,7 @@ func _ready() -> void:
 	randomize()
 	spawn_scenes(max_spawn_amount)
 	
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func spawn_scenes(count: int) -> void:

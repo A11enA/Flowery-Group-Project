@@ -1,22 +1,25 @@
 extends Area2D
 
-@export var attributes : flower_attributes
+@export var item : Item
+
 var value: float
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var animation : AnimationPlayer = $AnimationPlayer
 @onready var sound : AudioStreamPlayer = $AudioStreamPlayer
 # Called when the node enters the scene tree for the first time.
 
-func _ready() -> void:
-	value = attributes.value
-	sprite.texture = attributes.texture
 
-func collected():
-	Inventorymanager.add_item(attributes)
-	print("im in inventory")
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	# fill the values from our resource
+	#energy = item.energy
+	sprite.texture = item.texture
 
 func _on_body_entered(body: Node2D) -> void:
-	if body is Player:
-		collected()
-		queue_free()
-		print("im gone")
+	if body.has_method("on_item_picked_up"):
+		body.on_item_picked_up(item)
+		#PlayerManager.player_hp += energy
+		animation.play("eaten")
+		
+func del_item_onscreen():
+	queue_free()
