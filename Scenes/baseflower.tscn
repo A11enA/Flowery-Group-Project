@@ -1,13 +1,6 @@
 [gd_scene format=3 uid="uid://cygoom5wgcpoq"]
 
-[ext_resource type="Script" uid="uid://y1j7t3pe13w1" path="res://Scripts/baseflower.gd" id="1_jsq7h"]
-[ext_resource type="Script" uid="uid://mgg7h2xnasln" path="res://Utilites/flower_attributes.gd" id="2_f56yq"]
-[ext_resource type="Texture2D" uid="uid://d217k17bvoq1b" path="res://Assets/Images/testflower.jpg" id="2_jsq7h"]
-
-[sub_resource type="Resource" id="Resource_y2d71"]
-script = ExtResource("2_f56yq")
-texture = ExtResource("2_jsq7h")
-metadata/_custom_type_script = "uid://mgg7h2xnasln"
+[ext_resource type="Script" uid="uid://y1j7t3pe13w1" path="res://Scenes/Scripts/baseflower.gd" id="1_jsq7h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f56yq"]
 radius = 51.0
@@ -48,12 +41,13 @@ _data = {
 }
 
 [node name="baseflower" type="Area2D" unique_id=450694347]
+rotation = 0.017453292
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_jsq7h")
-attributes = SubResource("Resource_y2d71")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1315787143]
 rotation = 0.18325958
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.2, 0.2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=538056892]
 shape = SubResource("CapsuleShape2D_f56yq")

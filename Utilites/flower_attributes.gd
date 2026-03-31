@@ -1,5 +1,6 @@
 extends Resource
-class_name flower_attributes
+class_name Item
+
 
 @export var texture : Texture2D
 @export var value : float = 10.0
