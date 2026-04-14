@@ -1434,7 +1434,3 @@ scale = Vector2(0.5, 0.5)
 [node name="Spawner" parent="." unique_id=928819219 node_paths=PackedStringArray("tilemap_layer") instance=ExtResource("3_0jkes")]
 tilemap_layer = NodePath("../Spawn_Layer")
 resources_to_spawn = Array[Resource]([ExtResource("3_5yt8q"), ExtResource("2_0jkes")])
-
-[node name="dalies" parent="." unique_id=450694347 instance=ExtResource("6_5yt8q")]
-position = Vector2(43.00003, 228)
-item = ExtResource("2_0jkes")
