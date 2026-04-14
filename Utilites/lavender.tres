@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="flower_attributes" format=3 uid="uid://wjqdf3lfmg2g"]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://wjqdf3lfmg2g"]
 
 [ext_resource type="Script" uid="uid://mgg7h2xnasln" path="res://Utilites/flower_attributes.gd" id="1_4tt8g"]
-[ext_resource type="Texture2D" uid="uid://do7gljsp6nda3" path="res://Assets/Sprites/Ial Tutor/Frown.png" id="2_iviys"]
+[ext_resource type="Texture2D" uid="uid://6ixeqkhu8l3s" path="res://Assets/pixilart-drawing (20).png" id="2_iviys"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_354nr"]
+atlas = ExtResource("2_iviys")
+region = Rect2(24, 0, 24, 24)
 
 [resource]
 script = ExtResource("1_4tt8g")
-texture = ExtResource("2_iviys")
+texture = SubResource("AtlasTexture_354nr")
 desc = "lavvan"
 metadata/_custom_type_script = "uid://mgg7h2xnasln"
