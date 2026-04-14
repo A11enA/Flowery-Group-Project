@@ -4,8 +4,9 @@ class_name Player
 @export var move_speed: float = 100.0
 @export var acceleration: float = 5.0
 @export var sprint = 1.5
-@export var inv : InventoryControl
 var direction 
+
+var inventory : Inventory = Inventory.new()
 
 func _ready() -> void:
 	pass
@@ -18,9 +19,6 @@ func _physics_process(delta: float) -> void:
 	#var move_vector: Vector2 = Input.get_vector("move_left","move_right","move_up","move_down")
 	#velocity = move_vector * move_speed
 	move_player()
-
-	if Input.is_action_pressed("sprint"):
-			velocity *= sprint
 	move_and_slide()
 	
 func move_player():
@@ -39,3 +37,7 @@ func move_player():
 	else:
 		$AnimatedSprite2D.stop()
 	
+
+func on_item_picked_up(item : Item):
+	print("I picked up a ", item.name)
+	inventory.add_item(item)

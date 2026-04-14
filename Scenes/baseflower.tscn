@@ -3,22 +3,11 @@
 [ext_resource type="Script" uid="uid://y1j7t3pe13w1" path="res://Scenes/Scripts/baseflower.gd" id="1_jsq7h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f56yq"]
-radius = 51.0
-height = 118.0
+radius = 119.98173
+height = 415.79703
 
 [sub_resource type="Animation" id="Animation_f56yq"]
 length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.18325958, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
 
 [sub_resource type="Animation" id="Animation_y2d71"]
 resource_name = "moving"
@@ -40,13 +29,12 @@ _data = {
 &"moving": SubResource("Animation_y2d71")
 }
 
-[node name="baseflower" type="Area2D" unique_id=450694347]
+[node name="pickups" type="Area2D" unique_id=450694347]
 rotation = 0.017453292
 scale = Vector2(0.25, 0.25)
 script = ExtResource("1_jsq7h")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1315787143]
-rotation = 0.18325958
 scale = Vector2(0.2, 0.2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=538056892]
