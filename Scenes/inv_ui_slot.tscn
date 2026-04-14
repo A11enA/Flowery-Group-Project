@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dd8td1dlcsdr7"]
+[gd_scene format=3 uid="uid://gy6e6q5f1ou1"]
 
-[ext_resource type="Script" uid="uid://d0at8td332e6i" path="res://Scripts/inv_ui_slot.gd" id="1_dvbtt"]
+[ext_resource type="Script" uid="uid://d0at8td332e6i" path="res://Scenes/Scripts/inv_ui_slot.gd" id="1_dvbtt"]
 [ext_resource type="Texture2D" uid="uid://bmw3g7vk5mix5" path="res://Assets/icon.svg" id="2_hh5vi"]
 
 [node name="inv_UI_slot" type="Panel" unique_id=111100005]

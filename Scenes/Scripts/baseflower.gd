@@ -8,7 +8,6 @@ var value: float
 @onready var sound : AudioStreamPlayer = $AudioStreamPlayer
 # Called when the node enters the scene tree for the first time.
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# fill the values from our resource
@@ -19,7 +18,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("on_item_picked_up"):
 		body.on_item_picked_up(item)
 		#PlayerManager.player_hp += energy
-		animation.play("eaten")
-		
+		#animation.play("eaten")
+
 func del_item_onscreen():
 	queue_free()
