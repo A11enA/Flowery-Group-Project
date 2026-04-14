@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bkcmgkcfl4eig" path="res://Serene_Village_revamped_v1.9 - Copy/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Outside_Stuff_TILESET_B-C-D-E.png" id="3_c183e"]
 [ext_resource type="PackedScene" uid="uid://kyenwys6faus" path="res://Scenes/npc.tscn" id="3_nd6jl"]
 [ext_resource type="PackedScene" uid="uid://c7gmms1n2drqs" path="res://Scenes/portal.tscn" id="4_fdddk"]
+[ext_resource type="Texture2D" uid="uid://b6vqj64k1suxk" path="res://Assets/house-pixilart.png" id="4_holt8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ileq"]
 texture = ExtResource("2_holt8")
@@ -2661,10 +2662,16 @@ texture = ExtResource("3_c183e")
 42:0/0 = 0
 42:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40.745895, -35.43123, 23.030304, -38.97435, 24.801865, 40.74591, -23.030289, 40.74591)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c183e"]
+texture = ExtResource("4_holt8")
+0:0/size_in_atlas = Vector2i(3, 3)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_5s3ts"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2ileq")
 sources/1 = SubResource("TileSetAtlasSource_286iq")
+sources/2 = SubResource("TileSetAtlasSource_c183e")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ptt31"]
 
@@ -2678,7 +2685,7 @@ tile_set = ExtResource("1_ptt31")
 metadata/_edit_lock_ = true
 
 [node name="Houses" type="TileMapLayer" parent="." unique_id=1400693160]
-tile_map_data = PackedByteArray("AADg/+P/AAADAAEAAAATAOr/AAAQAAwAAAD6/+P/AAABAAwAAAAmAM7/AQAbABMAAADM/9L/AQAbABMAAADE/+f/AQAbABMAAADx/8//AQAbABMAAAAnAAsAAQAbABMAAADQ/xAAAQAbABMAAADN//n/AQAqABEAAADg/9T/AQAqABEAAAALANH/AQAqABEAAAAHACEAAQAqABEAAADm/ygAAQAqABEAAADq/xcAAQAqAAAAAAAoAOf/AQAqAAAAAAAjAP3/AQAVAAkAAAA6APz/AQAVAAkAAADb/+b/AQANAAsAAADl/+b/AQANAAsAAADb/+L/AQANAAsAAADl/+L/AQANAAsAAADc/+n/AQAMAAcAAADk/+n/AQAMAAcAAADz/+j/AQAMAAcAAAABAOj/AQAMAAcAAADz/+X/AQANAAsAAAABAOX/AQANAAsAAADz/+H/AQANAAsAAAABAOH/AQANAAsAAAAPAOz/AQANAAsAAAAXAOz/AQANAAsAAAAQAO//AQAMAAcAAAAWAO//AQAMAAcAAAA=")
+tile_map_data = PackedByteArray("AADg/+P/AAADAAEAAAATAOr/AAAQAAwAAAD6/+P/AAABAAwAAAAmAM7/AQAbABMAAADM/9L/AQAbABMAAADE/+f/AQAbABMAAADx/8//AQAbABMAAAAnAAsAAQAbABMAAADQ/xAAAQAbABMAAADN//n/AQAqABEAAADg/9T/AQAqABEAAAALANH/AQAqABEAAAAHACEAAQAqABEAAADm/ygAAQAqABEAAADq/xcAAQAqAAAAAAAoAOf/AQAqAAAAAAAjAP3/AQAVAAkAAAA6APz/AQAVAAkAAADb/+b/AQANAAsAAADl/+b/AQANAAsAAADb/+L/AQANAAsAAADl/+L/AQANAAsAAADc/+n/AQAMAAcAAADk/+n/AQAMAAcAAADz/+j/AQAMAAcAAAABAOj/AQAMAAcAAADz/+X/AQANAAsAAAABAOX/AQANAAsAAADz/+H/AQANAAsAAAABAOH/AQANAAsAAAAPAOz/AQANAAsAAAAXAOz/AQANAAsAAAAQAO//AQAMAAcAAAAWAO//AQAMAAcAAAALAPT/AgAAAAAAAAA=")
 tile_set = SubResource("TileSet_5s3ts")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=244311342]
