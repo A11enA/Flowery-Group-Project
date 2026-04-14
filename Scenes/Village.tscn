@@ -17,6 +17,8 @@ tile_map_data = PackedByteArray("AAAAANz/AQAFAAEAAAD//9z/AQAFAAEAAAD//9v/AQABAAA
 tile_set = ExtResource("1_ptt31")
 metadata/_edit_lock_ = true
 
+[node name="Houses" type="TileMapLayer" parent="." unique_id=1400693160]
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=244311342]
 
 [node name="Player" parent="." unique_id=417626187 instance=ExtResource("2_fdddk")]
