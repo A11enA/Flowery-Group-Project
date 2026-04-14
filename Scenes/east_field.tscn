@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://1y4y8yuvil3t" path="res://Scenes/player.tscn" id="2_by7ul"]
 [ext_resource type="Resource" uid="uid://wjqdf3lfmg2g" path="res://Utilites/lavender.tres" id="3_5yt8q"]
 [ext_resource type="Texture2D" uid="uid://bkcmgkcfl4eig" path="res://Serene_Village_revamped_v1.9 - Copy/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Outside_Stuff_TILESET_B-C-D-E.png" id="5_5yt8q"]
+[ext_resource type="PackedScene" uid="uid://c7gmms1n2drqs" path="res://Scenes/portal.tscn" id="7_2r3m2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2r3m2"]
 texture = ExtResource("5_5yt8q")
@@ -222,9 +223,9 @@ texture = ExtResource("5_5yt8q")
 13:6/0 = 0
 16:6/0 = 0
 17:6/0 = 0
+21:6/size_in_atlas = Vector2i(3, 3)
 21:6/0 = 0
-22:6/0 = 0
-23:6/0 = 0
+21:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-19.192108, -19.756588, 19.192116, -17.498692, 19.756584, 22.01448, -19.756584, 20.32106)
 24:6/0 = 0
 25:6/0 = 0
 26:6/0 = 0
@@ -261,9 +262,6 @@ texture = ExtResource("5_5yt8q")
 15:7/0 = 0
 16:7/0 = 0
 17:7/0 = 0
-21:7/0 = 0
-22:7/0 = 0
-23:7/0 = 0
 24:7/0 = 0
 25:7/0 = 0
 26:7/0 = 0
@@ -301,9 +299,6 @@ texture = ExtResource("5_5yt8q")
 14:8/0 = 0
 16:8/0 = 0
 17:8/0 = 0
-21:8/0 = 0
-22:8/0 = 0
-23:8/0 = 0
 24:8/0 = 0
 25:8/0 = 0
 26:8/0 = 0
@@ -1409,7 +1404,7 @@ tile_map_data = PackedByteArray("AAD+/wIAAQAAAAQAAAD+//7/AQAAAAQAAAD///7/AQAAAAQ
 tile_set = ExtResource("1_8132h")
 
 [node name="Trees" type="TileMapLayer" parent="." unique_id=757250453]
-tile_map_data = PackedByteArray("AAD2/wgAAAAbABMAAAA1ADYAAAAbABMAAABOAPj/AAAbABMAAAAAAOL/AAAbABMAAADo/zUAAAAbABMAAABDABsAAAAqABEAAADb/xkAAAAqABEAAAAgABEAAAAqABEAAADp/+T/AAAqABEAAAA0APH/AAAqABEAAADl/wIAAAAqAAAAAAAJADIAAAAqAAAAAAAkAOT/AAAqAAAAAAA3AAoAAAAqAAAAAAAsACcAAAAqAAAAAAAwANX/AAAbABMAAADe/8L/AAAbABMAAADT/zUAAAAqABEAAADJ/+//AAAqABEAAABEAMT/AAAqABEAAAAQAMn/AAAqABEAAADX/97/AAAqABEAAAA=")
+tile_map_data = PackedByteArray("AAD2/wgAAAAbABMAAAA1ADYAAAAbABMAAABOAPj/AAAbABMAAAAAAOL/AAAbABMAAADo/zUAAAAbABMAAABDABsAAAAqABEAAADb/xkAAAAqABEAAAAgABEAAAAqABEAAADp/+T/AAAqABEAAAA0APH/AAAqABEAAADl/wIAAAAqAAAAAAAJADIAAAAqAAAAAAAkAOT/AAAqAAAAAAA3AAoAAAAqAAAAAAAsACcAAAAqAAAAAAAwANX/AAAbABMAAADe/8L/AAAbABMAAADT/zUAAAAqABEAAADJ/+//AAAqABEAAABEAMT/AAAqABEAAAAQAMn/AAAqABEAAADX/97/AAAqABEAAADg//T/AAAVAAYAAAA=")
 tile_set = SubResource("TileSet_4f3fw")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=542659611]
@@ -1432,3 +1427,7 @@ shape = SubResource("WorldBoundaryShape2D_b7l51")
 [node name="Player" parent="." unique_id=417626187 instance=ExtResource("2_by7ul")]
 position = Vector2(35, 315)
 scale = Vector2(0.5, 0.5)
+
+[node name="Portal" parent="." unique_id=1773961177 instance=ExtResource("7_2r3m2")]
+position = Vector2(-581, -146)
+next_scene = "res://Scenes/Village.tscn"

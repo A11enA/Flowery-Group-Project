@@ -5,7 +5,7 @@ class_name  GameControl extends Node
 @export var translation_controller : Control
 
 var current_scene
-var player_spawn_position: Vector2
+var player_spawn_position: Vector2 = Vector2(0,2)
 
 func _ready():
 	Global.game_controller = self

@@ -17,7 +17,9 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		print("entered the portal")
+		print(Global.game_controller.player_spawn_position)
 		Global.game_controller.player_spawn_position = player_location
+	
 		Global.game_controller.change_scene(next_scene)
 
 
