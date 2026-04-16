@@ -12,6 +12,7 @@ func _on_area_2d_body_exited(body):
 	if body is Player:
 		$"Take Orders".visible = false
 		$"Wrap Flowers".visible = false
+		$Craft_UI.visible = false
 
 
 
@@ -31,4 +32,4 @@ func _on_take_orders_pressed() -> void:
 	
 
 func _on_wrap_flowers_pressed():
-	pass # Replace with function body.
+	$Craft_UI.visible = !$Craft_UI.visible

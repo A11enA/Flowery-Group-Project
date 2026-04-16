@@ -18,4 +18,5 @@ join "Ial Tutor" (Default) center [animation="Fade In"]
 "Ial Tutor" (Default): It seems like you wanna sell some flowers, Hm?
 "Ial Tutor" (Smile): You'll need this.
 do Inventorymanager.addToInventory(0)
+You have received a "Foraging Knife". It's a Paring knife previously used to cut stems.
 set {SceneFinish.tutorialCompleted} = true

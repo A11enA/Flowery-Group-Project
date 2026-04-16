@@ -7,3 +7,7 @@ func set_item(item):
 		item_visual.texture = item.icon
 	else:
 		item_visual.texture = null
+
+
+func _on_button_pressed():
+	pass # Equip selected item

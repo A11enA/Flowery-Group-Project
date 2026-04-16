@@ -3,21 +3,24 @@
 [ext_resource type="Script" uid="uid://sxgmt7ml8tcd" path="res://Scenes/Scripts/flower_stand.gd" id="1_pb0mu"]
 [ext_resource type="Texture2D" uid="uid://cayff7r8ffyy8" path="res://Assets/Images/Shop Placeholder.png" id="2_vr5sw"]
 [ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="3_fshgc"]
+[ext_resource type="PackedScene" uid="uid://tglbbwggo8uc" path="res://Scenes/crafting_ui.tscn" id="4_vr5sw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dug8h"]
+size = Vector2(100, 50)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cn410"]
-radius = 50.0
+radius = 500.0
 
 [node name="FlowerStand" type="StaticBody2D" unique_id=210249881]
 script = ExtResource("1_pb0mu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=449210452]
 position = Vector2(2, -3)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_vr5sw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2107818782]
-scale = Vector2(1.5, 1.5)
+position = Vector2(0, 30)
 shape = SubResource("RectangleShape2D_dug8h")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=78060262]
@@ -26,20 +29,42 @@ shape = SubResource("RectangleShape2D_dug8h")
 shape = SubResource("CircleShape2D_cn410")
 
 [node name="Take Orders" type="Button" parent="." unique_id=167651500]
-offset_left = -35.0
-offset_right = -5.0
-offset_bottom = 15.0
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -17.0
+offset_right = -18.0
+offset_bottom = 18.0
+grow_horizontal = 0
+grow_vertical = 2
 theme = ExtResource("3_fshgc")
-theme_override_font_sizes/font_size = 5
+theme_override_font_sizes/font_size = 20
 text = "Take Orders"
 
 [node name="Wrap Flowers" type="Button" parent="." unique_id=618413437]
-offset_left = 5.0
-offset_right = 40.0
-offset_bottom = 15.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 18.0
+offset_top = -17.0
+offset_right = 134.0
+offset_bottom = 18.0
+grow_vertical = 2
 theme = ExtResource("3_fshgc")
-theme_override_font_sizes/font_size = 5
+theme_override_font_sizes/font_size = 20
 text = "Wrap Flowers"
+
+[node name="Craft_UI" parent="." unique_id=358855631 instance=ExtResource("4_vr5sw")]
+visible = false
+offset_left = -75.0
+offset_top = -145.0
+offset_right = -75.0
+offset_bottom = -145.0
+scale = Vector2(0.2, 0.2)
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

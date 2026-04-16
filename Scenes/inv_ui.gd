@@ -5,6 +5,7 @@ extends Control
 
 func _ready():
 	create_slots(6)
+	create_slots(2)
 	
 	await get_tree().process_frame
 	
