@@ -17,3 +17,4 @@ texture = ExtResource("2_hh5vi")
 centered = false
 
 [node name="Item_display" type="Sprite2D" parent="." unique_id=1413859779]
+unique_name_in_owner = true

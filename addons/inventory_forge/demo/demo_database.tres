@@ -1,85 +1,352 @@
 [gd_resource type="Resource" script_class="ItemDatabase" format=3 uid="uid://brmkxyrevtejq"]
 
 [ext_resource type="Script" uid="uid://cmpnse6xb1gml" path="res://addons/inventory_forge/resources/item_definition.gd" id="1_definition"]
+[ext_resource type="Texture2D" uid="uid://dacqxuo8jyexe" path="res://Assets/Icons/otherAssets/foragingKnife.png" id="2_cwhas"]
 [ext_resource type="Script" uid="uid://dc4b62442egix" path="res://addons/inventory_forge/resources/item_database.gd" id="2_database"]
+[ext_resource type="Texture2D" uid="uid://b2vx40gaoxl3i" path="res://Assets/Icons/otherAssets/paperWings.png" id="3_drwe3"]
+[ext_resource type="Texture2D" uid="uid://caf4t0q6s5uv1" path="res://Assets/Icons/Unwrapped/Daisy.png" id="3_ytiia"]
+[ext_resource type="Texture2D" uid="uid://chluhf1j3lkl2" path="res://Assets/Icons/Unwrapped/Sunflower.png" id="5_nmyh2"]
+[ext_resource type="Texture2D" uid="uid://4thdxcfp3xew" path="res://Assets/Icons/Unwrapped/Dandelion.png" id="6_8bcaj"]
+[ext_resource type="Texture2D" uid="uid://g0eotrygvwsr" path="res://Assets/Icons/Wrapped/wrappedSunflower.png" id="6_ev8kx"]
+[ext_resource type="Texture2D" uid="uid://bk6rarmaq5ej4" path="res://Assets/Icons/Wrapped/wrappedDaisy.png" id="6_m1k76"]
+[ext_resource type="Texture2D" uid="uid://bhae8y5skk013" path="res://Assets/Icons/Unwrapped/Tulip.png" id="7_ubjc3"]
+[ext_resource type="Texture2D" uid="uid://du1an1i2fhd1q" path="res://Assets/Icons/Unwrapped/Lavender.png" id="8_gndwm"]
+[ext_resource type="Texture2D" uid="uid://bbwmjg4tjd06f" path="res://Assets/Icons/Wrapped/wrappedDandelion.png" id="9_074re"]
+[ext_resource type="Texture2D" uid="uid://dkybp3vo5i8eo" path="res://Assets/Icons/Unwrapped/Digitalis.png" id="9_jdfrt"]
+[ext_resource type="Texture2D" uid="uid://dqrdchrb1su0k" path="res://Assets/Icons/Unwrapped/MorningGlories.png" id="10_5vwhv"]
+[ext_resource type="Texture2D" uid="uid://bs7tga2kt40pl" path="res://Assets/Icons/Unwrapped/Datura.png" id="11_5mrub"]
+[ext_resource type="Texture2D" uid="uid://c5lhjvp2hxyu8" path="res://Assets/Icons/Wrapped/wrappedTulip.png" id="11_eudbo"]
+[ext_resource type="Texture2D" uid="uid://blfgnior7jkiv" path="res://Assets/Icons/Unwrapped/Poppy.png" id="12_fb81c"]
+[ext_resource type="Texture2D" uid="uid://cjg3ejatrgnfq" path="res://Assets/Icons/Unwrapped/Crocus.png" id="13_2fybx"]
+[ext_resource type="Texture2D" uid="uid://o0foa5ub1f4r" path="res://Assets/Icons/Wrapped/wrappedLavender.png" id="13_65ygm"]
+[ext_resource type="Texture2D" uid="uid://b7i2clcvv371t" path="res://Assets/Icons/Wrapped/wrappedDigitails.png" id="15_jr7rr"]
+[ext_resource type="Texture2D" uid="uid://1r336xgrqdl4" path="res://Assets/Icons/Wrapped/wrappedMorningGlories.png" id="17_x3pdd"]
+[ext_resource type="Texture2D" uid="uid://tu5c74seglc0" path="res://Assets/Icons/Wrapped/wrappedDatura.png" id="19_haxob"]
+[ext_resource type="Texture2D" uid="uid://cg1yd54icjiel" path="res://Assets/Icons/Wrapped/wrappedPoppy.png" id="21_crcvm"]
+[ext_resource type="Texture2D" uid="uid://l1d13ogf2hw7" path="res://Assets/Icons/Wrapped/wrappedCrocus.png" id="23_e8olp"]
 
-[sub_resource type="Resource" id="item_health_potion"]
+[sub_resource type="Resource" id="Resource_dqxuk"]
+script = ExtResource("1_definition")
+id = 0
+name_key = "Foraging Knife"
+description_key = "Paring knife previously used to cut stems"
+icon = ExtResource("2_cwhas")
+category = 1
+stack_capacity = 1
+stack_count_limit = 1
+tradeable = false
+equippable = true
+equip_slot = 5
+stat_atk = 3
+
+[sub_resource type="Resource" id="Resource_cwhas"]
 script = ExtResource("1_definition")
 id = 1
-name_key = "DEMO_HEALTH_POTION_NAME"
-description_key = "DEMO_HEALTH_POTION_DESC"
-category = 2
-buy_price = 50
-sell_price = 25
-consumable = true
-effect_type = 1
-effect_value = 50
+name_key = "Paper Wings"
+description_key = "Wings of the common paper butterfly. Can be used as a substitute for paper."
+icon = ExtResource("3_drwe3")
+category = 0
+buy_price = 5
+sell_price = 5
+is_ingredient = true
+material_type = 5
 
-[sub_resource type="Resource" id="item_iron_sword"]
+[sub_resource type="Resource" id="Resource_ytiia"]
 script = ExtResource("1_definition")
 id = 2
-name_key = "DEMO_IRON_SWORD_NAME"
-description_key = "DEMO_IRON_SWORD_DESC"
-category = 0
-stack_capacity = 1
-buy_price = 150
-sell_price = 75
-rarity = 1
-equippable = true
+name_key = "Daisy"
+description_key = "Flower with white rays and a yellow center."
+icon = ExtResource("3_ytiia")
+buy_price = 7
+sell_price = 7
+is_ingredient = true
+material_type = 2
 
-[sub_resource type="Resource" id="item_magic_scroll"]
+[sub_resource type="Resource" id="Resource_drwe3"]
 script = ExtResource("1_definition")
 id = 3
-name_key = "DEMO_MAGIC_SCROLL_NAME"
-description_key = "DEMO_MAGIC_SCROLL_DESC"
-category = 3
-stack_capacity = 20
-buy_price = 200
-sell_price = 100
-rarity = 2
-consumable = true
-effect_type = 3
-effect_value = 20
-effect_duration = 30.0
+name_key = "Sunflower"
+description_key = "Tall flower that always faces the sun."
+icon = ExtResource("5_nmyh2")
+buy_price = 10
+sell_price = 10
+is_ingredient = true
+material_type = 2
 
-[sub_resource type="Resource" id="item_quest_key"]
+[sub_resource type="Resource" id="Resource_nmyh2"]
 script = ExtResource("1_definition")
 id = 4
-name_key = "DEMO_QUEST_KEY_NAME"
-description_key = "DEMO_QUEST_KEY_DESC"
-stack_capacity = 1
-tradeable = false
-rarity = 3
-quest_id = "main_quest_001"
+name_key = "Dandelion"
+description_key = "Hardy, perennial herb with a bright yellow flower head."
+icon = ExtResource("6_8bcaj")
+buy_price = 6
+sell_price = 6
 is_ingredient = true
-material_type = 11
+material_type = 2
 
-[sub_resource type="Resource" id="item_leather_armor"]
+[sub_resource type="Resource" id="Resource_ev8kx"]
 script = ExtResource("1_definition")
 id = 5
-name_key = "DEMO_LEATHER_ARMOR_NAME"
-description_key = "DEMO_LEATHER_ARMOR_DESC"
-category = 0
-stack_capacity = 1
-buy_price = 300
-sell_price = 150
-rarity = 1
-required_level = 5
-equippable = true
+name_key = "Tulip"
+description_key = "Large, cup-shaped flowers that appear in almost all colors."
+icon = ExtResource("7_ubjc3")
+buy_price = 15
+sell_price = 15
+is_ingredient = true
+material_type = 2
 
-[sub_resource type="Resource" id="item_rare_gem"]
+[sub_resource type="Resource" id="Resource_m1k76"]
 script = ExtResource("1_definition")
 id = 6
-name_key = "DEMO_RARE_GEM_NAME"
-description_key = "DEMO_RARE_GEM_DESC"
-category = 1
-stack_capacity = 50
-buy_price = 1000
-sell_price = 500
-rarity = 4
+name_key = "Lavender"
+description_key = "Fragrant, evergreen, semi-woody shrub recognized via scent and purple, tubular flowers."
+icon = ExtResource("8_gndwm")
+buy_price = 20
+sell_price = 20
+is_ingredient = true
+material_type = 2
+
+[sub_resource type="Resource" id="Resource_8bcaj"]
+script = ExtResource("1_definition")
+id = 7
+name_key = "Digitails"
+description_key = "Often known as Foxtail."
+icon = ExtResource("9_jdfrt")
+buy_price = 30
+sell_price = 30
+rarity = 1
+is_ingredient = true
+material_type = 2
+
+[sub_resource type="Resource" id="Resource_074re"]
+script = ExtResource("1_definition")
+id = 8
+name_key = "Morning Glory"
+description_key = "Twining herbaceous annual vines known for their heart-shaped leaves and trumpet-shaped flowers that bloom in the morning and fade by afternoon."
+icon = ExtResource("10_5vwhv")
+buy_price = 45
+sell_price = 45
+rarity = 1
+is_ingredient = true
+material_type = 2
+
+[sub_resource type="Resource" id="Resource_ubjc3"]
+script = ExtResource("1_definition")
+id = 9
+name_key = "Datura"
+description_key = "Short-lived perennial plants up to 2 meters tall with trumpet-shaped flowers and spiny fruit capsules."
+icon = ExtResource("11_5mrub")
+buy_price = 50
+sell_price = 50
+rarity = 1
+is_ingredient = true
+material_type = 2
+
+[sub_resource type="Resource" id="Resource_eudbo"]
+script = ExtResource("1_definition")
+id = 10
+name_key = "Poppy"
+description_key = "Poppies are herbaceous plants in the Papaveraceae family, recognized by their vibrant, papery petals."
+icon = ExtResource("12_fb81c")
+buy_price = 35
+sell_price = 35
+rarity = 1
+is_ingredient = true
+material_type = 2
+
+[sub_resource type="Resource" id="Resource_gndwm"]
+script = ExtResource("1_definition")
+id = 11
+name_key = "Crocus"
+description_key = "Purpl flowers that are the source of the world's most expensive spice."
+icon = ExtResource("13_2fybx")
+buy_price = 75
+sell_price = 75
+rarity = 2
+is_ingredient = true
+material_type = 2
+
+[sub_resource type="Resource" id="Resource_65ygm"]
+script = ExtResource("1_definition")
+id = 12
+name_key = "Wrapped Daisy"
+description_key = "Flower with white rays and a yellow center. Wrapped."
+icon = ExtResource("6_m1k76")
+buy_price = 14
+sell_price = 14
+rarity = 1
 craftable = true
+ingredients = Array[Dictionary]([{
+"amount": 1,
+"item_id": 1
+}, {
+"amount": 1,
+"item_id": 2
+}])
+
+[sub_resource type="Resource" id="Resource_jdfrt"]
+script = ExtResource("1_definition")
+id = 13
+name_key = "Wrapped Sunflower"
+description_key = "Tall flower that always faces the sun. Wrapped."
+icon = ExtResource("6_ev8kx")
+buy_price = 20
+sell_price = 20
+rarity = 1
+craftable = true
+ingredients = Array[Dictionary]([{
+"amount": 1,
+"item_id": 1
+}, {
+"amount": 1,
+"item_id": 3
+}])
+
+[sub_resource type="Resource" id="Resource_jr7rr"]
+script = ExtResource("1_definition")
+id = 14
+name_key = "Wrapped Dandelion"
+description_key = "Hardy, perennial herb with a bright yellow flower head. Wrapped."
+icon = ExtResource("9_074re")
+buy_price = 12
+sell_price = 12
+rarity = 1
+craftable = true
+ingredients = Array[Dictionary]([{
+"amount": 1,
+"item_id": 1
+}, {
+"amount": 1,
+"item_id": 4
+}])
+
+[sub_resource type="Resource" id="Resource_5vwhv"]
+script = ExtResource("1_definition")
+id = 15
+name_key = "Wrapped Tulip"
+description_key = "Large, cup-shaped flowers that appear in almost all colors. Wrapped."
+icon = ExtResource("11_eudbo")
+buy_price = 30
+sell_price = 30
+rarity = 1
+craftable = true
+ingredients = Array[Dictionary]([{
+"amount": 1,
+"item_id": 1
+}, {
+"amount": 1,
+"item_id": 5
+}])
+
+[sub_resource type="Resource" id="Resource_x3pdd"]
+script = ExtResource("1_definition")
+id = 16
+name_key = "Wrapped Lavender"
+description_key = "Fragrant, evergreen, semi-woody shrub recognized via scent and purple, tubular flowers. Wrapped."
+icon = ExtResource("13_65ygm")
+buy_price = 40
+sell_price = 40
+rarity = 1
+craftable = true
+ingredients = Array[Dictionary]([{
+"amount": 1,
+"item_id": 1
+}, {
+"amount": 1,
+"item_id": 6
+}])
+
+[sub_resource type="Resource" id="Resource_5mrub"]
+script = ExtResource("1_definition")
+id = 17
+name_key = "Wrapped Digitails"
+description_key = "Often known as Foxtail. Wrapped."
+icon = ExtResource("15_jr7rr")
+buy_price = 60
+sell_price = 60
+rarity = 2
+craftable = true
+ingredients = Array[Dictionary]([{
+"amount": 1,
+"item_id": 1
+}, {
+"amount": 1,
+"item_id": 7
+}])
+
+[sub_resource type="Resource" id="Resource_haxob"]
+script = ExtResource("1_definition")
+id = 18
+name_key = "Wrapped Morning Glory"
+description_key = "Twining herbaceous annual vines known for their heart-shaped leaves and trumpet-shaped flowers that bloom in the morning and fade by afternoon. Wrapped."
+icon = ExtResource("17_x3pdd")
+buy_price = 90
+sell_price = 90
+rarity = 2
+craftable = true
+ingredients = Array[Dictionary]([{
+"amount": 1,
+"item_id": 1
+}, {
+"amount": 1,
+"item_id": 8
+}])
+
+[sub_resource type="Resource" id="Resource_fb81c"]
+script = ExtResource("1_definition")
+id = 19
+name_key = "Wrapped Datura"
+description_key = "Short-lived perennial plants up to 2 meters tall with trumpet-shaped flowers and spiny fruit capsules."
+icon = ExtResource("19_haxob")
+buy_price = 100
+sell_price = 100
+rarity = 2
+craftable = true
+ingredients = Array[Dictionary]([{
+"amount": 1,
+"item_id": 1
+}, {
+"amount": 1,
+"item_id": 9
+}])
+
+[sub_resource type="Resource" id="Resource_crcvm"]
+script = ExtResource("1_definition")
+id = 20
+name_key = "Wrapped Poppy"
+description_key = "Poppies are herbaceous plants in the Papaveraceae family, recognized by their vibrant, papery petals. Wrapped."
+icon = ExtResource("21_crcvm")
+buy_price = 70
+sell_price = 70
+rarity = 2
+craftable = true
+ingredients = Array[Dictionary]([{
+"amount": 1,
+"item_id": 1
+}, {
+"amount": 1,
+"item_id": 10
+}])
+
+[sub_resource type="Resource" id="Resource_2fybx"]
+script = ExtResource("1_definition")
+id = 21
+name_key = "Wrapped Crocus"
+description_key = "Purple flowers that are the source of the world's most expensive spice. Wrapped."
+icon = ExtResource("23_e8olp")
+buy_price = 150
+sell_price = 150
+rarity = 3
+craftable = true
+ingredients = Array[Dictionary]([{
+"amount": 1,
+"item_id": 1
+}, {
+"amount": 1,
+"item_id": 11
+}])
 
 [resource]
 script = ExtResource("2_database")
-items = Array[ExtResource("1_definition")]([SubResource("item_health_potion"), SubResource("item_iron_sword"), SubResource("item_magic_scroll"), SubResource("item_quest_key"), SubResource("item_leather_armor"), SubResource("item_rare_gem")])
+items = Array[ExtResource("1_definition")]([SubResource("Resource_dqxuk"), SubResource("Resource_cwhas"), SubResource("Resource_ytiia"), SubResource("Resource_drwe3"), SubResource("Resource_nmyh2"), SubResource("Resource_ev8kx"), SubResource("Resource_m1k76"), SubResource("Resource_8bcaj"), SubResource("Resource_074re"), SubResource("Resource_ubjc3"), SubResource("Resource_eudbo"), SubResource("Resource_gndwm"), SubResource("Resource_65ygm"), SubResource("Resource_jdfrt"), SubResource("Resource_jr7rr"), SubResource("Resource_5vwhv"), SubResource("Resource_x3pdd"), SubResource("Resource_5mrub"), SubResource("Resource_haxob"), SubResource("Resource_fb81c"), SubResource("Resource_crcvm"), SubResource("Resource_2fybx")])
 _migration_v2_materials_done = true

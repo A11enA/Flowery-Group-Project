@@ -9,4 +9,5 @@ func _on_interact_body_exited(body: Node2D) -> void:
 		$Button.visible = false
 
 func _on_button_pressed() -> void:
-	Dialogic.start("Tutorial")
+	if Dialogic.VAR.SceneFinish.tutorialCompleted == false:
+		Dialogic.start("Tutorial")

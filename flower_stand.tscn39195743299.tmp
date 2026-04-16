@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ddnvo8wwf4krg"]
+
+[ext_resource type="Script" uid="uid://sxgmt7ml8tcd" path="res://Scenes/Scripts/flower_stand.gd" id="1_pb0mu"]
+[ext_resource type="Texture2D" uid="uid://cayff7r8ffyy8" path="res://Assets/Images/Shop Placeholder.png" id="2_vr5sw"]
+[ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="3_fshgc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dug8h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cn410"]
+radius = 50.0
+
+[node name="FlowerStand" type="Node2D" unique_id=1229112204]
+script = ExtResource("1_pb0mu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=449210452]
+position = Vector2(2, -3)
+texture = ExtResource("2_vr5sw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2107818782]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_dug8h")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=78060262]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1849030075]
+shape = SubResource("CircleShape2D_cn410")
+
+[node name="Take Orders" type="Button" parent="." unique_id=167651500]
+visible = false
+offset_left = -35.0
+offset_right = -5.0
+offset_bottom = 15.0
+theme = ExtResource("3_fshgc")
+theme_override_font_sizes/font_size = 5
+text = "Take Orders"
+
+[node name="Wrap Flowers" type="Button" parent="." unique_id=618413437]
+visible = false
+offset_left = 5.0
+offset_right = 40.0
+offset_bottom = 15.0
+theme = ExtResource("3_fshgc")
+theme_override_font_sizes/font_size = 5
+text = "Wrap Flowers"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Take Orders" to="." method="_on_take_orders_pressed"]
+[connection signal="pressed" from="Wrap Flowers" to="." method="_on_wrap_flowers_pressed"]

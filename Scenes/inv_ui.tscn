@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://j64scf4gk148"]
 
+[ext_resource type="PackedScene" uid="uid://gy6e6q5f1ou1" path="res://Scenes/inv_ui_slot.tscn" id="1_cshhv"]
+
 [node name="Inv_UI" type="Control" unique_id=358855631]
 layout_mode = 3
 anchors_preset = 0
@@ -30,3 +32,21 @@ offset_bottom = 219.5
 grow_horizontal = 2
 grow_vertical = 2
 columns = 3
+
+[node name="inv_UI_slot" parent="NinePatchRect/GridContainer" unique_id=111100005 instance=ExtResource("1_cshhv")]
+layout_mode = 2
+
+[node name="inv_UI_slot2" parent="NinePatchRect/GridContainer" unique_id=499954204 instance=ExtResource("1_cshhv")]
+layout_mode = 2
+
+[node name="inv_UI_slot3" parent="NinePatchRect/GridContainer" unique_id=469935995 instance=ExtResource("1_cshhv")]
+layout_mode = 2
+
+[node name="inv_UI_slot4" parent="NinePatchRect/GridContainer" unique_id=11883255 instance=ExtResource("1_cshhv")]
+layout_mode = 2
+
+[node name="inv_UI_slot5" parent="NinePatchRect/GridContainer" unique_id=1960885694 instance=ExtResource("1_cshhv")]
+layout_mode = 2
+
+[node name="inv_UI_slot6" parent="NinePatchRect/GridContainer" unique_id=1771282865 instance=ExtResource("1_cshhv")]
+layout_mode = 2

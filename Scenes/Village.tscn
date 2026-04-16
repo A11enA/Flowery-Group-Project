@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://kyenwys6faus" path="res://Scenes/npc.tscn" id="3_nd6jl"]
 [ext_resource type="PackedScene" uid="uid://c7gmms1n2drqs" path="res://Scenes/portal.tscn" id="4_fdddk"]
 [ext_resource type="Texture2D" uid="uid://b6vqj64k1suxk" path="res://Assets/house-pixilart.png" id="4_holt8"]
+[ext_resource type="PackedScene" uid="uid://ddnvo8wwf4krg" path="res://flower_stand.tscn" id="8_c183e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ileq"]
 texture = ExtResource("2_holt8")
@@ -2030,24 +2031,12 @@ texture = ExtResource("3_c183e")
 2:24/0 = 0
 7:24/0 = 0
 8:24/0 = 0
-18:24/0 = 0
-19:24/0 = 0
-20:24/0 = 0
-21:24/0 = 0
-22:24/0 = 0
-23:24/0 = 0
 1:25/0 = 0
 2:25/0 = 0
 4:25/0 = 0
 7:25/0 = 0
 8:25/0 = 0
 10:25/0 = 0
-18:25/0 = 0
-19:25/0 = 0
-20:25/0 = 0
-21:25/0 = 0
-22:25/0 = 0
-23:25/0 = 0
 44:25/0 = 0
 45:25/0 = 0
 46:25/0 = 0
@@ -2067,12 +2056,6 @@ texture = ExtResource("3_c183e")
 13:26/0 = 0
 15:26/0 = 0
 16:26/0 = 0
-18:26/0 = 0
-19:26/0 = 0
-20:26/0 = 0
-21:26/0 = 0
-22:26/0 = 0
-23:26/0 = 0
 42:26/0 = 0
 43:26/0 = 0
 44:26/0 = 0
@@ -2661,6 +2644,8 @@ texture = ExtResource("3_c183e")
 42:0/size_in_atlas = Vector2i(6, 7)
 42:0/0 = 0
 42:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40.745895, -35.43123, 23.030304, -38.97435, 24.801865, 40.74591, -23.030289, 40.74591)
+18:24/size_in_atlas = Vector2i(6, 3)
+18:24/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c183e"]
 texture = ExtResource("4_holt8")
@@ -2722,3 +2707,6 @@ shape = SubResource("WorldBoundaryShape2D_c183e")
 [node name="Portal" parent="." unique_id=1773961177 instance=ExtResource("4_fdddk")]
 position = Vector2(947, 13)
 next_scene = "res://Scenes/east_field.tscn"
+
+[node name="FlowerStand" parent="." unique_id=1229112204 instance=ExtResource("8_c183e")]
+position = Vector2(-363, -103)

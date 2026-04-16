@@ -26,6 +26,8 @@ func move_player():
 	#velocity = move_vector * move_speed
 	velocity = velocity.move_toward(move_vector * move_speed, acceleration)
 	
+	
+	
 	if velocity.x > 0:
 		$AnimatedSprite2D.play("walk_right")
 	elif velocity.x < 0:
@@ -36,6 +38,11 @@ func move_player():
 		$AnimatedSprite2D.play("walk_up")
 	else:
 		$AnimatedSprite2D.stop()
+	
+	if Input.is_action_pressed("inv"):
+		
+		$Inv_UI.visible = !$Inv_UI.visible
+		
 	
 
 func on_item_picked_up(item : Item):

@@ -1,22 +1,21 @@
 join "Ial Tutor" (Default) center [animation="Fade In"]
-"Ial Tutor": Welcome to Flora Falls!
-"Ial Tutor" (Default): We don’t get many tourists this far out. What is your business here?
-- Sorry, I forgot to introduce myself. My name is MC.
-set {Likability.Ial} += 2.0
-"Ial Tutor" (Flustered): As in the legendary line of florists? Fascinating…
-- I want to make a name for myself. I am going to create a florist business of my own to rival my family's.
-set {Likability.Ial} += 1.0
-set {Likability.Ial} -= 2.0
-"Ial Tutor" (Smile): Of course! Flora Falls is known for our abundance of common and rare flowers alike.
-"Ial Tutor" (Default): I am Tutor Ial, a humble teacher to the few children that live here.
-- Can I count on you to teach me a little bit about how I should start my business?
-- You seem like you would appreciate a flower or two...
-- Can I interest you in some flowers I don’t have yet?
-"Ial Tutor" (Smile):  I would be honored to be your first customer! I prefer tulips to spruce up my house a little.
-"Ial Tutor" (Default): With all of my kids dirtying the house I haven’t had enough time to decorate.
-- Where could I find them?
-"Ial Tutor": Ah yes. Common flowers like tulips can be found in the flower field east of here.
-"Ial Tutor" (Frown): But I must warn you, there are bees that like to roam around there.
-- And where can I find you to deliver them?
-"Ial Tutor" (Smile): This town is small enough for you to find your way around. If you knock on the wrong door perhaps you might meet a new potential customer.
-"Ial Tutor": Ciao!
+"Ial Tutor" (Default): Oh! A new face! and setting up such a nice little stall up! What drove you to choose our quaint little town?
+- What's it to you?
+	set {Likability.Ial} -= 1.0
+	The man stares at you for a moment, his smile imperceptibly twitching
+	"Ial Tutor" (Frown): I guess that question was a bit invasive, apologies dear.
+- My parents want to be become sucessful in my business, so they sent me here.
+	set {Likability.Ial} += 1.5
+	The man smiled at you, something familiar twinkling in his eyes.
+	"Ial Tutor" (Smile): I have high hopes for you, then.
+- I dont really want to talk about it.
+	set {Likability.Ial} += 0.5
+	A soft, understanding smile graces the man's lips.
+	"Ial Tutor" (Smile): That's quite alright dear! no pressure at all.
+	<Empty Text Event>
+"Ial Tutor" (Flustered): Oh! I forgot to introduce myself!
+"Ial Tutor" (Smile): My name is Ial Tutor, but you can just call me Ial.
+"Ial Tutor" (Default): It seems like you wanna sell some flowers, Hm?
+"Ial Tutor" (Smile): You'll need this.
+do Inventorymanager.getStarterWeapon()
+set {SceneFinish.tutorialCompleted} = true
