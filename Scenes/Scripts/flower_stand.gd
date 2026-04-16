@@ -5,13 +5,13 @@ var rng = RandomNumberGenerator.new()
 
 func _on_area_2d_body_entered(body):
 	if body is Player:
-		$"Take Orders".visible = true
-		$"Wrap Flowers".visible = true
+		$"Take Orders".visible = !$"Take Orders".visible
+		$"Wrap Flowers".visible = !$"Wrap Flowers".visible
 
 func _on_area_2d_body_exited(body):
 	if body is Player:
-		$"Take Orders".visible = false
-		$"Wrap Flowers".visible = false
+		$"Take Orders".visible = !$"Take Orders".visible
+		$"Wrap Flowers".visible = !$"Wrap Flowers".visible
 		$Craft_UI.visible = false
 
 
