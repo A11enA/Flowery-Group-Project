@@ -1,25 +1,19 @@
-extends Resource
+class_name  InventoryControl extends Node
 
-class_name InventoryControl
+var inventory := []
+signal inventory_updated(inventory)
+const DATABASE_PATH := "res://addons/inventory_forge/demo/demo_database.tres"
 
-# In your game code
-const DATABASE_PATH := "res://data/items/item_database.tres"
-var database: ItemDatabase
+@onready var database = preload(DATABASE_PATH)
 
-func _ready() -> void:
-	
-	database = load(DATABASE_PATH) as ItemDatabase
-	print("Loaded %d items" % database.items.size())
-	
-	
-	
+func _ready():
+	Global.inventory_manager = self
 
-func addToInventory(Item) -> void:
-	print(Item + " put in inventory")
-	#Item_display.Texture = Item.icon
-
-func getStarterWeapon() -> void:
-	var knife = database.get_item_by_id(0)
-	print(knife.get_translated_name())  # "Health Potion" (translated)
-	addToInventory(knife)
+func addToInventory(id) -> void:
+	var item = database.get_item_by_id(id)
 	
+	if item:
+		inventory.append(item)
+		emit_signal("inventory_updated", inventory)
+	else:
+		print("Item not found:", id)

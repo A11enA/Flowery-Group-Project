@@ -39,7 +39,7 @@ func move_player():
 	else:
 		$AnimatedSprite2D.stop()
 	
-	if Input.is_action_pressed("inv"):
+	if Input.is_action_just_pressed("inv"):
 		
 		$Inv_UI.visible = !$Inv_UI.visible
 		

@@ -17,5 +17,5 @@ join "Ial Tutor" (Default) center [animation="Fade In"]
 "Ial Tutor" (Smile): My name is Ial Tutor, but you can just call me Ial.
 "Ial Tutor" (Default): It seems like you wanna sell some flowers, Hm?
 "Ial Tutor" (Smile): You'll need this.
-do Inventorymanager.getStarterWeapon()
+do Inventorymanager.addToInventory(0)
 set {SceneFinish.tutorialCompleted} = true

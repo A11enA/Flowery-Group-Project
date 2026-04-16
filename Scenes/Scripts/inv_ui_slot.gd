@@ -1,10 +1,9 @@
 extends Panel
 
-@onready var item_visual: Sprite2D = $Item_display
+@onready var item_visual: TextureRect = $TextureRect
 
-#func update(item: flower_attributes):
-	#if item:
-	#	item_visual.visible = false
-	#else:
-		#item_visual.visible = true
-		#item_visual.texture = item.texture
+func set_item(item):
+	if item:
+		item_visual.texture = item.icon
+	else:
+		item_visual.texture = null
