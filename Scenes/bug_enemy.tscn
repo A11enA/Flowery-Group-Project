@@ -1,8 +1,5 @@
 [gd_scene format=3 uid="uid://dmkv466uencfj"]
 
-[ext_resource type="Texture2D" uid="uid://bff0ius00iswv" path="res://Assets/Sprites/Red-Mason-Bee.webp" id="1_hvlcn"]
-[ext_resource type="Script" path="res://Scenes/bug_enemy.gd" id="1_wsu11"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5bnd"]
 size = Vector2(33, 35)
 
@@ -13,16 +10,10 @@ radius = 207.11832
 radius = 19.104973
 
 [node name="BugEnemy" type="CharacterBody2D" unique_id=1864485187]
-script = ExtResource("1_wsu11")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1170699744]
 position = Vector2(0.5, -1.5)
 shape = SubResource("RectangleShape2D_m5bnd")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1731104508]
-position = Vector2(0, -1)
-scale = Vector2(0.24, 0.246)
-texture = ExtResource("1_hvlcn")
 
 [node name="ChaseRadius" type="Area2D" parent="." unique_id=665944697]
 
@@ -33,5 +24,9 @@ shape = SubResource("CircleShape2D_7x8va")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1465090454]
 shape = SubResource("CircleShape2D_sukcn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1796116527]
+position = Vector2(0, -1)
+scale = Vector2(0.24, 0.246)
 
 [connection signal="body_entered" from="ChaseRadius" to="." method="_on_chase_radius_body_entered"]
