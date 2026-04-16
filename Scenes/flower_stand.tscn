@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ddnvo8wwf4krg"]
+[gd_scene format=3 uid="uid://bgywus4j2nup6"]
 
 [ext_resource type="Script" uid="uid://sxgmt7ml8tcd" path="res://Scenes/Scripts/flower_stand.gd" id="1_pb0mu"]
 [ext_resource type="Texture2D" uid="uid://cayff7r8ffyy8" path="res://Assets/Images/Shop Placeholder.png" id="2_vr5sw"]
@@ -9,9 +9,10 @@
 size = Vector2(90, 25)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cn410"]
-radius = 250.0
+radius = 139.74261
 
 [node name="FlowerStand" type="StaticBody2D" unique_id=210249881]
+collision_mask = 2
 script = ExtResource("1_pb0mu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=449210452]
@@ -24,11 +25,13 @@ position = Vector2(-1, 43)
 shape = SubResource("RectangleShape2D_dug8h")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=78060262]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1849030075]
 shape = SubResource("CircleShape2D_cn410")
 
 [node name="Take Orders" type="Button" parent="." unique_id=167651500]
+visible = false
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
@@ -45,6 +48,7 @@ theme_override_font_sizes/font_size = 20
 text = "Take Orders"
 
 [node name="Wrap Flowers" type="Button" parent="." unique_id=618413437]
+visible = false
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
