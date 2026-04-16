@@ -15,10 +15,6 @@ func _ready() -> void:
 	sprite.texture = item.texture
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.has_method("on_item_picked_up"):
-		body.on_item_picked_up(item)
-		#PlayerManager.player_hp += energy
-		#animation.play("eaten")
-
-func del_item_onscreen():
-	queue_free()
+	if body is Player:
+		Global.inventory_manager.addToInventory(2)
+		queue_free()

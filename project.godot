@@ -39,10 +39,6 @@ layout/style_directory={}
 variables={
 "Likability": {
 "Ial": 0.0
-},
-"SceneFinish": {
-"orderAmount": 0,
-"tutorialCompleted": false
 }
 }
 glossary/default_case_sensitive=true
