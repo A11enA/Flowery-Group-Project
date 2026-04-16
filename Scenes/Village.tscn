@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://kyenwys6faus" path="res://Scenes/npc.tscn" id="3_nd6jl"]
 [ext_resource type="PackedScene" uid="uid://c7gmms1n2drqs" path="res://Scenes/portal.tscn" id="4_fdddk"]
 [ext_resource type="Texture2D" uid="uid://b6vqj64k1suxk" path="res://Assets/house-pixilart.png" id="4_holt8"]
-[ext_resource type="PackedScene" uid="uid://ddnvo8wwf4krg" path="res://flower_stand.tscn" id="8_c183e"]
+[ext_resource type="PackedScene" uid="uid://ddnvo8wwf4krg" path="res://Scenes/flower_stand.tscn" id="8_c183e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ileq"]
 texture = ExtResource("2_holt8")
@@ -2708,5 +2708,5 @@ shape = SubResource("WorldBoundaryShape2D_c183e")
 position = Vector2(947, 13)
 next_scene = "res://Scenes/east_field.tscn"
 
-[node name="FlowerStand" parent="." unique_id=1229112204 instance=ExtResource("8_c183e")]
-position = Vector2(-363, -103)
+[node name="FlowerStand" parent="." unique_id=210249881 instance=ExtResource("8_c183e")]
+position = Vector2(-553, -123)
