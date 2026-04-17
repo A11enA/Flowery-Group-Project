@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0at8td332e6i" path="res://Scenes/Scripts/inv_ui_slot.gd" id="1_dvbtt"]
 [ext_resource type="Texture2D" uid="uid://ddl4pan2w2m3l" path="res://Assets/icon.png" id="2_dvbtt"]
+[ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="3_hh5vi"]
 
 [node name="inv_UI_slot" type="Panel" unique_id=111100005]
 self_modulate = Color(1, 1, 1, 0)
@@ -44,5 +45,21 @@ offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
+
+[node name="StackAmount" type="Label" parent="." unique_id=1785892232]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -64.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_hh5vi")
+theme_override_colors/font_color = Color(1, 0.4257876, 0.35708547, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

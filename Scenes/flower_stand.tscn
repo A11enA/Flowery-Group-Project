@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://tglbbwggo8uc" path="res://Scenes/crafting_ui.tscn" id="4_vr5sw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dug8h"]
-size = Vector2(90, 25)
+size = Vector2(90, 15.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cn410"]
 radius = 139.74261
@@ -21,7 +21,7 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_vr5sw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2107818782]
-position = Vector2(-1, 43)
+position = Vector2(-2, 22)
 shape = SubResource("RectangleShape2D_dug8h")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=78060262]
