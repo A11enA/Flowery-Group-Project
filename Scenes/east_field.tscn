@@ -1399,3 +1399,4 @@ position = Vector2(-399, -110)
 next_scene = "res://Scenes/Village.tscn"
 
 [node name="BugEnemy" parent="." unique_id=1864485187 instance=ExtResource("6_5yt8q")]
+z_index = 2

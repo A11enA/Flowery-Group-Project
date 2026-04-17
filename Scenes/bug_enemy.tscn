@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dmryw627svw7n" path="res://Scenes/Scripts/bug_enemy.gd" id="1_wsu11"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5bnd"]
-size = Vector2(62, 68)
+size = Vector2(39, 46)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7x8va"]
 radius = 135.03333
@@ -52,7 +52,7 @@ animations = [{
 script = ExtResource("1_wsu11")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1170699744]
-position = Vector2(-1, 2)
+position = Vector2(6.5, 0)
 shape = SubResource("RectangleShape2D_m5bnd")
 
 [node name="ChaseRadius" type="Area2D" parent="." unique_id=665944697]
@@ -67,6 +67,7 @@ shape = SubResource("CircleShape2D_7x8va")
 shape = SubResource("CircleShape2D_sukcn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=451979678]
+z_index = 1
 position = Vector2(-0.5000016, -2.2737368e-13)
 scale = Vector2(1.8749999, 1.8499999)
 sprite_frames = SubResource("SpriteFrames_wu13y")
