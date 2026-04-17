@@ -31,5 +31,24 @@ func addToInventory(id) -> void:
 			"item": item,
 			"quantity": 1
 		})
+		
+	
+	emit_signal("inventory_updated", inventory)
+
+func removeFromInventory(id) -> void:
+	var item = database.get_item_by_id(id)
+	if not item:
+		print("Item not found:", id)
+		return
+	
+	var stack = find_stack(id)
+	
+	if stack:
+		stack.quantity -= 1
+	else:
+		inventory.erase({
+			"item": item
+		})
+		
 	
 	emit_signal("inventory_updated", inventory)

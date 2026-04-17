@@ -15,22 +15,42 @@ func _process(delta):
 func _on_button_pressed():
 	if $NinePatchRect/GridContainer/Paper/OptionButton.get_selected_id() == 0:
 		if  $NinePatchRect/GridContainer/Unwrapped/OptionButton2.get_selected_id() == 0:
+			Global.inventory_manager.removeFromInventory(1)
+			Global.inventory_manager.removeFromInventory(2)
 			Global.inventory_manager.addToInventory(12)
 		if  $NinePatchRect/GridContainer/Unwrapped/OptionButton2.get_selected_id() == 1:
+			Global.inventory_manager.removeFromInventory(1)
+			Global.inventory_manager.removeFromInventory(3)
 			Global.inventory_manager.addToInventory(13)
 		if  $NinePatchRect/GridContainer/Unwrapped/OptionButton2.get_selected_id() == 2:
+			Global.inventory_manager.removeFromInventory(1)
+			Global.inventory_manager.removeFromInventory(4)
 			Global.inventory_manager.addToInventory(14)
 		if  $NinePatchRect/GridContainer/Unwrapped/OptionButton2.get_selected_id() == 3:
+			Global.inventory_manager.removeFromInventory(1)
+			Global.inventory_manager.removeFromInventory(5)
 			Global.inventory_manager.addToInventory(15)
 		if  $NinePatchRect/GridContainer/Unwrapped/OptionButton2.get_selected_id() == 4:
+			Global.inventory_manager.removeFromInventory(1)
+			Global.inventory_manager.removeFromInventory(6)
 			Global.inventory_manager.addToInventory(16)
 		if  $NinePatchRect/GridContainer/Unwrapped/OptionButton2.get_selected_id() == 5:
+			Global.inventory_manager.removeFromInventory(1)
+			Global.inventory_manager.removeFromInventory(7)
 			Global.inventory_manager.addToInventory(17)
 		if  $NinePatchRect/GridContainer/Unwrapped/OptionButton2.get_selected_id() == 6:
+			Global.inventory_manager.removeFromInventory(1)
+			Global.inventory_manager.removeFromInventory(8)
 			Global.inventory_manager.addToInventory(18)
 		if  $NinePatchRect/GridContainer/Unwrapped/OptionButton2.get_selected_id() == 7:
+			Global.inventory_manager.removeFromInventory(1)
+			Global.inventory_manager.removeFromInventory(9)
 			Global.inventory_manager.addToInventory(19)
 		if  $NinePatchRect/GridContainer/Unwrapped/OptionButton2.get_selected_id() == 8:
+			Global.inventory_manager.removeFromInventory(1)
+			Global.inventory_manager.removeFromInventory(10)
 			Global.inventory_manager.addToInventory(20)
 		if  $NinePatchRect/GridContainer/Unwrapped/OptionButton2.get_selected_id() == 9:
+			Global.inventory_manager.removeFromInventory(1)
+			Global.inventory_manager.removeFromInventory(11)
 			Global.inventory_manager.addToInventory(21)
