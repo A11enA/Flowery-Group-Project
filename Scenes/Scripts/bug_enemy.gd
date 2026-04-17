@@ -11,8 +11,8 @@ func _physics_process(delta: float) -> void:
 	if target:
 		chasing()
 	else:
-		pass
-	#animate_enemy()
+		speed = 150.0
+	animate_enemy()
 	move_and_slide()
 
 func chasing():
@@ -22,10 +22,16 @@ func chasing():
 	if speed > 0.0:
 		speed -= 0.1
 	velocity = direction_normal * speed
-
-#func animate_enemy():
-	#var normal_velocity: Vector2 = velocity
+	if target.position.x < position.x:
+		$AnimatedSprite2D.scale.x = 1.875
+	elif target.position.x > position.x:
+		$AnimatedSprite2D.scale.x = -1.875
 	
+
+
+func animate_enemy():
+	var normal_velocity: Vector2 = velocity.normalized()
+	$AnimatedSprite2D.play("move")
 	#if normal_velocity.x > 0.7:
 		#$AnimatedSprite2D.play("right")
 	#elif normal_velocity.x < -0.7:
@@ -42,6 +48,4 @@ func _on_chase_radius_body_entered(body: Node2D) -> void:
 	if body is Player:
 		target = body
 	speed = 100
-	
-	
 	

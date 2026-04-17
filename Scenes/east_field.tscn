@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://1y4y8yuvil3t" path="res://Scenes/player.tscn" id="2_by7ul"]
 [ext_resource type="PackedScene" uid="uid://cx3heuvngkhrq" path="res://Scenes/spawner.tscn" id="3_0jkes"]
 [ext_resource type="Texture2D" uid="uid://bkcmgkcfl4eig" path="res://Serene_Village_revamped_v1.9 - Copy/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Outside_Stuff_TILESET_B-C-D-E.png" id="5_5yt8q"]
+[ext_resource type="PackedScene" uid="uid://dmkv466uencfj" path="res://Scenes/bug_enemy.tscn" id="6_5yt8q"]
 [ext_resource type="PackedScene" uid="uid://c7gmms1n2drqs" path="res://Scenes/portal.tscn" id="7_2r3m2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2r3m2"]
@@ -1396,3 +1397,5 @@ tilemap_layer = NodePath("../Spawn_Layer")
 [node name="Portal" parent="." unique_id=1773961177 instance=ExtResource("7_2r3m2")]
 position = Vector2(-399, -110)
 next_scene = "res://Scenes/Village.tscn"
+
+[node name="BugEnemy" parent="." unique_id=1864485187 instance=ExtResource("6_5yt8q")]
