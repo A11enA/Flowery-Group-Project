@@ -1,67 +1,82 @@
 extends Node2D
 
-### SCENE SPAWNER ###
-### needs an array of scenes to spawn
-### needs a position to spawn, either random, random around a point, or on a tile
-### boolean for tilemaps ornot tilemaps
-
-### tilemaps
-### put all the available spawning positions into an array
-### go through and determine which will be a spawn point
-### delete the spawn point from the list of avialable spawning positions
-### if the item is picked up, add the position back to the list of avialable spawning positions
+### === CONFIG === ###
 
 @export var tilemap_layer: TileMapLayer
-# this is if you are just using scenes
-#@export var scenes_to_spawn: Array[PackedScene] = []
-# for a scene that uses custom resources, do this
-const PICKUPS_SCENE: PackedScene = preload("res://Scenes/baseflower.tscn")
-@export var resources_to_spawn: Array[Resource] = []
-#const SPAWN_CUSTOM_DATA_NAME = "Spawnable"
-#const SPAWN_CUSTOM_DATA_VALUE = 1
-@export var max_spawn_amount: int = 20
-var amount_spawned: int
+const PICKUP_SCENE: PackedScene = preload("res://Scenes/baseflower.tscn")
 
-# Called when the node enters the scene tree for the first time.
+@export var max_spawn_amount: int = 20
+
+# Weighted spawn pools
+var common_ids: Array[int] = [2,3,4,5,6]
+var uncommon_ids: Array[int] = [7,8,9,10]
+var rare_ids: Array[int] = [11]
+
+# Spawn weights (adjust these to tune rarity)
+@export var common_weight: int = 70
+@export var uncommon_weight: int = 25
+@export var rare_weight: int = 5
+
+### === INTERNAL === ###
+
+var available_cells: Array[Vector2i] = []
+
+### === READY === ###
+
 func _ready() -> void:
 	randomize()
-	spawn_scenes(max_spawn_amount)
-	
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func spawn_scenes(count: int) -> void:
 	if tilemap_layer == null:
-		print("Tilemap layer node not assigned!")
+		push_error("Tilemap layer not assigned!")
 		return
-	
-	# get all used cell coordinates in the specified layer
-	var used_cells: Array[Vector2i] = tilemap_layer.get_used_cells()
-	
-	if used_cells.is_empty():
-		print("No tiles found.")
+
+	available_cells = tilemap_layer.get_used_cells()
+
+	if available_cells.is_empty():
+		push_error("No tiles found in tilemap!")
 		return
-	
+
+	spawn_scenes(max_spawn_amount)
+
+### === SPAWN LOGIC === ###
+
+func spawn_scenes(count: int) -> void:
 	for i in range(count):
-		# select a random tile the array starts with 0 so subtract 1
-		var random_index = randi_range(0, used_cells.size() - 1)
-		var cell_coords: Vector2i = used_cells[random_index]
-		
-		# remove the choosen cell from the array
-		used_cells.remove_at(random_index)
-		
-		# convert from tile coords to world position
-		var spawn_position: Vector2 = tilemap_layer.map_to_local(cell_coords)
-		
-		# select a random scene
-		var random_scene_index = randi_range(0, resources_to_spawn.size() - 1)
-		var spawn_resource: Resource = resources_to_spawn[random_scene_index]
-		
-		# instance the selected scene
-		var new_instance = PICKUPS_SCENE.instantiate()
-		new_instance.item = spawn_resource
-		
-		# set scene instance position and add to the scene tree
-		add_child(new_instance) # what should be the parent of the new scene????
-		new_instance.global_position = spawn_position
-		amount_spawned += 1
-		print(amount_spawned)
+
+		if available_cells.is_empty():
+			print("No more available spawn positions.")
+			return
+
+		# Pick random tile
+		var index = randi_range(0, available_cells.size() - 1)
+		var cell_coords = available_cells[index]
+		available_cells.remove_at(index)
+
+		# Convert to world position
+		var local_pos = tilemap_layer.map_to_local(cell_coords)
+		var world_pos = tilemap_layer.to_global(local_pos)
+
+		# Get weighted random item ID
+		var item_id = get_weighted_item_id()
+
+		# Spawn pickup
+		var pickup = PICKUP_SCENE.instantiate()
+		pickup.item_id = item_id
+
+		get_tree().current_scene.add_child(pickup)
+		pickup.global_position = world_pos
+
+### === WEIGHTED RANDOM === ###
+
+func get_weighted_item_id() -> int:
+	var total_weight = common_weight + uncommon_weight + rare_weight
+	var roll = randi_range(1, total_weight)
+
+	if roll <= common_weight:
+		return common_ids.pick_random()
+
+	elif roll <= common_weight + uncommon_weight:
+		return uncommon_ids.pick_random()
+
+	else:
+		return rare_ids.pick_random()

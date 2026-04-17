@@ -1,19 +1,18 @@
 [gd_scene format=3 uid="uid://gy6e6q5f1ou1"]
 
 [ext_resource type="Script" uid="uid://d0at8td332e6i" path="res://Scenes/Scripts/inv_ui_slot.gd" id="1_dvbtt"]
-[ext_resource type="Texture2D" uid="uid://bmw3g7vk5mix5" path="res://Assets/icon.svg" id="2_hh5vi"]
+[ext_resource type="Texture2D" uid="uid://ddl4pan2w2m3l" path="res://Assets/icon.png" id="2_dvbtt"]
 
 [node name="inv_UI_slot" type="Panel" unique_id=111100005]
-modulate = Color(6.9061527, 4.836114, 6.9061527, 1)
 self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(206, 206)
+custom_minimum_size = Vector2(200, 200)
 offset_right = 206.0
 offset_bottom = 206.0
 script = ExtResource("1_dvbtt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=861591390]
-scale = Vector2(1.6, 1.6)
-texture = ExtResource("2_hh5vi")
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("2_dvbtt")
 centered = false
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=208673511]
@@ -23,8 +22,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -100.0
+offset_left = -103.0
+offset_top = -103.0
 offset_right = 100.0
 offset_bottom = 100.0
 grow_horizontal = 2
@@ -38,9 +37,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -100.0
-offset_right = 100.0
+offset_left = -103.0
+offset_top = -103.0
+offset_right = 101.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2

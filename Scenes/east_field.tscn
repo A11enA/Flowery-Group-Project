@@ -1,11 +1,9 @@
 [gd_scene format=4 uid="uid://taih3tjnptha"]
 
 [ext_resource type="TileSet" uid="uid://nkexf3iisl8f" path="res://TileSets/Grass.tres" id="1_8132h"]
-[ext_resource type="Script" uid="uid://mgg7h2xnasln" path="res://Utilites/flower_attributes.gd" id="2_5yt8q"]
 [ext_resource type="PackedScene" uid="uid://1y4y8yuvil3t" path="res://Scenes/player.tscn" id="2_by7ul"]
 [ext_resource type="PackedScene" uid="uid://cx3heuvngkhrq" path="res://Scenes/spawner.tscn" id="3_0jkes"]
 [ext_resource type="Texture2D" uid="uid://bkcmgkcfl4eig" path="res://Serene_Village_revamped_v1.9 - Copy/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Outside_Stuff_TILESET_B-C-D-E.png" id="5_5yt8q"]
-[ext_resource type="Texture2D" uid="uid://6ixeqkhu8l3s" path="res://Assets/pixilart-drawing (20).png" id="6_5yt8q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2r3m2"]
 texture = ExtResource("5_5yt8q")
@@ -1395,26 +1393,6 @@ distance = -1460.0
 normal = Vector2(1, 0)
 distance = -523.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3mpcd"]
-atlas = ExtResource("6_5yt8q")
-region = Rect2(0, 0, 24, 24)
-
-[sub_resource type="Resource" id="Resource_5yt8q"]
-script = ExtResource("2_5yt8q")
-texture = SubResource("AtlasTexture_3mpcd")
-desc = "daldal"
-metadata/_custom_type_script = "uid://mgg7h2xnasln"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_354nr"]
-atlas = ExtResource("6_5yt8q")
-region = Rect2(24, 0, 24, 24)
-
-[sub_resource type="Resource" id="Resource_2r3m2"]
-script = ExtResource("2_5yt8q")
-texture = SubResource("AtlasTexture_354nr")
-desc = "lavvan"
-metadata/_custom_type_script = "uid://mgg7h2xnasln"
-
 [node name="EastField" type="Node2D" unique_id=1130472972]
 
 [node name="Spawn_Layer" type="TileMapLayer" parent="." unique_id=1865182271]
@@ -1453,4 +1431,3 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Spawner" parent="." unique_id=928819219 node_paths=PackedStringArray("tilemap_layer") instance=ExtResource("3_0jkes")]
 tilemap_layer = NodePath("../Spawn_Layer")
-resources_to_spawn = Array[Resource]([SubResource("Resource_5yt8q"), SubResource("Resource_2r3m2")])
