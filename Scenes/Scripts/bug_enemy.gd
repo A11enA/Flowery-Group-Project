@@ -49,3 +49,5 @@ func _on_chase_radius_body_entered(body: Node2D) -> void:
 		target = body
 	speed = 100
 	
+func idle():
+	pass
