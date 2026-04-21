@@ -46,9 +46,7 @@ func removeFromInventory(id) -> void:
 	if stack:
 		stack.quantity -= 1
 	else:
-		inventory.erase({
-			"item": item
-		})
+		inventory.erase(stack)
 		
 	
 	emit_signal("inventory_updated", inventory)
