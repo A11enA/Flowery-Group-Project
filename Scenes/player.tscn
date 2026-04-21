@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dy4uu41x8bb2a" path="res://Scenes/Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bjkw6al6gwsic" path="res://Assets/Sprites/player-pixilart (4).png" id="4_fkybt"]
+[ext_resource type="Texture2D" uid="uid://dacqxuo8jyexe" path="res://Assets/Icons/otherAssets/foragingKnife.png" id="4_vgqql"]
 [ext_resource type="PackedScene" uid="uid://j64scf4gk148" path="res://Scenes/inv_ui.tscn" id="5_fkybt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
@@ -118,6 +119,157 @@ radius = 32.003906
 radius = 21.0
 height = 56.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgqql"]
+size = Vector2(16.133812, 21.947289)
+
+[sub_resource type="Animation" id="Animation_vgqql"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.2024455]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.0000005, 23)]
+}
+
+[sub_resource type="Animation" id="Animation_fkybt"]
+resource_name = "attack_down"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.001, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.8726646259971648, -3.9269908169872414]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-13.000002, 19), Vector2(-13.000002, 19)]
+}
+
+[sub_resource type="Animation" id="Animation_x3wgy"]
+resource_name = "attack_left"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.63308656, -1.568551]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 24), Vector2(1, 24)]
+}
+
+[sub_resource type="Animation" id="Animation_3smsa"]
+resource_name = "attack_right"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666669),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0263596, 3.1490576]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3.0000005, 23), Vector2(3.0000005, 23)]
+}
+
+[sub_resource type="Animation" id="Animation_8erm5"]
+resource_name = "attack_up"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.2519429, -0.7363777]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(15.000002, -13), Vector2(15.000002, -13)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8erm5"]
+_data = {
+&"RESET": SubResource("Animation_vgqql"),
+&"attack_down": SubResource("Animation_fkybt"),
+&"attack_left": SubResource("Animation_x3wgy"),
+&"attack_right": SubResource("Animation_3smsa"),
+&"attack_up": SubResource("Animation_8erm5")
+}
+
 [node name="Player" type="CharacterBody2D" unique_id=417626187]
 collision_layer = 2
 collision_mask = 5
@@ -151,4 +303,29 @@ collision_mask = 8
 shape = SubResource("CapsuleShape2D_6t5aa")
 debug_color = Color(0.7431031, 0.42355895, 0.51698387, 0.41960785)
 
+[node name="Weapon" type="Sprite2D" parent="." unique_id=2053099385]
+position = Vector2(3.0000005, 23)
+rotation = 2.2024455
+scale = Vector2(1.6532382, 1.752467)
+texture = ExtResource("4_vgqql")
+offset = Vector2(-8.41617, -11.0133705)
+
+[node name="Weapon_area" type="Area2D" parent="Weapon" unique_id=2121190431]
+collision_mask = 8
+
+[node name="weaponcollison" type="CollisionShape2D" parent="Weapon/Weapon_area" unique_id=459976792]
+position = Vector2(-9.219937, -9.987158)
+rotation = -0.75940263
+scale = Vector2(0.6696049, 1.5439985)
+shape = SubResource("RectangleShape2D_vgqql")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1550942172]
+root_node = NodePath("../Weapon")
+libraries/ = SubResource("AnimationLibrary_8erm5")
+
+[node name="WeaponTimer" type="Timer" parent="." unique_id=1553338787]
+wait_time = 0.5
+
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="body_entered" from="Weapon/Weapon_area" to="." method="_on_weapon_area_body_entered"]
+[connection signal="timeout" from="WeaponTimer" to="." method="_on_weapon_timer_timeout"]
