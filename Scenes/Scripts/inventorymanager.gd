@@ -35,18 +35,19 @@ func addToInventory(id) -> void:
 	
 	emit_signal("inventory_updated", inventory)
 
-func removeFromInventory(id) -> void:
-	var item = database.get_item_by_id(id)
-	if not item:
-		print("Item not found:", id)
-		return
-	
+func removeFromInventory(id, amount := 1) -> bool:
 	var stack = find_stack(id)
 	
-	if stack:
-		stack.quantity -= 1
-	else:
+	if stack == null:
+		return false
+	
+	if stack.quantity < amount:
+		return false
+	
+	stack.quantity -= amount
+	
+	if stack.quantity <= 0:
 		inventory.erase(stack)
-		
 	
 	emit_signal("inventory_updated", inventory)
+	return true

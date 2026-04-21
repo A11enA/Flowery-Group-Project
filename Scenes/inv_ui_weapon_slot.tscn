@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://b0cgeyh47502l"]
+
+[ext_resource type="Script" uid="uid://db0c1sqe1qs6h" path="res://Scenes/Scripts/inv_ui_weapon_slot.gd" id="1_1o8ko"]
+[ext_resource type="Texture2D" uid="uid://ddl4pan2w2m3l" path="res://Assets/icon.png" id="2_7brty"]
+[ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="3_qscnx"]
+
+[node name="inv_UI_slot" type="Panel" unique_id=111100005]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(200, 200)
+offset_right = 206.0
+offset_bottom = 206.0
+script = ExtResource("1_1o8ko")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=861591390]
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("2_7brty")
+centered = false
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=208673511]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.0
+offset_top = -103.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=1751006186]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.0
+offset_top = -103.0
+offset_right = 101.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="StackAmount" type="Label" parent="." unique_id=1785892232]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -64.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_qscnx")
+theme_override_colors/font_color = Color(1, 0.4257876, 0.35708547, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

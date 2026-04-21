@@ -4,13 +4,15 @@ extends Panel
 @onready var stack_label: Label = $StackAmount
 
 var current_entry = null
-var is_weapon_slot = false
+var is_weapon_slot = true
+
+const CATEGORY_WEAPON = 1
 
 
 func set_item(entry):
 	current_entry = entry
 
-	if entry != null and entry.item != null and entry.item.category != 1:
+	if entry != null and entry.item != null and entry.item.category == CATEGORY_WEAPON:
 		var item = entry.item
 		var quantity = entry.quantity
 

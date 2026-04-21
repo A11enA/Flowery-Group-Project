@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bx6f1ornmxph2" path="res://Scenes/crafting_ui.gd" id="1_wydjh"]
 [ext_resource type="Texture2D" uid="uid://bmw3g7vk5mix5" path="res://Assets/icon.svg" id="2_mvsx2"]
+[ext_resource type="Texture2D" uid="uid://ddl4pan2w2m3l" path="res://Assets/icon.png" id="2_wydjh"]
 [ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="3_8i03j"]
 [ext_resource type="Texture2D" uid="uid://b2vx40gaoxl3i" path="res://Assets/Icons/otherAssets/paperWings.png" id="3_h3gr4"]
 [ext_resource type="Texture2D" uid="uid://caf4t0q6s5uv1" path="res://Assets/Icons/Unwrapped/Daisy.png" id="3_pn7vg"]
 [ext_resource type="Texture2D" uid="uid://blfgnior7jkiv" path="res://Assets/Icons/Unwrapped/Poppy.png" id="4_dv3d2"]
-[ext_resource type="Texture2D" uid="uid://dlrsby80qkbde" path="res://icon.svg" id="4_xt6ho"]
 [ext_resource type="Texture2D" uid="uid://bhae8y5skk013" path="res://Assets/Icons/Unwrapped/Tulip.png" id="5_x3l2g"]
 [ext_resource type="Texture2D" uid="uid://cjg3ejatrgnfq" path="res://Assets/Icons/Unwrapped/Crocus.png" id="6_wydjh"]
 [ext_resource type="Texture2D" uid="uid://bs7tga2kt40pl" path="res://Assets/Icons/Unwrapped/Datura.png" id="7_h3gr4"]
@@ -49,15 +49,14 @@ grow_vertical = 2
 columns = 3
 
 [node name="Paper" type="Panel" parent="NinePatchRect/GridContainer" unique_id=1431486517]
-modulate = Color(6.906, 4.836, 6.906, 1)
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="NinePatchRect/GridContainer/Paper" unique_id=1984621788]
-scale = Vector2(1.6, 1.6)
-texture = ExtResource("2_mvsx2")
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("2_wydjh")
 centered = false
 
 [node name="TextureRect" type="TextureRect" parent="NinePatchRect/GridContainer/Paper/Sprite2D" unique_id=1606667992]
@@ -77,13 +76,12 @@ grow_vertical = 2
 layout_mode = 1
 offset_right = 200.0
 offset_bottom = 200.0
-item_count = 2
-popup/item_0/text = "Paper Wings"
+icon_alignment = 1
+expand_icon = true
+item_count = 1
+popup/item_0/text = "Butterfly Wings"
 popup/item_0/icon = ExtResource("3_h3gr4")
 popup/item_0/id = 0
-popup/item_1/text = "None"
-popup/item_1/icon = ExtResource("4_xt6ho")
-popup/item_1/id = 1
 
 [node name="Blank" type="Panel" parent="NinePatchRect/GridContainer" unique_id=568242901]
 modulate = Color(6.9061527, 4.836114, 6.9061527, 0)
@@ -111,15 +109,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Unwrapped" type="Panel" parent="NinePatchRect/GridContainer" unique_id=440571491]
-modulate = Color(6.906, 4.836, 6.906, 1)
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="NinePatchRect/GridContainer/Unwrapped" unique_id=1459871737]
-scale = Vector2(1.6, 1.6)
-texture = ExtResource("2_mvsx2")
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("2_wydjh")
 centered = false
 
 [node name="TextureRect" type="TextureRect" parent="NinePatchRect/GridContainer/Unwrapped/Sprite2D" unique_id=20742411]
@@ -139,6 +136,8 @@ grow_vertical = 2
 layout_mode = 1
 offset_right = 200.0
 offset_bottom = 200.0
+icon_alignment = 1
+expand_icon = true
 item_count = 10
 popup/item_0/text = "Daisy"
 popup/item_0/icon = ExtResource("3_pn7vg")
@@ -155,7 +154,7 @@ popup/item_3/id = 3
 popup/item_4/text = "Lavender"
 popup/item_4/icon = ExtResource("8_xt6ho")
 popup/item_4/id = 4
-popup/item_5/text = "Digitails"
+popup/item_5/text = "Digitalis"
 popup/item_5/icon = ExtResource("10_g7fe8")
 popup/item_5/id = 5
 popup/item_6/text = "Morning Glory"
