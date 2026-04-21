@@ -51,6 +51,7 @@ func move_player():
 func die():
 	Global.player_hp = 3
 	get_tree().call_deferred("reload_current_scene")
+	Inventory.new()
 	
 func on_item_picked_up(item : Item):
 	print("I picked up a ", item.name)
