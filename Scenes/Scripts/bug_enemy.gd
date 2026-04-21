@@ -5,7 +5,7 @@ var target: Node2D
 @export var hp:int = 3
 
 func _ready() -> void:
-	pass #SceneManager.enemy_hp = 3
+	Global.enemy_hp = 3
 
 func _physics_process(delta: float) -> void:
 	if target:
