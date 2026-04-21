@@ -45,6 +45,18 @@ func move_player():
 		
 	
 
+func die():
+	Global.player_hp = 3
+	get_tree().call_deferred("reload_current_scene")
+	
 func on_item_picked_up(item : Item):
 	print("I picked up a ", item.name)
 	inventory.add_item(item)
+
+
+func _on_hit_box_body_entered(body: Node2D) -> void:
+	Global.player_hp -= 1
+	print(Global.player_hp)
+	#die function 
+	if Global.player_hp <= 0:
+		die()

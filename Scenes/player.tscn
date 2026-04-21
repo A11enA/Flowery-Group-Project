@@ -114,9 +114,13 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
 radius = 32.003906
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6t5aa"]
+radius = 21.0
+height = 56.0
+
 [node name="Player" type="CharacterBody2D" unique_id=417626187]
 collision_layer = 2
-collision_mask = 13
+collision_mask = 5
 script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1255805462]
@@ -138,3 +142,13 @@ offset_top = -245.99998
 offset_right = 589.0
 offset_bottom = 251.00002
 scale = Vector2(0.386386, 0.39276767)
+
+[node name="HitBox" type="Area2D" parent="." unique_id=542881373]
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=161495403]
+shape = SubResource("CapsuleShape2D_6t5aa")
+debug_color = Color(0.7431031, 0.42355895, 0.51698387, 0.41960785)
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
