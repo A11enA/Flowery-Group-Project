@@ -26,7 +26,6 @@ func _physics_process(delta: float) -> void:
 func move_player():
 	var move_vector: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	#velocity = move_vector * move_speed
-	print(move_vector)
 	velocity = velocity.move_toward(move_vector * move_speed, acceleration)
 	
 	
