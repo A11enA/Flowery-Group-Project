@@ -67,7 +67,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_down",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -279,7 +279,7 @@ script = ExtResource("1_cvnsp")
 position = Vector2(-2.9999998, -2.9999998)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_vgqql")
-animation = &"walk_up"
+animation = &"walk_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1038736412]
 shape = SubResource("CircleShape2D_cvnsp")
