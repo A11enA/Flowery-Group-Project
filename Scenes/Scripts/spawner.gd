@@ -45,7 +45,7 @@ func spawn_items(count: int) -> void:
 			print("Invalid item ID:", item_id)
 			continue
 		
-		# 🔥 INVENTORY FORGE SPAWN
+		# INVENTORY FORGE SPAWN
 		var world_item = item_database.create_world_item(item_data)
 		
 		if world_item == null:

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bjkw6al6gwsic" path="res://Assets/Sprites/player-pixilart (4).png" id="4_fkybt"]
 [ext_resource type="Texture2D" uid="uid://dacqxuo8jyexe" path="res://Assets/Icons/otherAssets/foragingKnife.png" id="4_vgqql"]
 [ext_resource type="PackedScene" uid="uid://j64scf4gk148" path="res://Scenes/inv_ui.tscn" id="5_fkybt"]
+[ext_resource type="PackedScene" uid="uid://do6evjt1ds4ul" path="res://Scenes/popup.tscn" id="5_x3wgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
 atlas = ExtResource("4_fkybt")
@@ -112,12 +113,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
-radius = 32.003906
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vgqql"]
+radius = 21.0
+height = 66.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6t5aa"]
-radius = 21.0
-height = 56.0
+radius = 36.0
+height = 88.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgqql"]
 size = Vector2(16.133812, 21.947289)
@@ -282,7 +284,7 @@ sprite_frames = SubResource("SpriteFrames_vgqql")
 animation = &"walk_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1038736412]
-shape = SubResource("CircleShape2D_cvnsp")
+shape = SubResource("CapsuleShape2D_vgqql")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1756012814]
 zoom = Vector2(2, 2)
@@ -311,7 +313,10 @@ texture = ExtResource("4_vgqql")
 offset = Vector2(-8.41617, -11.0133705)
 
 [node name="Weapon_area" type="Area2D" parent="Weapon" unique_id=2121190431]
+unique_name_in_owner = true
+collision_layer = 2
 collision_mask = 8
+monitoring = false
 
 [node name="weaponcollison" type="CollisionShape2D" parent="Weapon/Weapon_area" unique_id=459976792]
 position = Vector2(-9.219937, -9.987158)
@@ -325,6 +330,11 @@ libraries/ = SubResource("AnimationLibrary_8erm5")
 
 [node name="WeaponTimer" type="Timer" parent="." unique_id=1553338787]
 wait_time = 0.5
+
+[node name="DeathTimer" type="Timer" parent="." unique_id=1933924070]
+wait_time = 3.0
+
+[node name="Popup" parent="." unique_id=1322633788 instance=ExtResource("5_x3wgy")]
 
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
 [connection signal="body_entered" from="Weapon/Weapon_area" to="." method="_on_weapon_area_body_entered"]
