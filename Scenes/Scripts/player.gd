@@ -46,6 +46,16 @@ func move_player():
 		$Inv_UI.visible = !$Inv_UI.visible
 		
 	
+	if Input.is_action_just_pressed("Save"):
+		await SAVE_MANAGER.save_data()
+		print("Game Saved Successfully!")
+	
+	if Input.is_action_just_pressed("MainMenu"):
+		$"loading Screen".visible = true
+		await SAVE_MANAGER.save_data()
+		Global.game_controller.change_scene("res://Scenes/title_screen.tscn")
+		$"loading Screen".visible = false
+	
 
 func die():
 	Global.player_hp = 3

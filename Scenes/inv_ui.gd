@@ -8,7 +8,7 @@ const CATEGORY_WEAPON = 1
 
 func _ready():
 	create_weapon_slots(1)
-	create_slots(8)
+	create_slots(7)
 
 	await get_tree().process_frame
 

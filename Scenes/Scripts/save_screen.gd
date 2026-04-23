@@ -30,3 +30,36 @@ func button_hover(button : Button, tween_amt, duration):
 func tween(button, property, amount, duration):
 	var tween = create_tween()
 	tween. tween_property(button, property, amount, duration)
+
+
+
+func _on_save_1_button_pressed() -> void:
+	await SAVE_MANAGER.change_slot(0)
+	await SAVE_MANAGER.load_data()
+	Global.game_controller.change_scene("res://Scenes/Village.tscn")
+	print("Game Loaded Successfully!")
+
+
+func _on_save_2_button_pressed() -> void:
+	await SAVE_MANAGER.change_slot(1)
+	await SAVE_MANAGER.load_data()
+	Global.game_controller.change_scene("res://Scenes/Village.tscn")
+	print("Game Loaded Successfully!")
+
+
+func _on_save_3_button_pressed() -> void:
+	await SAVE_MANAGER.change_slot(2)
+	await SAVE_MANAGER.load_data()
+	Global.game_controller.change_scene("res://Scenes/Village.tscn")
+	print("Game Loaded Successfully!")
+
+
+func _on_save_4_button_pressed() -> void:
+	await SAVE_MANAGER.change_slot(3)
+	await SAVE_MANAGER.load_data()
+	Global.game_controller.change_scene("res://Scenes/Village.tscn")
+	print("Game Loaded Successfully!")
+
+
+func _on_back_button_pressed() -> void:
+	Global.game_controller.change_scene("res://Scenes/title_screen.tscn")

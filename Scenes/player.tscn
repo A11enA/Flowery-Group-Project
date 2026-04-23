@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bjkw6al6gwsic" path="res://Assets/Sprites/player-pixilart (4).png" id="4_fkybt"]
 [ext_resource type="Texture2D" uid="uid://dacqxuo8jyexe" path="res://Assets/Icons/otherAssets/foragingKnife.png" id="4_vgqql"]
 [ext_resource type="PackedScene" uid="uid://j64scf4gk148" path="res://Scenes/inv_ui.tscn" id="5_fkybt"]
+[ext_resource type="PackedScene" uid="uid://do71ng8lvdetc" path="res://Scenes/loadingScreen.tscn" id="5_x3wgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
 atlas = ExtResource("4_fkybt")
@@ -325,6 +326,20 @@ libraries/ = SubResource("AnimationLibrary_8erm5")
 
 [node name="WeaponTimer" type="Timer" parent="." unique_id=1553338787]
 wait_time = 0.5
+
+[node name="loading Screen" parent="." unique_id=679297742 instance=ExtResource("5_x3wgy")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.5
+offset_top = -325.0
+offset_right = 577.5
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
 [connection signal="body_entered" from="Weapon/Weapon_area" to="." method="_on_weapon_area_body_entered"]
