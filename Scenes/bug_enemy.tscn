@@ -65,6 +65,7 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_7x8va")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1673394194]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1465090454]
 scale = Vector2(2.7457097, 2.7541366)

@@ -4,12 +4,14 @@ class_name Player
 @export var move_speed: float = 100.0
 @export var acceleration: float = 100.0
 @export var sprint = 1.5
+@onready var iventory = $NinePatchRect/GridContainer
 var direction 
 var is_attacking: bool = false
 
 var inventory : Inventory = Inventory.new()
 
 func _ready() -> void:
+	Global.player_hp = 3
 	$Weapon.visible = false
 
 func _process(delta: float) -> void:
@@ -57,15 +59,17 @@ func move_player():
 		$"loading Screen".visible = false
 	
 
+
 func die():
-	Global.player_hp = 3
+	$DeathTimer.start()
+	$Popup.show_message("you died :(")
+	await $DeathTimer.timeout
 	get_tree().call_deferred("reload_current_scene")
-	Inventory.new()
-	
+
 func on_item_picked_up(item : Item):
 	print("I picked up a ", item.name)
+	$Popup.show_message("you picked up a flower!")
 	inventory.add_item(item)
-
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	Global.player_hp -= 1
@@ -78,6 +82,9 @@ func _on_weapon_area_body_entered(body: Node2D) -> void:
 	Global.enemy_hp -= 1
 	print(Global.enemy_hp)
 	if Global.enemy_hp <= 0:
+		Global.inventory_manager.addToInventory(1)
+		print("wings has been added to your inventory")
+		$Popup.show_message("you earned butterfly wings!")
 		body.queue_free()
 
 func attack():
@@ -86,7 +93,7 @@ func attack():
 		#show the weapon, somewhere hide the weapon
 		#turn collision on and off
 		$Weapon.visible = true
-		$Weapon/Weapon_area.monitoring = true
+		%Weapon_area.monitoring = true
 		$WeaponTimer.start()
 		var player_animation: String = $AnimatedSprite2D.animation
 		if player_animation == "walk_right":
@@ -101,4 +108,4 @@ func attack():
 func _on_weapon_timer_timeout() -> void:
 	is_attacking = false
 	$Weapon.visible = false
-	$Weapon/Weapon_area.monitoring = false
+	%Weapon_area.monitoring = false
