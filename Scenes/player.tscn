@@ -361,6 +361,11 @@ offset_bottom = 95.0
 grow_horizontal = 1
 grow_vertical = 1
 
+[node name="Panel" type="Panel" parent="UI/MarginContainer/HBoxContainer/Panel" unique_id=1884514777]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
 [connection signal="body_entered" from="Weapon/Weapon_area" to="." method="_on_weapon_area_body_entered"]
 [connection signal="timeout" from="WeaponTimer" to="." method="_on_weapon_timer_timeout"]
