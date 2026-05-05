@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bgywus4j2nup6"]
 
 [ext_resource type="Script" uid="uid://sxgmt7ml8tcd" path="res://Scenes/Scripts/flower_stand.gd" id="1_pb0mu"]
-[ext_resource type="Texture2D" uid="uid://cayff7r8ffyy8" path="res://Assets/Images/Shop Placeholder.png" id="2_vr5sw"]
+[ext_resource type="Texture2D" uid="uid://dr5mbow2516cs" path="res://shop-pixilart.png" id="2_nd5oq"]
 [ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="3_fshgc"]
 [ext_resource type="PackedScene" uid="uid://tglbbwggo8uc" path="res://Scenes/crafting_ui.tscn" id="4_vr5sw"]
 
@@ -17,8 +17,8 @@ script = ExtResource("1_pb0mu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=449210452]
 position = Vector2(2, -3)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("2_vr5sw")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_nd5oq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2107818782]
 position = Vector2(-2, 22)
@@ -32,6 +32,7 @@ shape = SubResource("CircleShape2D_cn410")
 
 [node name="Take Orders" type="Button" parent="." unique_id=167651500]
 visible = false
+z_index = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
@@ -49,6 +50,7 @@ text = "Take Orders"
 
 [node name="Wrap Flowers" type="Button" parent="." unique_id=618413437]
 visible = false
+z_index = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
