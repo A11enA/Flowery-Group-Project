@@ -1,0 +1,3 @@
+join Veronica center [animation="Slide From Left"]
+Veronica: Order 3
+leave Veronica [animation="Slide To Right"]
