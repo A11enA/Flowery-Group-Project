@@ -2,7 +2,6 @@ extends Node2D
 
 var rng = RandomNumberGenerator.new()
 
-
 func _on_area_2d_body_entered(body):
 	if body is Player:
 		$"Take Orders".visible = !$"Take Orders".visible
@@ -14,10 +13,8 @@ func _on_area_2d_body_exited(body):
 		$"Wrap Flowers".visible = !$"Wrap Flowers".visible
 		$Craft_UI.visible = false
 
-
-
-
 func _on_take_orders_pressed() -> void:
+	print("take orders button")
 	if Dialogic.VAR.SceneFinish.tutorialCompleted == false:
 		Dialogic.start("Tutorial")
 	else :
@@ -28,8 +25,7 @@ func _on_take_orders_pressed() -> void:
 			print("3")
 		else:
 			print("2") 
-	
-	
 
 func _on_wrap_flowers_pressed():
+	print("wrap flowers button")
 	$Craft_UI.visible = !$Craft_UI.visible

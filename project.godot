@@ -29,11 +29,12 @@ SAVE_MANAGER="*uid://ctt30dnwyf7w6"
 [dialogic]
 
 directories/dch_directory={
-"Ial Tutor": "res://Characters/Ial Tutor.dch",
-"character": "res://Characters/character.dch"
+"Characters/character": "res://Characters/character.dch",
+"Ial Tutor": "res://Characters/Ial Tutor.dch"
 }
 directories/dtl_directory={
-"Tutorial": "res://Timeline/Tutorial.dtl"
+"Tutorial": "res://Timeline/Tutorial.dtl",
+"Villagesign": "res://Timeline/Villagesign.dtl"
 }
 layout/style_directory={}
 variables={

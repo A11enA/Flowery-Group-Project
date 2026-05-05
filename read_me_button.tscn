@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://can3g7d1c2mi7"]
+
+[ext_resource type="Script" uid="uid://bapkugddvqjux" path="res://read_me_button.gd" id="1_6njqu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3wvft"]
+radius = 95.189285
+
+[node name="ReadMeButton" type="Button" unique_id=1028478669]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+text = "read?"
+script = ExtResource("1_6njqu")
+
+[node name="interact" type="Area2D" parent="." unique_id=1172902881]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interact" unique_id=915890519]
+position = Vector2(26, 17)
+shape = SubResource("CircleShape2D_3wvft")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="body_entered" from="interact" to="." method="_on_interact_body_entered"]
+[connection signal="body_exited" from="interact" to="." method="_on_interact_body_exited"]

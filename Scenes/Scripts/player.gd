@@ -61,14 +61,10 @@ func move_player():
 
 
 func die():
-	$DeathTimer.start()
-	$Popup.show_message("you died :(")
-	await $DeathTimer.timeout
 	get_tree().call_deferred("reload_current_scene")
 
 func on_item_picked_up(item : Item):
 	print("I picked up a ", item.name)
-	$Popup.show_message("you picked up a flower!")
 	inventory.add_item(item)
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
@@ -84,7 +80,6 @@ func _on_weapon_area_body_entered(body: Node2D) -> void:
 	if Global.enemy_hp <= 0:
 		Global.inventory_manager.addToInventory(1)
 		print("wings has been added to your inventory")
-		$Popup.show_message("you earned butterfly wings!")
 		body.queue_free()
 
 func attack():
