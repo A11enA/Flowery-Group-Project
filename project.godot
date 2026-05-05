@@ -29,13 +29,16 @@ SAVE_MANAGER="*uid://ctt30dnwyf7w6"
 [dialogic]
 
 directories/dch_directory={
-"Characters/character": "res://Characters/character.dch",
 "Ethan": "res://Characters/Ethan.dch",
 "Ial Tutor": "res://Characters/Ial Tutor.dch",
-"Veronica": "res://Characters/Veronica.dch"
+"Veronica": "res://Characters/Veronica.dch",
+"character": "res://Characters/character.dch"
 }
 directories/dtl_directory={
+"Ethan Order": "res://Timeline/Ethan Order.dtl",
+"Ial Order": "res://Timeline/Ial Order.dtl",
 "Tutorial": "res://Timeline/Tutorial.dtl",
+"Veronica Order": "res://Timeline/Veronica Order.dtl",
 "Villagesign": "res://Timeline/Villagesign.dtl"
 }
 layout/style_directory={}
