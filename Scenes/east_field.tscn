@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://nkexf3iisl8f" path="res://TileSets/Grass.tres" id="1_8132h"]
 [ext_resource type="PackedScene" uid="uid://1y4y8yuvil3t" path="res://Scenes/player.tscn" id="2_by7ul"]
 [ext_resource type="PackedScene" uid="uid://cx3heuvngkhrq" path="res://Scenes/spawner.tscn" id="3_0jkes"]
+[ext_resource type="Texture2D" uid="uid://bthsyw8r5wcqi" path="res://TileSets/nature-tileset-pixilart.png" id="3_2r3m2"]
 [ext_resource type="Texture2D" uid="uid://bkcmgkcfl4eig" path="res://Serene_Village_revamped_v1.9 - Copy/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Outside_Stuff_TILESET_B-C-D-E.png" id="5_5yt8q"]
 [ext_resource type="PackedScene" uid="uid://dmkv466uencfj" path="res://Scenes/bug_enemy.tscn" id="6_5yt8q"]
 [ext_resource type="PackedScene" uid="uid://c7gmms1n2drqs" path="res://Scenes/portal.tscn" id="7_2r3m2"]
@@ -1335,10 +1336,32 @@ texture = ExtResource("5_5yt8q")
 0:3/0 = 0
 0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -33, 10, -36, 31, 16, 27, 52, -29, 27)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4f3fw"]
+texture = ExtResource("3_2r3m2")
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:0/size_in_atlas = Vector2i(2, 2)
+2:0/0 = 0
+4:0/size_in_atlas = Vector2i(2, 2)
+4:0/0 = 0
+2:3/size_in_atlas = Vector2i(2, 2)
+2:3/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_4f3fw"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_2r3m2")
+sources/1 = SubResource("TileSetAtlasSource_4f3fw")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8132h"]
 normal = Vector2(0.007604343, 0.9999711)
@@ -1366,7 +1389,7 @@ tile_map_data = PackedByteArray("AAD+/wIAAQAAAAQAAAD+//7/AQAAAAQAAAD///7/AQAAAAQ
 tile_set = ExtResource("1_8132h")
 
 [node name="Trees" type="TileMapLayer" parent="." unique_id=757250453]
-tile_map_data = PackedByteArray("AAD2/wgAAAAbABMAAAA1ADYAAAAbABMAAABOAPj/AAAbABMAAAAAAOL/AAAbABMAAADo/zUAAAAbABMAAABDABsAAAAqABEAAADb/xkAAAAqABEAAAAgABEAAAAqABEAAADp/+T/AAAqABEAAAA0APH/AAAqABEAAADl/wIAAAAqAAAAAAAJADIAAAAqAAAAAAAkAOT/AAAqAAAAAAA3AAoAAAAqAAAAAAAsACcAAAAqAAAAAAAwANX/AAAbABMAAADe/8L/AAAbABMAAADT/zUAAAAqABEAAADJ/+//AAAqABEAAABEAMT/AAAqABEAAAAQAMn/AAAqABEAAADX/97/AAAqABEAAADr//X/AAAAAAMAAAACAAgAAAAVAAwAAAD7//r/AAAVAAwAAAA=")
+tile_map_data = PackedByteArray("AAD2/wgAAAAbABMAAAA1ADYAAAAbABMAAABOAPj/AAAbABMAAAAAAOL/AAAbABMAAADo/zUAAAAbABMAAABDABsAAAAqABEAAADb/xkAAAAqABEAAAAgABEAAAAqABEAAADp/+T/AAAqABEAAAA0APH/AAAqABEAAADl/wIAAAAqAAAAAAAJADIAAAAqAAAAAAAkAOT/AAAqAAAAAAA3AAoAAAAqAAAAAAAsACcAAAAqAAAAAAAwANX/AAAbABMAAADe/8L/AAAbABMAAADT/zUAAAAqABEAAADJ/+//AAAqABEAAABEAMT/AAAqABEAAAAQAMn/AAAqABEAAADX/97/AAAqABEAAADr//X/AAAAAAMAAAACAAgAAAAVAAwAAAD7//r/AAAVAAwAAAAKAPT/AQABAAMAAAAPAPj/AQABAAMAAAD1/+3/AQABAAMAAADw/9n/AQABAAMAAAAuAOz/AQABAAMAAAAXANj/AQABAAMAAADj/+r/AQABAAMAAAAmAAkAAQABAAMAAADh/w0AAQABAAMAAADx/wAAAQABAAMAAADQ/wEAAQABAAMAAAAkAP7/AQABAAMAAAAEANn/AQABAAMAAAAOAA4AAQAAAAMAAAD0//T/AQAAAAMAAADs/xUAAQAAAAMAAAAXAP3/AQAAAAMAAADl//D/AQAAAAMAAADz/9f/AQAAAAMAAAA2APz/AQAAAAMAAAD2/y0AAQABAAQAAADk/x4AAQABAAQAAAD3/yIAAQABAAQAAAAbAAMAAQABAAQAAAAlACAAAQABAAQAAAAMACIAAQAAAAQAAADn/woAAQAAAAQAAADM/xQAAQAAAAQAAADI/yEAAQAAAAQAAADU/yQAAQAAAAQAAADW/+n/AQAAAAQAAAAqAO7/AQAAAAQAAAD///L/AQAAAAQAAAAZACEAAQAEAAIAAAD0/xMAAQAEAAIAAADW/wsAAQAEAAIAAAAUAAMAAQAEAAIAAADg//v/AQAEAAIAAAAZAB0AAQAEAAIAAADp/yUAAQAEAAIAAAA5ABkAAQADAAIAAAARAPL/AQADAAIAAADY/wYAAQADAAIAAADk/yoAAQADAAIAAAD9/ykAAQADAAIAAAAhAC8AAQABAAIAAADX/w0AAQABAAIAAAAjAPX/AQABAAIAAAD9/+z/AQABAAIAAADn/xMAAQAAAAIAAAAZABkAAQAAAAIAAAAGABoAAQAAAAIAAAAtAPv/AQAAAAIAAAD5/wEAAQAAAAIAAAAgACUAAQABAAIAAAA/AB4AAQABAAIAAAAtAA0AAQABAAIAAADS/xIAAQABAAIAAADe//v/AQABAAIAAAA=")
 tile_set = SubResource("TileSet_4f3fw")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=542659611]
