@@ -9,4 +9,4 @@ func _on_interact_body_exited(body: Node2D) -> void:
 		%ReadMeButton.visible = false
 
 func _on_pressed() -> void:
-	Dialogic.start("testtest")
+	Dialogic.start("Villagesign")
