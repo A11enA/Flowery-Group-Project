@@ -29,7 +29,9 @@ SAVE_MANAGER="*uid://ctt30dnwyf7w6"
 [dialogic]
 
 directories/dch_directory={
+"Ethan": "res://Characters/Ethan.dch",
 "Ial Tutor": "res://Characters/Ial Tutor.dch",
+"Veronica": "res://Characters/Veronica.dch",
 "character": "res://Characters/character.dch"
 }
 directories/dtl_directory={

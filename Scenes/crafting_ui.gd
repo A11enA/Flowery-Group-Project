@@ -15,7 +15,6 @@ func _process(delta):
 func _on_button_pressed():
 	if $NinePatchRect/GridContainer/Paper/OptionButton.get_selected_id() == 0:
 		if  $NinePatchRect/GridContainer/Unwrapped/OptionButton2.get_selected_id() == 0:
-			
 			Global.inventory_manager.removeFromInventory(1)
 			Global.inventory_manager.removeFromInventory(2)
 			Global.inventory_manager.addToInventory(12)
