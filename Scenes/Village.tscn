@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://2irnlq5d2bha" path="res://Assets/pixilart-drawing (21).png" id="4_c183e"]
 [ext_resource type="PackedScene" uid="uid://c7gmms1n2drqs" path="res://Scenes/portal.tscn" id="4_fdddk"]
 [ext_resource type="PackedScene" uid="uid://bgywus4j2nup6" path="res://Scenes/flower_stand.tscn" id="8_c183e"]
-[ext_resource type="PackedScene" uid="uid://can3g7d1c2mi7" path="res://read_me_button.tscn" id="9_2ileq"]
+[ext_resource type="PackedScene" uid="uid://duw180oejm8gv" path="res://read_me_button.tscn" id="9_2ileq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ileq"]
 texture = ExtResource("2_holt8")

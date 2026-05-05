@@ -1,3 +1,5 @@
 join Veronica center [animation="Slide From Left"]
-Veronica: Order 3
+Veronica (Neutral): Hey, I heard your the flower guy. Do you think you could get me some crocus and morning glory?
+character: Sure thing!
+Veronica: Thanks.
 leave Veronica [animation="Slide To Right"]
