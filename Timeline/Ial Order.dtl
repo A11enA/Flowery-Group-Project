@@ -1,0 +1,3 @@
+join "Ial Tutor" center [animation="Slide From Left"]
+"Ial Tutor": Order 2
+leave "Ial Tutor" [animation="Slide To Right"]

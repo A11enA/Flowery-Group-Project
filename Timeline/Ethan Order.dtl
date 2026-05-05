@@ -1,0 +1,3 @@
+join Ethan center [animation="Slide From Left"]
+Ethan: Order 1
+leave Ethan [animation="Slide To Right"]

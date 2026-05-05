@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://can3g7d1c2mi7"]
+[gd_scene format=3 uid="uid://duw180oejm8gv"]
 
 [ext_resource type="Script" uid="uid://bapkugddvqjux" path="res://read_me_button.gd" id="1_6njqu"]
 
@@ -13,6 +13,7 @@ text = "read?"
 script = ExtResource("1_6njqu")
 
 [node name="interact" type="Area2D" parent="." unique_id=1172902881]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interact" unique_id=915890519]
 position = Vector2(26, 17)

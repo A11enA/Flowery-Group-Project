@@ -20,11 +20,14 @@ func _on_take_orders_pressed() -> void:
 	else :
 		var randI = rng.randf_range(0, 3)
 		if randI <= 1:
-			print("1")
+			print("Ethan")
+			Dialogic.start("Ethan Order")
 		elif randI > 2:
-			print("3")
+			print("Ial")
+			Dialogic.start("Ial Order")
 		else:
-			print("2") 
+			print("Veronica") 
+			Dialogic.start("Veronica Order")
 
 func _on_wrap_flowers_pressed():
 	print("wrap flowers button")
