@@ -1,3 +1,11 @@
 join Ethan center [animation="Slide From Left"]
-Ethan: Order 1
+Ethan (Neutral): ...
+character: Do you want anything or...
+Ethan (Neutral): ...
+character: Dude..
+Ethan (Plotting): Is the flower seller talking to ME??
+Ethan (Smile): I'll have your finest lavernder to aid in my deep slumber!
+character: Sure
+Ethan: HAHA HAAA
+character: (weird...)
 leave Ethan [animation="Slide To Right"]
