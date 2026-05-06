@@ -16,7 +16,7 @@ join "Ial Tutor" (Default) center [animation="Slide From Right"]
 "Ial Tutor" (Flustered): Oh! I forgot to introduce myself!
 "Ial Tutor" (Smile): My name is Ial Tutor, but you can just call me Ial.
 "Ial Tutor" (Default): It seems like you wanna sell some flowers, Hm?
-"Ial Tutor" (Smile): You'll need this for the field to the east. Keep an eye out for the butterflies.
+"Ial Tutor" (Smile): You'll need this for the field to the east. Keep an eye out for the butterflies. Ferocious little things.
 do Inventorymanager.addToInventory(0)
 You have received a "Foraging Knife". It's a Paring knife previously used to cut stems.
 set {SceneFinish.tutorialCompleted} = true

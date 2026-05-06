@@ -4,8 +4,9 @@ character: Do you want anything or...
 Ethan (Neutral): ...
 character: Dude..
 Ethan (Plotting): Is the flower seller talking to ME??
-Ethan (Smile): I'll have your finest lavernder to aid in my deep slumber!
-character: Sure
-Ethan: HAHA HAAA
-character: (weird...)
+Ethan (Smile): I'll have two of your finest lavernder and a datura to aid in my deep slumber!
+character: Sure.
+Ethan (Plotting): HAHA HAAA
+character: (Weirdo...)
+set {Order.EthanOrder} = true
 leave Ethan [animation="Slide To Right"]

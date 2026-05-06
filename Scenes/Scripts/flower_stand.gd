@@ -15,6 +15,8 @@ func _on_area_2d_body_exited(body):
 
 func _on_take_orders_pressed() -> void:
 	print("take orders button")
+	if Dialogic.VAR.Order.EthanOrder || Dialogic.VAR.Order.IalOrder || Dialogic.VAR.Order.VeronicaOrder:
+		Dialogic.start("tooManyOrders")
 	if Dialogic.VAR.SceneFinish.tutorialCompleted == false:
 		Dialogic.start("Tutorial")
 	else :

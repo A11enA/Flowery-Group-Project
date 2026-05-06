@@ -1,0 +1,15 @@
+join "Ial Tutor" (Default) center [animation="Fade In"]
+if {Order.IalOrder} == true:
+	"Ial Tutor": Just who I wanted to see! Do you have my order, dear?
+	- Yes, Here you go! | [if {Order.OrderFilled} == true]
+		"Ial Tutor": Oh thank you! They are just wonderful! For your trouble.
+		do Inventorymanager.removeFromInventory(0)
+		do Inventorymanager.removeFromInventory(0)
+		do Inventorymanager.removeFromInventory(0)
+	- No, Sorry.
+		That's ok, dear.
+	- Actually, I wanted to chat a bit!
+		"Ial Tutor": Oh really? Sorry dear, I'm busy now. You can talk to me after my chat gets written!
+else:
+	"Ial Tutor": Hello! Wonderful day, is it not?
+leave "Ial Tutor" [animation="Fade Out"]

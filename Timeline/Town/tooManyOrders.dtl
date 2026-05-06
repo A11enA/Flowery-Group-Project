@@ -1,0 +1,9 @@
+if {Order.IalOrder} == true:
+	character: I should finish Ial's order first.
+elif {Order.VeronicaOrder} == true:
+	if {SceneFinish.MetVeronica} == true:
+		character: I should fil Veronica's order first.
+	else:
+		character: I should fill that tall woman's order first.
+elif {Order.EthanOrder} == true:
+	character: I should fil that weirdo's order first.

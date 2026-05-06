@@ -7,5 +7,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func update_score(score):
+func update_display(score):
 	$MoneyLabel.text = str(score)

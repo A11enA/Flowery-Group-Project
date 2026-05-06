@@ -45,7 +45,7 @@ func move_player():
 	
 	if Input.is_action_just_pressed("inv"):
 		
-		$Inv_UI.visible = !$Inv_UI.visible
+		$"Pause Ui".visible = !$"Pause Ui".visible
 		
 	
 	if Input.is_action_just_pressed("Save"):

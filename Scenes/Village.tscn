@@ -8,8 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://bthsyw8r5wcqi" path="res://TileSets/nature-tileset-pixilart.png" id="4_2ileq"]
 [ext_resource type="Texture2D" uid="uid://2irnlq5d2bha" path="res://Assets/pixilart-drawing (21).png" id="4_c183e"]
 [ext_resource type="PackedScene" uid="uid://c7gmms1n2drqs" path="res://Scenes/portal.tscn" id="4_fdddk"]
+[ext_resource type="Texture2D" uid="uid://ssu1ic72e4jf" path="res://Assets/Sprites/Ial Tutor/Default.png" id="8_4e4q5"]
 [ext_resource type="PackedScene" uid="uid://bgywus4j2nup6" path="res://Scenes/flower_stand.tscn" id="8_c183e"]
-[ext_resource type="PackedScene" uid="uid://duw180oejm8gv" path="res://read_me_button.tscn" id="9_2ileq"]
+[ext_resource type="PackedScene" path="res://read_me_button.tscn" id="9_2ileq"]
+[ext_resource type="Texture2D" uid="uid://dc4jrglxlwhve" path="res://Assets/Sprites/Ethan/Ethan Neutral.png" id="9_80t11"]
+[ext_resource type="Texture2D" uid="uid://dlxusxu4cos3g" path="res://Assets/Sprites/Veronica/Veronica Neutral.png" id="10_2cy4q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ileq"]
 texture = ExtResource("2_holt8")
@@ -2720,11 +2723,29 @@ y_sort_enabled = true
 scale = Vector2(0.5, 0.5)
 sprint = 0.0
 
-[node name="Npc" parent="." unique_id=261900754 instance=ExtResource("3_nd6jl")]
+[node name="Ial" parent="." unique_id=261900754 instance=ExtResource("3_nd6jl")]
 z_index = 2
 y_sort_enabled = true
-position = Vector2(13, -152)
+position = Vector2(110, -262)
 scale = Vector2(0.5, 0.5)
+Interaction = "Ial"
+Sprite = ExtResource("8_4e4q5")
+
+[node name="Ethan" parent="." unique_id=1911364146 instance=ExtResource("3_nd6jl")]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(-316, -343)
+scale = Vector2(0.5, 0.5)
+Interaction = "Ethan"
+Sprite = ExtResource("9_80t11")
+
+[node name="Veronica" parent="." unique_id=751132596 instance=ExtResource("3_nd6jl")]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(-67, 138)
+scale = Vector2(0.5, 0.5)
+Interaction = "Veronica"
+Sprite = ExtResource("10_2cy4q")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1376141762]
 position = Vector2(0, 1000)

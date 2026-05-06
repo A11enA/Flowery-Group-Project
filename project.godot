@@ -35,18 +35,32 @@ directories/dch_directory={
 "character": "res://Characters/character.dch"
 }
 directories/dtl_directory={
-"Ethan Order": "res://Timeline/Ethan Order.dtl",
-"Ial Order": "res://Timeline/Ial Order.dtl",
-"Tutorial": "res://Timeline/Tutorial.dtl",
-"Veronica Order": "res://Timeline/Veronica Order.dtl",
-"Villagesign": "res://Timeline/Villagesign.dtl"
+"Ethan": "res://Timeline/Town/Ethan.dtl",
+"Ethan Order": "res://Timeline/Orders/Ethan Order.dtl",
+"Ial": "res://Timeline/Town/Ial.dtl",
+"Ial Order": "res://Timeline/Orders/Ial Order.dtl",
+"Tutorial": "res://Timeline/Critical!/Tutorial.dtl",
+"Veronica": "res://Timeline/Town/Veronica.dtl",
+"Veronica Order": "res://Timeline/Orders/Veronica Order.dtl",
+"Villagesign": "res://Timeline/Town/Villagesign.dtl",
+"tooManyOrders": "res://Timeline/Town/tooManyOrders.dtl"
 }
 layout/style_directory={}
 variables={
 "Likability": {
-"Ial": 0.0
+"Ethan": "",
+"Ethan2": 0.0,
+"Ial": 0.0,
+"Veronica": 0.0
+},
+"Order": {
+"EthanOrder": false,
+"IalOrder": false,
+"OrderFilled": false,
+"VeronicaOrder": false
 },
 "SceneFinish": {
+"MetVeronica": false,
 "tutorialCompleted": false
 }
 }

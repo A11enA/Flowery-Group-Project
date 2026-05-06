@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://8s8p56y68m0s"]
+
+[ext_resource type="Texture2D" uid="uid://db8abr8w30kl3" path="res://Assets/tilesets/popUp1 (1).webp" id="1_k8r5c"]
+[ext_resource type="Script" uid="uid://c7v3lehg2eujk" path="res://Scenes/to_do.gd" id="1_xbkkr"]
+[ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="2_xbkkr"]
+
+[node name="ToDo" type="Control" unique_id=1888823601]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xbkkr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=423536875]
+position = Vector2(576, 320)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_k8r5c")
+
+[node name="Header" type="Label" parent="." unique_id=1210342641]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -97.5
+offset_top = 75.0
+offset_right = 97.5
+offset_bottom = 139.0
+grow_horizontal = 2
+theme = ExtResource("2_xbkkr")
+theme_override_colors/font_color = Color(0.38039216, 0.22352941, 0.2627451, 1)
+theme_override_font_sizes/font_size = 100
+text = "TO DO:"
+
+[node name="To do" type="Label" parent="." unique_id=235274602]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -74.0
+offset_right = 0.5
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_xbkkr")
+theme_override_colors/font_color = Color(0.42352942, 0.2784314, 0.3137255, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Nothing Yet!"
