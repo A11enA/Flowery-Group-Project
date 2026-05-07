@@ -1,52 +1,54 @@
 join Ethan center [animation="Fade In"]
 
 if {Order.EthanOrder} == true:
-
+	
 	Ethan: You must have my order!
-
+	
 	- Yeah, here you go | [if {Order.OrderFilled} == true]
-
+		
 		if {Global.inventory_manager.has_item_amount(19,1)}:
 			do Global.economy_manager.sell_flower(19, 1)
 		else:
 			do Global.economy_manager.sell_flower(9, 1)
-
-
+		
+		
 		if {Global.inventory_manager.has_item_amount(16,2)}:
 			do Global.economy_manager.sell_flower(16, 2)
-
+		
 		elif {Global.inventory_manager.has_item_amount(16,1)}:
 			do Global.economy_manager.sell_flower(16, 1)
 			do Global.economy_manager.sell_flower(6, 1)
-
+		
 		else:
 			do Global.economy_manager.sell_flower(6, 2)
-
-
+		Ethan: Yes!! YEEESSS!!
+		set {Order.EthanOrder} = false
+	
+	
 	- Sorry, Not yet. I want to chat though!
-
+		
 		Ethan: You truly think that you are WORTHY enough to speak to a MASTER such as me!?
-
+		
 		Ethan: BEGONE! ONLY RETURN IF YOU BRING THE HERBS FOR MY QUEST!
-
+		
 		leave Ethan [animation="Fade Out"]
-
+		
 		[end_timeline]
-
-
+	
+	
 	- Dont rush me.
-
+		
 		Ethan: Such INSOLENCE!
-
+		
 		Ethan: BEGONE! ONLY RETURN IF YOU BRING THE HERBS FOR MY QUEST!
 
 
 else:
-
+	
 	Ethan: Oh? You're approaching me?
-
+	
 	Ethan: I'm quite impressed! most people are intimidated by my natrual aura!
-
+	
 	Ethan: You are still FAR too underlevelled to speak to me though! BEGONE!
 
 

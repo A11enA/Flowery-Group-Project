@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c7gmms1n2drqs" path="res://Scenes/portal.tscn" id="4_fdddk"]
 [ext_resource type="Texture2D" uid="uid://ssu1ic72e4jf" path="res://Assets/Sprites/Ial Tutor/Default.png" id="8_4e4q5"]
 [ext_resource type="PackedScene" uid="uid://bgywus4j2nup6" path="res://Scenes/flower_stand.tscn" id="8_c183e"]
-[ext_resource type="PackedScene" path="res://read_me_button.tscn" id="9_2ileq"]
+[ext_resource type="PackedScene" uid="uid://duw180oejm8gv" path="res://read_me_button.tscn" id="9_2ileq"]
 [ext_resource type="Texture2D" uid="uid://dc4jrglxlwhve" path="res://Assets/Sprites/Ethan/Ethan Neutral.png" id="9_80t11"]
 [ext_resource type="Texture2D" uid="uid://dlxusxu4cos3g" path="res://Assets/Sprites/Veronica/Veronica Neutral.png" id="10_2cy4q"]
 
