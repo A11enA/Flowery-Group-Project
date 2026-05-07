@@ -18,16 +18,21 @@ grow_vertical = 2
 script = ExtResource("1_k436y")
 
 [node name="Pause Ui" parent="." unique_id=406130906 instance=ExtResource("2_wcp00")]
+visible = false
 
 [node name="popUp" parent="." unique_id=268763354 instance=ExtResource("3_pwm6i")]
+visible = false
 
 [node name="Inv_UI" parent="." unique_id=358855631 instance=ExtResource("4_0cbwa")]
+visible = false
 layout_mode = 1
 
 [node name="Craft_UI" parent="." unique_id=1670283733 instance=ExtResource("5_sm38h")]
+visible = false
 layout_mode = 0
 
 [node name="ToDo" parent="." unique_id=1888823601 instance=ExtResource("6_y4mvd")]
+visible = false
 layout_mode = 1
 offset_left = -232.5
 offset_top = -144.0

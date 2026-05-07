@@ -1,5 +1,5 @@
 class_name UIControl
-extends CanvasLayer
+extends Control
 
 signal healthU
 

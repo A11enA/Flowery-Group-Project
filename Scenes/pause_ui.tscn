@@ -9,6 +9,7 @@
 
 [node name="Pause Ui" type="CanvasLayer" unique_id=406130906]
 process_mode = 3
+visible = false
 script = ExtResource("1_w3mym")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1198217798]
