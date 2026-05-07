@@ -15,10 +15,12 @@ var customers = [
 		"order": [
 			{
 				"id": 11,
+				"wrappedId": 21,
 				"amount": 2
 			},
 			{
 				"id": 3,
+				"wrappedId": 13,
 				"amount": 1
 			}
 		]
@@ -29,10 +31,12 @@ var customers = [
 		"order": [
 			{
 				"id": 6,
+				"wrappedId": 16,
 				"amount": 2
 			},
 			{
 				"id": 9,
+				"wrappedId": 19,
 				"amount": 1
 			}
 		]
@@ -43,10 +47,12 @@ var customers = [
 		"order": [
 			{
 				"id": 5,
+				"wrappedId": 15,
 				"amount": 2
 			},
 			{
 				"id": 7,
+				"wrappedId": 17,
 				"amount": 1
 			}
 		]
@@ -95,6 +101,7 @@ func sell_flower(id : int, amt : int):
 	return true
 
 
+
 # Check customer order
 # Check current order
 func check_order() -> bool:
@@ -107,10 +114,11 @@ func check_order() -> bool:
 	for requirement in customer["order"]:
 	
 		var id = requirement["id"]
+		var wrappedId = requirement["wrappedId"]
 	
 		var amount = requirement["amount"]
 	
-		if !Global.inventory_manager.has_item_amount(id, amount):
+		if !Global.inventory_manager.has_item_amount(id, amount) && !Global.inventory_manager.has_item_amount(wrappedId, amount) && !(Global.inventory_manager.has_item_amount(wrappedId, amount-1) && Global.inventory_manager.has_item_amount(id, amount-1)):
 	
 			Dialogic.VAR.Order.OrderFilled = false
 	

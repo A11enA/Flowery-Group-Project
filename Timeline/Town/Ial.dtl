@@ -1,14 +1,42 @@
 join "Ial Tutor" (Default) center [animation="Fade In"]
+
 if {Order.IalOrder} == true:
+
 	"Ial Tutor": Just who I wanted to see! Do you have my order, dear?
+
 	- Yes, Here you go! | [if {Order.OrderFilled} == true]
+
 		"Ial Tutor": Oh thank you! They are just wonderful! For your trouble.
-		do Global.economy_manager.sell_flower(7, 1)
-		do Global.economy_manager.sell_flower(5, 2)
+
+
+		if {Global.inventory_manager.has_item_amount(17,1)}:
+			do Global.economy_manager.sell_flower(17, 1)
+		else:
+			do Global.economy_manager.sell_flower(7, 1)
+
+
+		if {Global.inventory_manager.has_item_amount(15,2)}:
+			do Global.economy_manager.sell_flower(15, 2)
+
+		elif {Global.inventory_manager.has_item_amount(15,1)}:
+			do Global.economy_manager.sell_flower(15, 1)
+			do Global.economy_manager.sell_flower(5, 1)
+
+		else:
+			do Global.economy_manager.sell_flower(5, 2)
+
+
 	- No, Sorry.
-		That's ok, sweetie.
+
+		"Ial Tutor": That's ok, sweetie.
+
+
 	- Actually, I wanted to chat a bit!
+
 		"Ial Tutor": Oh really? Sorry dear, I'm busy now. You can talk to me after my chat gets written!
+
 else:
+
 	"Ial Tutor": Hello! Wonderful day, is it not?
+
 leave "Ial Tutor" [animation="Fade Out"]
