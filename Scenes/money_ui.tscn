@@ -1,21 +1,98 @@
 [gd_scene format=3 uid="uid://bv50unu0fwc3p"]
 
-[ext_resource type="Script" path="res://Scenes/Scripts/money_ui.gd" id="1_88w3p"]
+[ext_resource type="Script" uid="uid://cxj122qn5yhd0" path="res://Scenes/Scripts/money_ui.gd" id="1_88w3p"]
 [ext_resource type="FontFile" uid="uid://ykgh2extoktk" path="res://Assets/Fonts/great-vibes.regular.ttf" id="1_pfpth"]
+[ext_resource type="Texture2D" uid="uid://dql05fq40n85r" path="res://coin-pixilart.png" id="3_lhcgw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhcgw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkewa"]
+atlas = ExtResource("3_lhcgw")
+region = Rect2(0, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we6gn"]
+atlas = ExtResource("3_lhcgw")
+region = Rect2(14, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pe8p"]
+atlas = ExtResource("3_lhcgw")
+region = Rect2(28, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_br8xl"]
+atlas = ExtResource("3_lhcgw")
+region = Rect2(42, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kc7e"]
+atlas = ExtResource("3_lhcgw")
+region = Rect2(56, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_meabd"]
+atlas = ExtResource("3_lhcgw")
+region = Rect2(70, 0, 14, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gxcl4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkewa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we6gn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pe8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_br8xl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kc7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_meabd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="MoneyUI" type="Control" unique_id=426087141]
+process_mode = 3
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 script = ExtResource("1_88w3p")
 
-[node name="MoneyLabel" type="Label" parent="." unique_id=482506045]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1787920649]
+custom_minimum_size = Vector2(200, 64)
 layout_mode = 0
 offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=2129763896]
+layout_mode = 2
+
+[node name="MoneyLabel" type="Label" parent="PanelContainer/HBoxContainer" unique_id=482506045]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_pfpth")
 theme_override_font_sizes/font_size = 50
-text = "0"
+text = "000000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="PanelContainer/HBoxContainer" unique_id=646474722]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lhcgw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PanelContainer/HBoxContainer/Panel" unique_id=1510987501]
+position = Vector2(20, 20)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_gxcl4")
+autoplay = "default"
+frame_progress = 0.32411072

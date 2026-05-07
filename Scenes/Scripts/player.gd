@@ -4,7 +4,7 @@ class_name Player
 @export var move_speed: float = 100.0
 @export var acceleration: float = 100.0
 @export var sprint = 1.5
-@onready var iventory = $NinePatchRect/GridContainer
+@onready var iventory = %Inv_UI
 var direction 
 var is_attacking: bool = false
 
@@ -16,7 +16,8 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack"):
-		attack()
+		if Global.inventory_manager.find_stack(0):
+			attack()
 
 
 func _physics_process(delta: float) -> void:
@@ -42,11 +43,6 @@ func move_player():
 		$AnimatedSprite2D.play("walk_up")
 	else:
 		$AnimatedSprite2D.stop()
-	
-	if Input.is_action_just_pressed("inv"):
-		
-		$"Pause Ui".visible = !$"Pause Ui".visible
-		
 	
 	if Input.is_action_just_pressed("Save"):
 		await SAVE_MANAGER.save_data()

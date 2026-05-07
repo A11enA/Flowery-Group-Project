@@ -6,7 +6,8 @@ signal inventory_updated(inventory)
 const DATABASE_PATH := "res://addons/inventory_forge/demo/demo_database.tres"
 @onready var database = preload(DATABASE_PATH)
 
-var max_slots := 9
+var max_slots := 10
+var invFull := false
 
 
 func _ready():
@@ -20,13 +21,13 @@ func find_stack(id):
 	for entry in inventory:
 		if entry == null:
 			continue
-
+	
 		if entry.item == null:
 			continue
-
+	
 		if entry.item.id == id:
 			return entry
-
+	
 	return null
 
 
@@ -45,26 +46,26 @@ func addToInventory(id) -> bool:
 	if not item:
 		print("Item not found:", id)
 		return false
-
+	
 	var stack = find_stack(id)
-
+	
 	# Stack if exists
 	if stack:
 		stack.quantity += 1
 		emit_signal("inventory_updated", inventory)
 		return true
-
+	
 	# Slot limit check for new stacks
 	if get_used_slots() >= max_slots:
 		print("inventory full")
 		return false
-
+	
 	# Create new stack
 	inventory.append({
 		"item": item,
 		"quantity": 1
 	})
-
+	
 	emit_signal("inventory_updated", inventory)
 	return true
 
@@ -74,17 +75,19 @@ func addToInventory(id) -> bool:
 # --------------------------------------------------
 func removeFromInventory(id, amount := 1) -> bool:
 	var stack = find_stack(id)
-
+	
 	if stack == null:
+		PopUp.alert("None in Inventory!")
 		return false
-
+	
 	if stack.quantity < amount:
+		PopUp.alert("Not Enough in Inventory!")
 		return false
-
+	
 	stack.quantity -= amount
-
+	
 	if stack.quantity <= 0:
 		inventory.erase(stack)
-
+	
 	emit_signal("inventory_updated", inventory)
 	return true

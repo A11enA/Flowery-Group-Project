@@ -2,6 +2,9 @@ join "Ial Tutor" center [animation="Slide From Left"]
 "Ial Tutor": Hey sweetie, can I trouble you for a couple tulips and a morning glory?
 "Ial Tutor": I think they'd look great pressed!
 - Sure!
+	set {Order.IalOrder} = true
+	"Ial Tutor": Thank you, sweetie!
 - I dont know...
-set {Order.IalOrder} = true
+	set {Likability.Ial} -= 0.5
+	"Ial Tutor": Oh... Well that's ok! I'll swing back later.
 leave "Ial Tutor" [animation="Slide To Right"]

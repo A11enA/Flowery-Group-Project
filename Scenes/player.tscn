@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://dy4uu41x8bb2a" path="res://Scenes/Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bjkw6al6gwsic" path="res://Assets/Sprites/player-pixilart (4).png" id="4_fkybt"]
 [ext_resource type="Texture2D" uid="uid://dacqxuo8jyexe" path="res://Assets/Icons/otherAssets/foragingKnife.png" id="4_vgqql"]
-[ext_resource type="PackedScene" uid="uid://j64scf4gk148" path="res://Scenes/inv_ui.tscn" id="5_fkybt"]
+[ext_resource type="PackedScene" uid="uid://i77o42iiboqh" path="res://Scenes/pop_up.tscn" id="5_8erm5"]
 [ext_resource type="PackedScene" uid="uid://bv50unu0fwc3p" path="res://Scenes/money_ui.tscn" id="5_x3wgy"]
-[ext_resource type="PackedScene" uid="uid://8s8p56y68m0s" path="res://Scenes/to_do.tscn" id="6_x3wgy"]
+[ext_resource type="PackedScene" uid="uid://dgajui67y4m8e" path="res://Scenes/pause_ui.tscn" id="6_x3wgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
 atlas = ExtResource("4_fkybt")
@@ -335,50 +335,16 @@ offset_left = -577.5
 offset_top = -325.0
 offset_right = 577.5
 offset_bottom = 325.0
-
-[node name="Pause Ui" type="CanvasLayer" parent="." unique_id=76085141]
-visible = false
-
-[node name="MarginContainer" type="MarginContainer" parent="Pause Ui" unique_id=26621418]
-custom_minimum_size = Vector2(20, 20)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_stretch_ratio = 1.47
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Pause Ui/MarginContainer" unique_id=2144499689]
-layout_mode = 2
+[node name="PopUp" parent="." unique_id=1888823601 instance=ExtResource("5_8erm5")]
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="Panel" type="Panel" parent="Pause Ui/MarginContainer/HBoxContainer" unique_id=108310098]
-custom_minimum_size = Vector2(100, 50)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-
-[node name="MoneyUI" parent="Pause Ui/MarginContainer/HBoxContainer/Panel" unique_id=426087141 instance=ExtResource("5_x3wgy")]
-clip_contents = true
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 12.0
-offset_top = -5.0
-offset_right = 112.0
-offset_bottom = 95.0
-grow_horizontal = 1
-grow_vertical = 1
-
-[node name="Inv_UI" parent="Pause Ui" unique_id=358855631 instance=ExtResource("5_fkybt")]
-offset_left = -132.0
-offset_top = -245.99998
-offset_right = 589.0
-offset_bottom = 251.00002
-scale = Vector2(0.386386, 0.39276767)
-
-[node name="ToDo" parent="Pause Ui" unique_id=1888823601 instance=ExtResource("6_x3wgy")]
+[node name="Pause Ui" parent="." unique_id=406130906 instance=ExtResource("6_x3wgy")]
+visible = false
 
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
 [connection signal="body_entered" from="Weapon/Weapon_area" to="." method="_on_weapon_area_body_entered"]

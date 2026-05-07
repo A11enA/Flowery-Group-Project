@@ -1,5 +1,5 @@
 join Veronica center [animation="Slide From Left"]
-Veronica (Neutral): Hey, I heard your the flower guy. Do you think you could get me two crocus flowers and a morning glory?
+Veronica (Neutral): Hey, I heard your the new flower guy. Do you think you could get me two crocus flowers and a morning glory?
 character: Sure thing!
 Veronica (Smile): Thanks.
 set {Order.VeronicaOrder} = true

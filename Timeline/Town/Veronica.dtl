@@ -1,9 +1,19 @@
 join Veronica center [animation="Fade In"]
-Veronica: ...
-- ...
-	Veronica: ...
+if {Order.VeronicaOrder} == true:
+	Veronica: You have my order?
+	- Yup! | [if {Order.OrderFilled} == true]
+	- Nah, Sorry.
+else:
 	- ...
-- Hi!
-	<Empty Text Event>
-- Can you look at me?
-	<Empty Text Event>
+		Veronica: ...
+		Veronica: ...
+		- ...
+			Veronica: ...
+			- Hello!
+				[end_timeline]
+			Veronica: Hi... You need something?
+	- Hi!
+		Veronica: <Empty Text Event>
+	- Can you look at me?
+		set {Likability.Veronica} -= 1.0
+		Veronica: Sorry. Alasia was too lazy to add my attention sprites.

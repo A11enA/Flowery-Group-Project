@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://dgajui67y4m8e"]
+
+[ext_resource type="PackedScene" uid="uid://bv50unu0fwc3p" path="res://Scenes/money_ui.tscn" id="1_cf5hy"]
+[ext_resource type="Script" uid="uid://bpiulhjpt1x5q" path="res://Scenes/pause_ui.gd" id="1_w3mym"]
+[ext_resource type="PackedScene" uid="uid://j64scf4gk148" path="res://Scenes/inv_ui.tscn" id="2_w3mym"]
+[ext_resource type="PackedScene" uid="uid://8s8p56y68m0s" path="res://Scenes/to_do.tscn" id="3_36amk"]
+[ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="4_knkv6"]
+
+[node name="Pause Ui" type="CanvasLayer" unique_id=406130906]
+process_mode = 3
+script = ExtResource("1_w3mym")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1198217798]
+custom_minimum_size = Vector2(1152, 648)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -51.5
+offset_right = 110.0
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MoneyUI" parent="PanelContainer" unique_id=426087141 instance=ExtResource("1_cf5hy")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 64)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="." unique_id=358626030]
+custom_minimum_size = Vector2(1152, 6)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=2047843076]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -48.0
+offset_right = 184.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Inv_UI" parent="Control/HBoxContainer" unique_id=358855631 instance=ExtResource("2_w3mym")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Control/HBoxContainer" unique_id=932026172]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(50, 96)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ToDo" parent="Control/HBoxContainer" unique_id=1888823601 instance=ExtResource("3_36amk")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=695930858]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/margin_top = 30
+
+[node name="Unpause" type="Button" parent="MarginContainer" unique_id=455976250]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("4_knkv6")
+theme_override_font_sizes/font_size = 75
+text = "Unpause"
+
+[connection signal="pressed" from="MarginContainer/Unpause" to="." method="_on_unpause_pressed"]

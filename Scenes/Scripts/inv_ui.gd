@@ -1,6 +1,6 @@
 extends Control
 
-@onready var slot_container = $NinePatchRect/GridContainer
+@onready var slot_container = $NinePatchRect/MarginContainer/GridContainer
 @onready var slot_scene = preload("res://Scenes/inv_ui_slot.tscn")
 @onready var weapon_slot_scene = preload("res://Scenes/inv_ui_weapon_slot.tscn")
 
@@ -8,7 +8,7 @@ const CATEGORY_WEAPON = 1
 
 func _ready():
 	create_weapon_slots(1)
-	create_slots(7)
+	create_slots(9)
 
 	await get_tree().process_frame
 
