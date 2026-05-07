@@ -3,9 +3,8 @@ if {Order.IalOrder} == true:
 	"Ial Tutor": Just who I wanted to see! Do you have my order, dear?
 	- Yes, Here you go! | [if {Order.OrderFilled} == true]
 		"Ial Tutor": Oh thank you! They are just wonderful! For your trouble.
-		do Global.removeFromInventory(0)
-		do Inventorymanager.removeFromInventory(0)
-		do Inventorymanager.removeFromInventory(0)
+		do Global.economy_manager.sell_flower(7, 1)
+		do Global.economy_manager.sell_flower(5, 2)
 	- No, Sorry.
 		That's ok, sweetie.
 	- Actually, I wanted to chat a bit!

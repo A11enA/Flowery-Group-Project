@@ -1,6 +1,6 @@
 join "Ial Tutor" center [animation="Slide From Left"]
-"Ial Tutor": Hey sweetie, can I trouble you for a couple tulips and a morning glory?
-"Ial Tutor": I think they'd look great pressed!
+"Ial Tutor": Hey sweetie, can I trouble you for a couple tulips and a Fox Glove?
+"Ial Tutor": I think they'd look just wonderful pressed!
 - Sure!
 	set {Order.IalOrder} = true
 	"Ial Tutor": Thank you, sweetie!

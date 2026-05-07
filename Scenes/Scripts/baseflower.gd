@@ -19,12 +19,16 @@ func _ready():
 		print("Invalid item ID:", item_id)
 
 func _on_body_entered(body):
-	if body is Player:
-		print("Picked up item:", item_id)
-
-		if Global.inventory_manager:
-			Global.inventory_manager.addToInventory(item_id)
-		else:
-			print("Inventory manager missing!")
-
-		queue_free()
+	if !Global.inventory_manager.invFull || Global.inventory_manager.find_stack(item_id):
+		if body is Player:
+			print("Picked up item:", item_id)
+	
+			if Global.inventory_manager:
+				Global.inventory_manager.addToInventory(item_id)
+			else:
+				print("Inventory manager missing!")
+	
+			queue_free()
+			Global.economy_manager.check_order()
+	else:
+		PopUp.alert ("Inventory Full")

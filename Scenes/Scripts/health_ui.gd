@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,11 +8,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("Pause"):
-		get_tree().paused = !get_tree().paused
-		$".".visible = !$".".visible
+	pass
+
+func update_display(hp):
+	$PanelContainer/HBoxContainer/HealthLabel.text = str(hp)
 
 
-func _on_unpause_pressed():
-	get_tree().paused = false
-	$".".visible = false
+func _on_pause_ui_health_u():
+	update_display(Global.player_hp)

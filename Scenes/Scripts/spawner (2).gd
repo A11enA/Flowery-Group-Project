@@ -62,9 +62,10 @@ func spawn_scenes(count: int) -> void:
 		# Spawn pickup
 		var pickup = PICKUP_SCENE.instantiate()
 		pickup.item_id = item_id
-
+	
 		get_tree().current_scene.add_child(pickup)
 		pickup.global_position = world_pos
+
 
 ### === WEIGHTED RANDOM === ###
 

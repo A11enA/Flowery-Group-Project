@@ -4,77 +4,62 @@
 [ext_resource type="Texture2D" uid="uid://db8abr8w30kl3" path="res://Assets/tilesets/popUp1 (1).webp" id="2_0ek4e"]
 [ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="3_05qr1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ek4e"]
-
-[node name="PopUp" type="Control" unique_id=1888823601]
-z_index = 5
-custom_minimum_size = Vector2(1152, 648)
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
+[node name="popUp" type="CanvasLayer" unique_id=268763354]
 script = ExtResource("1_ntxle")
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=187437049]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -576.0
-offset_top = -324.0
-offset_right = 576.0
-offset_bottom = 324.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_0ek4e")
+[node name="Control" type="Control" parent="." unique_id=1861603360]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1975171024]
-custom_minimum_size = Vector2(1152, 648)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/margin_left = 165
-theme_override_constants/margin_top = 70
-theme_override_constants/margin_right = 165
-theme_override_constants/margin_bottom = 75
-
-[node name="Sprite2D" type="Sprite2D" parent="PanelContainer/MarginContainer" unique_id=423536875]
-position = Vector2(576, 320)
-scale = Vector2(0.5, 0.5)
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=423536875]
+position = Vector2(919.5, 144)
+scale = Vector2(3, 3)
 texture = ExtResource("2_0ek4e")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1247534574]
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=1975171024]
+custom_minimum_size = Vector2(465, 288)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 647.0
+offset_right = 1112.0
+offset_bottom = 288.0
+grow_horizontal = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer" unique_id=1247534574]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 alignment = 1
 
-[node name="Header" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1210342641]
+[node name="Header" type="Label" parent="Control/MarginContainer/VBoxContainer" unique_id=1210342641]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 0
 theme = ExtResource("3_05qr1")
-theme_override_colors/font_color = Color(0.38039216, 0.22352941, 0.2627451, 1)
-theme_override_font_sizes/font_size = 100
+theme_override_colors/font_color = Color(0.2901961, 0.2, 0.21568628, 1)
+theme_override_font_sizes/font_size = 48
 text = "Alert!"
 
-[node name="Body" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=235274602]
+[node name="Body" type="Label" parent="Control/MarginContainer/VBoxContainer" unique_id=235274602]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("3_05qr1")
-theme_override_colors/font_color = Color(0.42352942, 0.2784314, 0.3137255, 1)
+theme_override_colors/font_color = Color(0.38039216, 0.22352941, 0.2627451, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
 
-[node name="Timer" type="Timer" parent="." unique_id=911562098]
-wait_time = 2.0
-one_shot = true
+[node name="Timer" type="Timer" parent="." unique_id=577380263]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

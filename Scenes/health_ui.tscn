@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://hkur4w5gf7vc"]
+
+[ext_resource type="Script" uid="uid://c4bq4aggecxv1" path="res://Scenes/Scripts/health_ui.gd" id="1_t0jn1"]
+[ext_resource type="Texture2D" uid="uid://bwdneh0yk46n6" path="res://Assets/Images/heart pixel art 254x254.png" id="2_yegwi"]
+[ext_resource type="FontFile" uid="uid://ykgh2extoktk" path="res://Assets/Fonts/great-vibes.regular.ttf" id="3_ph7ae"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a0l0k"]
+
+[node name="HealthUI" type="Control" unique_id=770716365]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+script = ExtResource("1_t0jn1")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1111594602]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = -96.0
+offset_bottom = 64.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=97571093]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer/HBoxContainer" unique_id=1539981927]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxEmpty_a0l0k")
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="PanelContainer/HBoxContainer/Panel" unique_id=349199683]
+position = Vector2(20, 20)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_yegwi")
+
+[node name="HealthLabel" type="Label" parent="PanelContainer/HBoxContainer" unique_id=36066851]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_ph7ae")
+theme_override_font_sizes/font_size = 50
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1

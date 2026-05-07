@@ -7,6 +7,7 @@ class_name Player
 @onready var iventory = %Inv_UI
 var direction 
 var is_attacking: bool = false
+signal health
 
 var inventory : Inventory = Inventory.new()
 
@@ -18,6 +19,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack"):
 		if Global.inventory_manager.find_stack(0):
 			attack()
+	if Global.player_hp <= 3 && $HealTimer.is_stopped:
+		$HealTimer.start()
 
 
 func _physics_process(delta: float) -> void:
@@ -66,6 +69,8 @@ func on_item_picked_up(item : Item):
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	Global.player_hp -= 1
 	print(Global.player_hp)
+	health.emit()
+	$hpMinus.play()
 	#die function 
 	if Global.player_hp <= 0:
 		die()
@@ -73,9 +78,11 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 func _on_weapon_area_body_entered(body: Node2D) -> void:
 	Global.enemy_hp -= 1
 	print(Global.enemy_hp)
+	$bugScream.play()
 	if Global.enemy_hp <= 0:
 		Global.inventory_manager.addToInventory(1)
-		print("wings has been added to your inventory")
+		print("wings have been added to your inventory")
+		$bugDie.play()
 		body.queue_free()
 
 func attack():
@@ -100,3 +107,9 @@ func _on_weapon_timer_timeout() -> void:
 	is_attacking = false
 	$Weapon.visible = false
 	%Weapon_area.monitoring = false
+
+
+func _on_heal_timer_timeout():
+	$hpPlus.play()
+	Global.player_hp += 1
+	health.emit()

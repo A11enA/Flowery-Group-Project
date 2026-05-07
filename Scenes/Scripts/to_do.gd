@@ -9,11 +9,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Dialogic.VAR.Order.EthanOrder:
-		$PanelContainer/MarginContainer/VBoxContainer/Body.text = "Bring that weird guy 2 Lavender and a Datura"
+		$MarginContainer/VBoxContainer/Body.text = "Bring that weird guy 2 Lavender and a Datura"
 	elif Dialogic.VAR.Order.IalOrder:
-		$PanelContainer/MarginContainer/VBoxContainer/Body.text = "Bring Ial ???"
+		$MarginContainer/VBoxContainer/Body.text = "Bring Ial 2 Tulips and a Digitalis"
 	elif Dialogic.VAR.Order.VeronicaOrder:
 		if Dialogic.VAR.SceneFinish.MetVeronica:
-			$PanelContainer/MarginContainer/VBoxContainer/Body.text = "Bring Veronica 2 crocus flowers and a morning glory"
+			$MarginContainer/VBoxContainer/Body.text = "Bring Veronica 2 Crocus flowers and a Morning glory"
 		else:
-			$PanelContainer/MarginContainer/VBoxContainer/Body.text = "Bring the tall woman 2 crocus flowers and a morning glory"
+			$MarginContainer/VBoxContainer/Body.text = "Bring the tall woman 2 Crocus flowers and a Morning glory"

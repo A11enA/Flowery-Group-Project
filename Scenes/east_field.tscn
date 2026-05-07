@@ -1425,3 +1425,14 @@ next_scene = "res://Scenes/Village.tscn"
 [node name="BugEnemy" parent="." unique_id=1864485187 instance=ExtResource("6_5yt8q")]
 z_index = 2
 position = Vector2(529, 478)
+hp = 1
+
+[node name="BugEnemy3" parent="." unique_id=672523597 instance=ExtResource("6_5yt8q")]
+z_index = 2
+position = Vector2(86, -156)
+hp = 1
+
+[node name="BugEnemy2" parent="." unique_id=660306417 instance=ExtResource("6_5yt8q")]
+z_index = 2
+position = Vector2(968, -31)
+hp = 1

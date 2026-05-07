@@ -9,7 +9,8 @@ size = Vector2(16.421528, 53.394062)
 [sub_resource type="CircleShape2D" id="CircleShape2D_7x8va"]
 radius = 135.03333
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wsu11"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_wsu11"]
+radius = 20.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wsu11"]
 atlas = ExtResource("1_hvlcn")
@@ -69,7 +70,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1465090454]
 scale = Vector2(2.7457097, 2.7541366)
-shape = SubResource("CapsuleShape2D_wsu11")
+shape = SubResource("CircleShape2D_wsu11")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=451979678]
 z_index = 1

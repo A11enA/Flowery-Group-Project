@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bv50unu0fwc3p"]
 
-[ext_resource type="Script" uid="uid://cxj122qn5yhd0" path="res://Scenes/Scripts/money_ui.gd" id="1_88w3p"]
+[ext_resource type="Script" uid="uid://cxj122qn5yhd0" path="res://Scenes/Scripts/economymanager.gd" id="1_88w3p"]
 [ext_resource type="FontFile" uid="uid://ykgh2extoktk" path="res://Assets/Fonts/great-vibes.regular.ttf" id="1_pfpth"]
 [ext_resource type="Texture2D" uid="uid://dql05fq40n85r" path="res://coin-pixilart.png" id="3_lhcgw"]
 
