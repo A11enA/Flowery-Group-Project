@@ -21,14 +21,12 @@ mouse_filter = 1
 script = ExtResource("1_dvbtt")
 
 [node name="Background" type="TextureRect" parent="." unique_id=898217759]
-visible = false
 layout_mode = 0
 scale = Vector2(1.5, 1.5)
 mouse_filter = 2
 texture = ExtResource("2_hh5vi")
 
 [node name="ItemSpot" type="TextureRect" parent="." unique_id=208673511]
-visible = false
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 1
 anchors_preset = 8
