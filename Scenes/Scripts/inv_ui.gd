@@ -9,6 +9,7 @@ const CATEGORY_WEAPON = 1
 func _ready():
 	create_weapon_slots(1)
 	create_slots(9)
+	#print_tree_pretty()
 
 	await get_tree().process_frame
 
@@ -20,6 +21,7 @@ func create_slots(amount):
 	for i in range(amount):
 		var slot = slot_scene.instantiate()
 		slot_container.add_child(slot)
+
 
 
 func create_weapon_slots(amount):

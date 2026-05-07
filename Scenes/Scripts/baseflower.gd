@@ -31,4 +31,4 @@ func _on_body_entered(body):
 			queue_free()
 			Global.economy_manager.check_order()
 	else:
-		PopUp.alert ("Inventory Full")
+		Global.UiManager.alert ("Inventory Full")

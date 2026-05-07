@@ -55,8 +55,8 @@ func _on_button_pressed():
 			Global.inventory_manager.removeFromInventory(11)
 			Global.inventory_manager.addToInventory(21)
 		else:
-			PopUp.alert("Not enough flowers!")
+			Global.UiManager.alert("Not enough flowers!")
 			print("testf")
 	else:
-		PopUp.alert("No Paper!")
+		Global.UiManager.alert("No Paper!")
 		print("testp")

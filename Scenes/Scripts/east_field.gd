@@ -18,6 +18,7 @@ func _ready() -> void:
 	randomize()
 	setup_spawn_positions()
 	spawn_items(max_spawn_amount)
+	
 
 
 func setup_spawn_positions():

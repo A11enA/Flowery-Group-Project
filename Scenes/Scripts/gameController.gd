@@ -43,7 +43,8 @@ func change_scene(
 	scene_holder.add_child(new)
 	current_scene = new
 	
-	
+	if new_scene == "res://Scenes/Village.tscn":
+		Dialogic.start("thoughts")
 	##fade back in
 	#if transition:
 		#translation_controller.transition(transition_out, seconds)

@@ -1,12 +1,12 @@
 join Ethan center [animation="Slide From Left"]
 Ethan (Neutral): ...
-character: Do you want anything or...
+Player: Do you want anything or...
 Ethan (Neutral): ...
-character: Dude..
+Player: Dude..
 Ethan (Plotting): Is the normie flower seller talking to ME??
 Ethan (Smile): I'll have two of your finest lavernder and a datura to aid in my slumber ritual!
-character: Sure.
+Player: Sure.
 Ethan (Plotting): HAHA HAAA
-character: (Weirdo...)
+Player: (Weirdo...)
 set {Order.EthanOrder} = true
 leave Ethan [animation="Slide To Right"]

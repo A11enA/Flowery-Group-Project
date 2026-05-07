@@ -1,0 +1,19 @@
+class_name UIControl
+extends CanvasLayer
+
+signal healthU
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	Global.UI_manager = self
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func alert(msg: String):
+	$popUp.alert(msg)
+
+func itemDisc(id: int):
+	$ToDo.itemDisc(id)

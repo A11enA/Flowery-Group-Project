@@ -69,12 +69,6 @@ func _ready() -> void:
 	update_display(coins)
 	
 	
-	Global.economy_manager = self
-	
-	database = load(DATABASE_PATH)
-	
-	update_display(coins)
-	
 	
 
 # Update UI
@@ -119,13 +113,13 @@ func check_order() -> bool:
 		var amount = requirement["amount"]
 	
 		if !Global.inventory_manager.has_item_amount(id, amount) && !Global.inventory_manager.has_item_amount(wrappedId, amount) && !(Global.inventory_manager.has_item_amount(wrappedId, amount-1) && Global.inventory_manager.has_item_amount(id, amount-1)):
-	
+			
 			Dialogic.VAR.Order.OrderFilled = false
-	
+			
 			return false
 	
 	Dialogic.VAR.Order.OrderFilled = true
-	PopUp.alert("Order Filled!")
+	Global.UiManager.alert("Order Filled!")
 
 	return true
 

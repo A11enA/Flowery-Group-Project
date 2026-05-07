@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b2s4nje252rwo"]
+
+[ext_resource type="Script" uid="uid://d3iv1ecajtbw4" path="res://Scenes/Scripts/Ui_Manager.gd" id="1_k436y"]
+[ext_resource type="PackedScene" uid="uid://dgajui67y4m8e" path="res://Scenes/pause_ui.tscn" id="2_wcp00"]
+[ext_resource type="PackedScene" uid="uid://i77o42iiboqh" path="res://Scenes/pop_up.tscn" id="3_pwm6i"]
+[ext_resource type="PackedScene" uid="uid://j64scf4gk148" path="res://Scenes/inv_ui.tscn" id="4_0cbwa"]
+[ext_resource type="PackedScene" uid="uid://tglbbwggo8uc" path="res://Scenes/crafting_ui.tscn" id="5_sm38h"]
+[ext_resource type="PackedScene" uid="uid://8s8p56y68m0s" path="res://Scenes/to_do.tscn" id="6_y4mvd"]
+
+[node name="UiManager" type="Control" unique_id=2020516279]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k436y")
+
+[node name="Pause Ui" parent="." unique_id=406130906 instance=ExtResource("2_wcp00")]
+
+[node name="popUp" parent="." unique_id=268763354 instance=ExtResource("3_pwm6i")]
+
+[node name="Inv_UI" parent="." unique_id=358855631 instance=ExtResource("4_0cbwa")]
+layout_mode = 1
+
+[node name="Craft_UI" parent="." unique_id=1670283733 instance=ExtResource("5_sm38h")]
+layout_mode = 0
+
+[node name="ToDo" parent="." unique_id=1888823601 instance=ExtResource("6_y4mvd")]
+layout_mode = 1
+offset_left = -232.5
+offset_top = -144.0
+offset_right = 232.5
+offset_bottom = 144.0

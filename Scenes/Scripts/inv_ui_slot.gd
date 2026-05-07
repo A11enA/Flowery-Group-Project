@@ -1,11 +1,15 @@
 extends Panel
 
-@onready var item_visual: TextureRect = $TextureRect
+@onready var item_visual: TextureRect = $ItemSpot
 @onready var stack_label: Label = $StackAmount
 
 var current_entry = null
 var is_weapon_slot = false
 
+func _ready():
+	#print_tree_pretty()
+	print($Button.size)
+	print($Button.global_position)
 
 func set_item(entry):
 	current_entry = entry
@@ -44,3 +48,9 @@ func remove_item(amount := 1):
 		return
 
 	inv.removeFromInventory(item.id, amount)
+
+
+func _on_button_pressed():
+	print("Press!")
+	if current_entry != null:
+		Global.UI_manager.itemDisc(current_entry.item.id)

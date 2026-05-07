@@ -25,15 +25,14 @@ Dialogic="*uid://ds2q0uclmolvu"
 PlayerStats="*uid://c0x62gugl8bhf"
 Inventorymanager="*uid://wremrernhdhf"
 SAVE_MANAGER="*uid://ctt30dnwyf7w6"
-PopUp="*uid://i77o42iiboqh"
 
 [dialogic]
 
 directories/dch_directory={
 "Ethan": "res://Characters/Ethan.dch",
 "Ial Tutor": "res://Characters/Ial Tutor.dch",
-"Veronica": "res://Characters/Veronica.dch",
-"character": "res://Characters/character.dch"
+"Player": "res://Characters/Player.dch",
+"Veronica": "res://Characters/Veronica.dch"
 }
 directories/dtl_directory={
 "Ethan": "res://Timeline/Town/Ethan.dtl",
@@ -44,6 +43,7 @@ directories/dtl_directory={
 "Veronica": "res://Timeline/Town/Veronica.dtl",
 "Veronica Order": "res://Timeline/Orders/Veronica Order.dtl",
 "Villagesign": "res://Timeline/Town/Villagesign.dtl",
+"thoughts": "res://Timeline/Town/thoughts.dtl",
 "tooManyOrders": "res://Timeline/Town/tooManyOrders.dtl"
 }
 layout/style_directory={}

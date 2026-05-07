@@ -35,3 +35,4 @@ func _on_take_orders_pressed() -> void:
 func _on_wrap_flowers_pressed():
 	print("wrap flowers button")
 	$Craft_UI.visible = !$Craft_UI.visible
+	Global.economy_manager.check_order()

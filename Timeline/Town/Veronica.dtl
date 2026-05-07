@@ -1,92 +1,82 @@
 join Veronica center [animation="Fade In"]
 
 if {Order.VeronicaOrder} == true:
-
+	
 	Veronica: You have my order?
-
+	
 	- Yup! | [if {Order.OrderFilled} == true]
-
+		
 		set {Likability.Veronica} += 1.0
-
-
-		if {Global.inventory_manager.has_item_amount(13,1)}:
-			do Global.economy_manager.sell_flower(13, 1)
-		else:
+		
+		
+if Global.inventory_manager.has_item_amount(3,1) || :
+if Global.inventory_manager.has_item_amount(13,1):
 			do Global.economy_manager.sell_flower(3, 1)
-
-
-		if {Global.inventory_manager.has_item_amount(21,2)}:
-			do Global.economy_manager.sell_flower(21, 2)
-
-		elif {Global.inventory_manager.has_item_amount(21,1)}:
-			do Global.economy_manager.sell_flower(21, 1)
-			do Global.economy_manager.sell_flower(11, 1)
-
-		else:
-			do Global.economy_manager.sell_flower(11, 2)
-
-
+		if Global.inventory_manager.has_item_amount(11,2)||(Global.inventory_manager.has_item_amount(11,1) && Global.inventory_manager.has_item_amount(21,1)) ||Global.inventory_manager.has_item_amount(21,2):
+				do Global.economy_manager.sell_flower(5, 2)
+		
+		
 		Veronica: Thanks. Bye.
-
+		
 		leave Veronica [animation="Slide To Right"]
-
+		
 		[end_timeline]
-
-
+	
+	
 	- Nah, Sorry.
-
+		
 		Veronica: Oh...
-
+		
 		leave Veronica [animation="Slide To Right"]
-
+		
 		[end_timeline]
 
 
 else:
-
+	
 	Veronica: ...
-
-
+	
+	
 	- ...
-
+		
 		return
-
-
+	
+	
 	- Hi!
-
+		
 		Veronica: Hi... You need something?
-
-
+		
+		
 		- What's your name?
-
+			
 			Veronica: Veronica... Goodybye.
-
+			
 			set {SceneFinish.MetVeronica} = true
-
+			
 			leave Veronica [animation="Slide To Right"]
-
+			
 			[end_timeline]
-
-
+		
+		
 		- No, Just wanted to chat!
-
+			
 			Veronica: Oh. I'm not much of a chatter.
-
+			
 			Veronica: My name is Veronica. I have to go now.
-
+			
 			leave Veronica [animation="Slide To Right"]
-
+			
 			[end_timeline]
-
-
+	
+	
 	- Can you look at me?
-
+		
 		set {Likability.Veronica} -= 1.0
-
+		
 		Veronica: Sorry. Alasia was too lazy to add my attention sprites.
-
+		
 		leave Veronica [animation="Slide To Right"]
-
+		
 		[end_timeline]
 
 
