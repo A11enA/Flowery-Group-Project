@@ -1,4 +1,4 @@
-join "Ial Tutor" (Default) center [animation="Slide From Right"]
+join "Ial Tutor" center [animation="Slide From Right"]
 "Ial Tutor" (Default): Oh! A new face! and setting up such a nice little stall up! What drove you to choose our quaint little town?
 - What's it to you?
 	set {Likability.Ial} -= 1.0
@@ -21,3 +21,4 @@ do Inventorymanager.addToInventory(0)
 You have received a "Foraging Knife". It's a Paring knife previously used to cut stems.
 set {SceneFinish.tutorialCompleted} = true
 leave "Ial Tutor" [animation="Slide To Left"]
+Player: Maybe I should try and wait for another order?

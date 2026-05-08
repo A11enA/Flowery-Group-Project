@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dr5mbow2516cs"
-path="res://.godot/imported/shop-pixilart.png-3a38b37fe56958ef31fee581a1524eca.ctex"
+path="res://.godot/imported/shop-pixilart.png-724baecd68ba1e5cd549eaec23706787.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shop-pixilart.png"
-dest_files=["res://.godot/imported/shop-pixilart.png-3a38b37fe56958ef31fee581a1524eca.ctex"]
+source_file="res://Assets/Images/shop-pixilart.png"
+dest_files=["res://.godot/imported/shop-pixilart.png-724baecd68ba1e5cd549eaec23706787.ctex"]
 
 [params]
 

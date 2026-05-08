@@ -37,16 +37,16 @@ directories/dch_directory={
 "Veronica": "res://Characters/Veronica.dch"
 }
 directories/dtl_directory={
-"Ethan": "res://Timeline/Town/Ethan.dtl",
+"Ethan": "res://Timeline/Town/Chat/Ethan.dtl",
 "Ethan Order": "res://Timeline/Orders/Ethan Order.dtl",
-"Ial": "res://Timeline/Town/Ial.dtl",
+"Ial": "res://Timeline/Town/Chat/Ial.dtl",
 "Ial Order": "res://Timeline/Orders/Ial Order.dtl",
 "Tutorial": "res://Timeline/Critical!/Tutorial.dtl",
-"Veronica": "res://Timeline/Town/Veronica.dtl",
+"Veronica": "res://Timeline/Town/Chat/Veronica.dtl",
 "Veronica Order": "res://Timeline/Orders/Veronica Order.dtl",
-"Villagesign": "res://Timeline/Town/Villagesign.dtl",
-"thoughts": "res://Timeline/Town/thoughts.dtl",
-"tooManyOrders": "res://Timeline/Town/tooManyOrders.dtl"
+"Villagesign": "res://Timeline/Town/Utility/Villagesign.dtl",
+"thoughts": "res://Timeline/Town/Utility/thoughts.dtl",
+"tooManyOrders": "res://Timeline/Town/Utility/tooManyOrders.dtl"
 }
 layout/style_directory={}
 variables={

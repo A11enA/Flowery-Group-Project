@@ -346,9 +346,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Pause Ui" parent="." unique_id=406130906 instance=ExtResource("6_x3wgy")]
-visible = false
 
 [node name="PopUp" parent="." unique_id=1888823601 instance=ExtResource("5_8erm5")]
+visible = false
 
 [node name="hpMinus" type="AudioStreamPlayer2D" parent="." unique_id=1503642731]
 stream = ExtResource("7_tx1dd")
