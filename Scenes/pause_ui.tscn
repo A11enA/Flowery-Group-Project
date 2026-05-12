@@ -9,6 +9,7 @@
 
 [node name="Pause Ui" type="CanvasLayer" unique_id=406130906]
 process_mode = 3
+visible = false
 script = ExtResource("1_w3mym")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1198217798]
@@ -96,4 +97,4 @@ theme_override_font_sizes/font_size = 75
 text = "Unpause"
 
 [connection signal="healthU" from="." to="PanelContainer/HealthUI" method="_on_pause_ui_health_u"]
-[connection signal="pressed" from="MarginContainer/Unpause" to="." method="_on_unpause_pressed"]
+[connection signal="button_down" from="MarginContainer/Unpause" to="." method="_on_unpause_pressed"]

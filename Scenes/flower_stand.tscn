@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bgywus4j2nup6"]
 
 [ext_resource type="Script" uid="uid://sxgmt7ml8tcd" path="res://Scenes/Scripts/flower_stand.gd" id="1_pb0mu"]
-[ext_resource type="Texture2D" uid="uid://dr5mbow2516cs" path="res://shop-pixilart.png" id="2_nd5oq"]
+[ext_resource type="Texture2D" uid="uid://dr5mbow2516cs" path="res://Assets/Images/shop-pixilart.png" id="2_nd5oq"]
 [ext_resource type="Theme" uid="uid://blihtgpmnolhy" path="res://Assets/Themes/Fancy.tres" id="3_fshgc"]
 [ext_resource type="PackedScene" uid="uid://tglbbwggo8uc" path="res://Scenes/crafting_ui.tscn" id="4_vr5sw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dug8h"]
-size = Vector2(90, 15.5)
+size = Vector2(100, 25.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cn410"]
 radius = 139.74261
@@ -21,7 +21,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_nd5oq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2107818782]
-position = Vector2(-2, 22)
+position = Vector2(10, 25)
 shape = SubResource("RectangleShape2D_dug8h")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=78060262]

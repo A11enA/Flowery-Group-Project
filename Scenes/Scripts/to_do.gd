@@ -1,6 +1,5 @@
 extends Control
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -29,7 +28,13 @@ func makeDefault():
 
 func itemDisc(id : int):
 	if $MarginContainer/VBoxContainer/Header.text == "TO DO:":
-		if Global.inventory_manager.find_stack(2):
+		if Global.inventory_manager.find_stack(0):
+			$MarginContainer/VBoxContainer/Header.text = "Foraging Knife."
+			$MarginContainer/VBoxContainer/Body.text = "Paring knife previously used to cut stems"
+		elif Global.inventory_manager.find_stack(1):
+			$MarginContainer/VBoxContainer/Header.text = "Paper Butterfly"
+			$MarginContainer/VBoxContainer/Body.text = "Wings of the common paper butterfly. \nCan be used as a substitute for paper."
+		elif Global.inventory_manager.find_stack(2):
 			$MarginContainer/VBoxContainer/Header.text = "Daisy"
 			$MarginContainer/VBoxContainer/Body.text = "Flower with white rays and a yellow center."
 		elif Global.inventory_manager.find_stack(3):
@@ -46,18 +51,18 @@ func itemDisc(id : int):
 			$MarginContainer/VBoxContainer/Body.text = "Fragrant, evergreen, semi-woody shrub recognized via scent and purple, tubular flowers."
 		elif Global.inventory_manager.find_stack(7):
 			$MarginContainer/VBoxContainer/Header.text = "Digitalis"
-			$MarginContainer/VBoxContainer/Body.text = "Tall, tubular medicinal flower \n Often known as Foxglove."
+			$MarginContainer/VBoxContainer/Body.text = "Tall, tubular medicinal flower. \n Often known as Foxglove."
 		elif Global.inventory_manager.find_stack(8):
 			$MarginContainer/VBoxContainer/Header.text = "Morning Glory"
 			$MarginContainer/VBoxContainer/Body.text = "Twining herbaceous annual vines known for their heart-shaped \n leaves and trumpet-shaped flowers that bloom \n in the morning and fade by afternoon."
 		elif Global.inventory_manager.find_stack(9):
 			$MarginContainer/VBoxContainer/Header.text = "Datura"
-			$MarginContainer/VBoxContainer/Body.text = "Flower with white rays and a yellow center."
+			$MarginContainer/VBoxContainer/Body.text = "Short-lived perennial plants up to 2 meters tall with trumpet-shaped flowers and spiny fruit capsules."
 		elif Global.inventory_manager.find_stack(10):
 			$MarginContainer/VBoxContainer/Header.text = "Poppy"
-			$MarginContainer/VBoxContainer/Body.text = "Flower with white rays and a yellow center."
+			$MarginContainer/VBoxContainer/Body.text = "Poppies are herbaceous plants in the Papaveraceae family, recognized \n by their vibrant, papery petals."
 		elif Global.inventory_manager.find_stack(11):
 			$MarginContainer/VBoxContainer/Header.text = "Crocus"
-			$MarginContainer/VBoxContainer/Body.text = "Flower with white rays and a yellow center."
+			$MarginContainer/VBoxContainer/Body.text = "Purple flowers that are the source of the world's most expensive spice."
 	else:
 		checkToDo()

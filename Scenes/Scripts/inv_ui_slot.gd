@@ -2,6 +2,7 @@ extends Panel
 
 @onready var item_visual: TextureRect = $ItemSpot
 @onready var stack_label: Label = $StackAmount
+@onready var UI = UI_manager
 
 var current_entry = null
 var is_weapon_slot = false
@@ -52,5 +53,7 @@ func remove_item(amount := 1):
 
 func _on_button_pressed():
 	print("Press!")
-	if Global.UI_manager != null && current_entry != null :
-		Global.UI_manager.itemDisc(current_entry.item.id)
+	if UI_manager != null && current_entry != null :
+		UI_manager.itemDisc(current_entry.item.id)
+	else:
+		print("not loading :(")
