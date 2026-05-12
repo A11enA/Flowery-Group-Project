@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://y1j7t3pe13w1" path="res://Scenes/Scripts/baseflower.gd" id="1_jsq7h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f56yq"]
-radius = 119.98173
-height = 415.79703
+radius = 99.775345
+height = 199.55069
 
 [sub_resource type="Animation" id="Animation_f56yq"]
 length = 0.001
