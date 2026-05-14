@@ -16,4 +16,11 @@ func alert(msg: String):
 	$popUp.alert(msg)
 
 func itemDisc(id: int):
+	print("ITEM DISC RUNNING")
+	print("ITEM DISC:", id)
 	$ToDo.itemDisc(id)
+	$ToDo.visible = true
+	visible = true
+
+func check():
+	$ToDo.checkToDo()

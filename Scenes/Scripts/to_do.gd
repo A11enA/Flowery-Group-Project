@@ -1,68 +1,71 @@
 extends Control
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
 	checkToDo()
 
+
 func checkToDo():
+	print("CHECK TODO RUNNING")
+	$MarginContainer/VBoxContainer/Header.set_text("TO DO:")
+	
 	if Dialogic.VAR.Order.EthanOrder:
-		$MarginContainer/VBoxContainer/Body.text = "Bring that weird guy 2 Lavender and a Datura"
+		$MarginContainer/VBoxContainer/Body.set_text("Bring that weird guy 2 Lavender and a Datura")
 	elif Dialogic.VAR.Order.IalOrder:
-		$MarginContainer/VBoxContainer/Body.text = "Bring Ial 2 Tulips and a Digitalis"
+		$MarginContainer/VBoxContainer/Body.set_text("Bring Ial 2 Tulips and a Digitalis")
 	elif Dialogic.VAR.Order.VeronicaOrder:
 		if Dialogic.VAR.SceneFinish.MetVeronica:
-			$MarginContainer/VBoxContainer/Body.text = "Bring Veronica 2 Crocus flowers and a Morning glory"
+			$MarginContainer/VBoxContainer/Body.set_text("Bring Veronica 2 Crocus flowers and a Morning Glory")
 		else:
-			$MarginContainer/VBoxContainer/Body.text = "Bring the tall woman 2 Crocus flowers and a Morning glory"
+			$MarginContainer/VBoxContainer/Body.set_text("Bring the tall woman 2 Crocus flowers and a Morning Glory")
+	
 	else:
 		makeDefault()
 
+
 func makeDefault():
-	$MarginContainer/VBoxContainer/Header.text = "TO DO:"
-	$MarginContainer/VBoxContainer/Body.text = "Nothing Yet!"
+
+	$MarginContainer/VBoxContainer/Header.set_text("TO DO:")
+	$MarginContainer/VBoxContainer/Body.set_text("Nothing Yet!")
+
 
 func itemDisc(id : int):
-	if $MarginContainer/VBoxContainer/Header.text == "TO DO:":
-		if Global.inventory_manager.find_stack(0):
-			$MarginContainer/VBoxContainer/Header.text = "Foraging Knife."
-			$MarginContainer/VBoxContainer/Body.text = "Paring knife previously used to cut stems"
-		elif Global.inventory_manager.find_stack(1):
-			$MarginContainer/VBoxContainer/Header.text = "Paper Butterfly"
-			$MarginContainer/VBoxContainer/Body.text = "Wings of the common paper butterfly. \nCan be used as a substitute for paper."
-		elif Global.inventory_manager.find_stack(2):
-			$MarginContainer/VBoxContainer/Header.text = "Daisy"
-			$MarginContainer/VBoxContainer/Body.text = "Flower with white rays and a yellow center."
-		elif Global.inventory_manager.find_stack(3):
-			$MarginContainer/VBoxContainer/Header.text = "Sunflower"
-			$MarginContainer/VBoxContainer/Body.text = "Flower with white rays and a yellow center."
-		elif Global.inventory_manager.find_stack(4):
-			$MarginContainer/VBoxContainer/Header.text = "Dandelion"
-			$MarginContainer/VBoxContainer/Body.text = "Hardy, perennial herb with a bright yellow flower head."
-		elif Global.inventory_manager.find_stack(5):
-			$MarginContainer/VBoxContainer/Header.text = "Tulip"
-			$MarginContainer/VBoxContainer/Body.text = "Large, cup-shaped flowers that appear in almost all colors. \n Grows pink in this area."
-		elif Global.inventory_manager.find_stack(6):
-			$MarginContainer/VBoxContainer/Header.text = "Lavender"
-			$MarginContainer/VBoxContainer/Body.text = "Fragrant, evergreen, semi-woody shrub recognized via scent and purple, tubular flowers."
-		elif Global.inventory_manager.find_stack(7):
-			$MarginContainer/VBoxContainer/Header.text = "Digitalis"
-			$MarginContainer/VBoxContainer/Body.text = "Tall, tubular medicinal flower. \n Often known as Foxglove."
-		elif Global.inventory_manager.find_stack(8):
-			$MarginContainer/VBoxContainer/Header.text = "Morning Glory"
-			$MarginContainer/VBoxContainer/Body.text = "Twining herbaceous annual vines known for their heart-shaped \n leaves and trumpet-shaped flowers that bloom \n in the morning and fade by afternoon."
-		elif Global.inventory_manager.find_stack(9):
-			$MarginContainer/VBoxContainer/Header.text = "Datura"
-			$MarginContainer/VBoxContainer/Body.text = "Short-lived perennial plants up to 2 meters tall with trumpet-shaped flowers and spiny fruit capsules."
-		elif Global.inventory_manager.find_stack(10):
-			$MarginContainer/VBoxContainer/Header.text = "Poppy"
-			$MarginContainer/VBoxContainer/Body.text = "Poppies are herbaceous plants in the Papaveraceae family, recognized \n by their vibrant, papery petals."
-		elif Global.inventory_manager.find_stack(11):
-			$MarginContainer/VBoxContainer/Header.text = "Crocus"
-			$MarginContainer/VBoxContainer/Body.text = "Purple flowers that are the source of the world's most expensive spice."
+	
+	if id == 0:
+		$MarginContainer/VBoxContainer/Header.set_text("Foraging Knife")
+		$MarginContainer/VBoxContainer/Body.set_text("Paring knife previously used to cut stems.")
+	elif id == 1:
+		$MarginContainer/VBoxContainer/Header.set_text("Paper Butterfly Wings")
+		$MarginContainer/VBoxContainer/Body.set_text("Wings of the common paper butterfly.\nCan be used as a substitute for paper.")
+	elif id == 2:
+		$MarginContainer/VBoxContainer/Header.set_text("Daisy")
+		$MarginContainer/VBoxContainer/Body.set_text("Flower with white rays and a yellow center.")
+	elif id == 3:
+		$MarginContainer/VBoxContainer/Header.set_text("Sunflower")
+		$MarginContainer/VBoxContainer/Body.set_text("Tall flower that always faces the sun.")
+	elif id == 4:
+		$MarginContainer/VBoxContainer/Header.set_text("Dandelion")
+		$MarginContainer/VBoxContainer/Body.set_text("Hardy, perennial herb with a bright yellow flower head.")
+	elif id == 5:
+		$MarginContainer/VBoxContainer/Header.set_text("Tulip")
+		$MarginContainer/VBoxContainer/Body.set_text("Large, cup-shaped flowers that appear in almost all colors.\nGrows pink in this area.")
+	elif id == 6:
+		$MarginContainer/VBoxContainer/Header.set_text("Lavender")
+		$MarginContainer/VBoxContainer/Body.set_text("Fragrant, evergreen, semi-woody shrub recognized via \nscent and purple tubular flowers.")
+	elif id == 7:
+		$MarginContainer/VBoxContainer/Header.set_text("Digitalis")
+		$MarginContainer/VBoxContainer/Body.set_text("Tall, tubular medicinal flower.\nOften known as Foxglove.")
+	elif id == 8:
+		$MarginContainer/VBoxContainer/Header.set_text("Morning Glory")
+		$MarginContainer/VBoxContainer/Body.set_text("Twining herbaceous annual vine with trumpet-shaped flowers.")
+	elif id == 9:
+		$MarginContainer/VBoxContainer/Header.set_text("Datura")
+		$MarginContainer/VBoxContainer/Body.set_text("Short-lived perennial plant with trumpet-shaped flowers and spiny fruit capsules.")
+	elif id == 10:
+		$MarginContainer/VBoxContainer/Header.set_text("Poppy")
+		$MarginContainer/VBoxContainer/Body.set_text("Flower recognized by vibrant papery petals.")
+	elif id == 11:
+		$MarginContainer/VBoxContainer/Header.set_text("Crocus")
+		$MarginContainer/VBoxContainer/Body.set_text("Purple flowers that produce saffron.")
 	else:
 		checkToDo()
