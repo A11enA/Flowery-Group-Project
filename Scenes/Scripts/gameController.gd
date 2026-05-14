@@ -21,7 +21,7 @@ func save_current_slot(slot: int = 0) -> Error:
 	SAVE_MANAGER.change_slot(slot)
 	var err: Error = await SAVE_MANAGER.save_data()
 	if err == OK:
-		Global.UI_manager.alert("Game Saved")
+		Ui_Manager.alert("Game Saved")
 	return err
 
 # Load saved game data from the specified slot and restore the scene.
@@ -30,14 +30,14 @@ func load_save_slot(slot: int = 0) -> void:
 	SAVE_MANAGER.load_data()
 	var saved_scene = SAVE_MANAGER.get_data("current_scene", "res://Scenes/Village.tscn")
 	change_scene(saved_scene, true, false, false, true)
-	Global.UI_manager.alert("Game Loaded")
+	Global.Ui_Manager.alert("Game Loaded")
 
 # Load the current save and restart the last loaded scene.
 func load_game() -> void:
 	if current_scene_path != "":
 		change_scene(current_scene_path)
 	SAVE_MANAGER.load_data()
-	Global.UI_manager.alert("Game Loaded")
+	Global.Ui_Manager.alert("Game Loaded")
 
 func change_scene(
 	new_scene: String,

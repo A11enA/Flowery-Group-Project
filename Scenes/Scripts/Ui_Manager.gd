@@ -5,7 +5,7 @@ signal healthU
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.UI_manager = self
+	Global.Ui_Manager = self
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
