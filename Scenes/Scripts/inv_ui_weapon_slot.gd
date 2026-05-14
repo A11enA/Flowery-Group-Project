@@ -39,3 +39,11 @@ func remove_item(amount := 1):
 		return
 	
 	inv.removeFromInventory(item.id, amount)
+
+
+func _on_button_pressed():
+	print("Press!")
+	if Global.Ui_Manager != null && current_entry != null :
+		Global.Ui_Manager.itemDisc(current_entry.item.id)
+	else:
+		print("not loading :(")

@@ -71,7 +71,7 @@ func addToInventory(id) -> bool:
 	
 	if get_used_slots() >= max_slots:
 	
-		Global.UI_manager.alert("Inventory Full!")
+		Global.Ui_Manager.alert("Inventory Full!")
 	
 		return false
 	
@@ -93,14 +93,14 @@ func removeFromInventory(id, amount := 1) -> bool:
 	
 	if stack == null:
 		
-		Global.UI_manager.alert("None in Inventory!")
+		Global.Ui_Manager.alert("None in Inventory!")
 		
 		return false
 	
 	
 	if stack.quantity < amount:
 	
-		Global.UI_manager.alert("Not Enough in Inventory!")
+		Global.Ui_Manager.alert("Not Enough in Inventory!")
 	
 		return false
 	

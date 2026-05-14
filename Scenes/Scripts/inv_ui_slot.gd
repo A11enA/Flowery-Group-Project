@@ -50,7 +50,7 @@ func remove_item(amount := 1):
 
 func _on_button_pressed():
 	print("Press!")
-	if Global.UI_manager != null && current_entry != null :
-		Global.UI_manager.itemDisc(current_entry.item.id)
+	if Global.Ui_Manager != null && current_entry != null :
+		Global.Ui_Manager.itemDisc(current_entry.item.id)
 	else:
 		print("not loading :(")

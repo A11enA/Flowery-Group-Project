@@ -75,4 +75,4 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_pn6yi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hh5vi")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j5pqu")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="button_down" from="Button" to="." method="_on_button_pressed"]
