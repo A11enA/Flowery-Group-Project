@@ -122,8 +122,8 @@ radius = 21.0
 height = 66.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6t5aa"]
-radius = 36.0
-height = 88.0
+radius = 25.0
+height = 72.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x3wgy"]
 radius = 15.0
