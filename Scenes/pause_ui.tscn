@@ -77,8 +77,6 @@ size_flags_vertical = 4
 
 [node name="ToDo" parent="Control/HBoxContainer" unique_id=1888823601 instance=ExtResource("3_36amk")]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=695930858]
 anchors_preset = 10

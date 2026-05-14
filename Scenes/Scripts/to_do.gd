@@ -24,12 +24,12 @@ func checkToDo():
 
 
 func makeDefault():
-
 	$MarginContainer/VBoxContainer/Header.set_text("TO DO:")
 	$MarginContainer/VBoxContainer/Body.set_text("Nothing Yet!")
 
 
 func itemDisc(id : int):
+	#%Header.text = "Foraging Knife"
 	#print("I'M WORKING")
 	if id == 0:
 		print("I'M WORKING knife")
