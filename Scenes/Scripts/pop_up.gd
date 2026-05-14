@@ -15,7 +15,5 @@ func alert(msg: String):
 	print("alert end")
 
 func _on_timer_timeout():
-	print("timeout start")
 	visible = false
 	$Control/MarginContainer/VBoxContainer/Body.text = ""
-	print("timeout end")

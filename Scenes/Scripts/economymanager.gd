@@ -2,8 +2,10 @@ class_name EconomyControl
 extends Control
 
 const DATABASE_PATH := "res://addons/inventory_forge/demo/demo_database.tres"
+const UIMANAGER := "res://Scenes/Scripts/Ui_Manager.gd"
 
 @onready var database = preload(DATABASE_PATH)
+@onready var UiManager = preload(UIMANAGER)
 
 var coins := 0
 
@@ -65,6 +67,7 @@ func _ready() -> void:
 	Global.economy_manager = self
 	
 	database = load(DATABASE_PATH)
+	UiManager = load(UIMANAGER)
 	
 	update_display(coins)
 	

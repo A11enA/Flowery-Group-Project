@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 			attack()
 	if Global.player_hp <= 3 && $HealTimer.is_stopped:
 		$HealTimer.start()
-
+	
 	_handle_save_input()
 
 
@@ -76,13 +76,15 @@ func _save_and_return_to_menu() -> void:
 	var err: Error = await Global.game_controller.save_current_slot()
 	if err != OK:
 		printerr("Save failed:", err)
-	Global.game_controller.change_scene("res://Scenes/title_screen.tscn", true, false, false, true)
+	get_tree().reload_current_scene()
 
 # Store the player-related state in the save resource before writing to disk.
 func _save_game_state() -> void:
 	SAVE_MANAGER.set_data("player_position", position)
 	SAVE_MANAGER.set_data("player_hp", Global.player_hp)
 	SAVE_MANAGER.set_data("enemy_hp", Global.enemy_hp)
+	SAVE_MANAGER.set_data("inventory", Global.inventory_manager.inventory)
+	SAVE_MANAGER.set_data("Dialogic Variables", Global.inventory_manager.inventory)
 	SAVE_MANAGER.set_data("current_scene", Global.game_controller.current_scene_path)
 
 # Restore the player-related state from the save resource after loading.

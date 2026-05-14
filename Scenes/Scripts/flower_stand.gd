@@ -30,7 +30,7 @@ func _on_take_orders_pressed() -> void:
 		else:
 			print("Veronica") 
 			Dialogic.start("Veronica Order")
-			
+		Global.UI_manager.check()
 
 func _on_wrap_flowers_pressed():
 	print("wrap flowers button")

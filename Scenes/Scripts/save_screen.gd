@@ -39,9 +39,9 @@ func tween(button, property, amount, duration):
 # Load the selected save slot and restore to the saved scene and position.
 func _load_save_slot(slot: int) -> void:
 	# Hide the save screen before loading the game
-	visible = false
 	Global.game_controller.load_save_slot(slot)
 	print("Game Loaded from Slot %d!" % (slot + 1))
+	visible = !visible
 
 func _on_save_1_button_pressed() -> void:
 	_load_save_slot(0)
@@ -56,4 +56,4 @@ func _on_save_4_button_pressed() -> void:
 	_load_save_slot(3)
 
 func _on_back_button_pressed() -> void:
-	Global.game_controller.change_scene("res://Scenes/title_screen.tscn", true, false, false, true)
+	get_tree().reload_current_scene()
